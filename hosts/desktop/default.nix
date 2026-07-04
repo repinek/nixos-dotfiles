@@ -1,4 +1,5 @@
 {
+  pkgs,
   modulesPath,
   hostname,
   ...
@@ -7,6 +8,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
     ./hardware-configuration.nix
 
+    ../../modules/cli/platform-tools/system.nix
     ../../modules/cli/ssh/system.nix
 
     ../../modules/core/boot/system.nix
@@ -32,7 +34,10 @@
     ../../modules/shell/fish/system.nix
   ];
 
-  modules.cli.ssh.system.enable = true;
+  modules.cli = {
+    platform-tools.enable = true;
+    ssh.system.enable = true;
+  };
 
   modules.core = {
     boot.system = {

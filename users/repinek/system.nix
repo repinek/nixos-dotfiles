@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   users.users.repinek = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    # adbusers required from platform-tools
+    extraGroups = ["wheel, adbusers"];
     shell = pkgs.fish;
   };
 }
