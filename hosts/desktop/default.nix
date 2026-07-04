@@ -1,5 +1,4 @@
 {
-  pkgs,
   modulesPath,
   hostname,
   ...
@@ -7,6 +6,7 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./hardware-configuration.nix
+    ./btrfs-subvolumes.nix
 
     ../../modules/cli/platform-tools/system.nix
     ../../modules/cli/ssh/system.nix
@@ -35,7 +35,7 @@
   ];
 
   modules.cli = {
-    platform-tools.enable = true;
+    platform-tools.system.enable = true;
     ssh.system.enable = true;
   };
 
