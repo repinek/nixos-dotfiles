@@ -30,7 +30,7 @@
       ",             Print, exec, noctalia msg screenshot-region"
       # FIXME: shift + print exec hyprshot region + pipes to satty
       "CTRL,         Print, exec, noctalia msg screenshot-fullscreen DP-3"
-      "CTRL SHIFT,   Print, exec, hyprpicker -a -n -b -r -s 7"
+      "CTRL SHIFT,   Print, exec, hyprpicker -a -b -r -s 7"
 
       # Switch workspaces with mainMod + [1/9]
       "$mainMod, 1, workspace, 1"
