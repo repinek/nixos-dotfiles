@@ -12,7 +12,7 @@ in {
   config = mkIf cfg.enable {
     programs.vscodium = {
       enable = true;
-      package = pkgs.vscodium-fhs; # Use wrapped variant in FHS environment
+      # package = pkgs.vscodium-fhs; # Use wrapped variant in FHS environment UPD: I don't think we need it rn
       mutableExtensionsDir = true;
 
       profiles.default = {
