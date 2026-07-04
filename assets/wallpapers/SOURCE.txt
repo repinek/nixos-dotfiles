@@ -1,0 +1,6 @@
+nix-wallpaper.svg - Taken from nixos-artwork with converted colors for noctalia template
+https://github.com/NixOS/nixos-artwork/blob/master/wallpapers/nix-wallpaper-nineish-catppuccin-mocha.svg 
+(there's no LICENSE soo)
+
+old.png - My old wallpapers, but I can't find the source
+was taken from random r/unixporn catppuccin rice

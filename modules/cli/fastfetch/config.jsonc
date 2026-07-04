@@ -1,0 +1,36 @@
+{
+  "logo": {
+    "source": "nixos_small",
+    "padding": { "top": 1 },
+    "type": "auto",
+    "color": {
+      "1": "38;2;91;206;250",
+      "2": "38;2;245;169;184",
+      "3": "38;2;255;255;255",
+      "4": "38;2;245;169;184",
+      "5": "38;2;91;206;250",
+      "6": "38;2;168;216;234"
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "{{colors.primary.default.hex}}",
+      "output": "white"
+    }
+  },
+  "modules": [
+    { "type": "title",   "color": { "user": "{{colors.tertiary.default.hex}}", "at": "white", "host": "{{colors.tertiary.default.hex}}" } },
+    "break",
+    { "type": "os",      "key": "os    ",       "keyColor": "{{colors.primary.default.hex}}" },
+    { "type": "kernel",  "key": "kernel",       "keyColor": "{{colors.primary.default.hex}}" },
+    { "type": "wm",      "key": "wm    ",       "keyColor": "{{colors.primary.default.hex}}" },
+    { "type": "uptime",  "format": "{2}h {3}m", "key": "uptime", "keyColor": "{{colors.primary.default.hex}}" },
+    "break",
+    { "type": "display", "key": "disp  ",       "keyColor": "{{colors.primary.default.hex}}" },
+    { "type": "cpu",     "key": "cpu   ",       "keyColor": "{{colors.primary.default.hex}}", "temp": true },
+    { "type": "gpu",     "key": "gpu   ",       "keyColor": "{{colors.primary.default.hex}}", "temp": true },
+    { "type": "memory",  "key": "memory",       "keyColor": "{{colors.primary.default.hex}}" },
+    { "type": "disk",    "key": "disk  ",       "keyColor": "{{colors.primary.default.hex}}", "folders": "/" }
+  ]
+}
