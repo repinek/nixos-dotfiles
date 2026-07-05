@@ -1,10 +1,9 @@
-{ 
-  pkgs,
+{
   lib,
   config,
   ...
-}: with lib; 
-let 
+}:
+with lib; let
   cfg = config.modules.cli.gh.user;
 in {
   options.modules.cli.gh.user.enable = mkEnableOption "Github CLI tool (gh)";
@@ -18,4 +17,4 @@ in {
       };
     };
   };
-} 
+}

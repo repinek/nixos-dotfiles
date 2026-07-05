@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+{...}: {
   fileSystems."/home/repinek/Media" = {
     device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
     fsType = "btrfs";

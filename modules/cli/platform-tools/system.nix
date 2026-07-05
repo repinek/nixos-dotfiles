@@ -1,5 +1,10 @@
-{ pkgs, lib, config, ... }: with lib; 
-let 
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+with lib; let
   cfg = config.modules.cli.platform-tools.system;
 in {
   options.modules.cli.platform-tools.system.enable = mkEnableOption "platform-tools (adb and fastboot)";
@@ -9,4 +14,4 @@ in {
       androidenv.androidPkgs.platform-tools
     ];
   };
-} 
+}
