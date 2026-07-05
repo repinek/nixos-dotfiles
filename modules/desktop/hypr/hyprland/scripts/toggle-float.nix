@@ -4,7 +4,7 @@
       width=''${1:-1200}
       height=''${2:-700}
 
-      is_floating=$(hyprctl activewindow -j | ${pkgs.jq}/bin/jq 'floating')
+      is_floating=$(hyprctl activewindow -j | ${pkgs.jq}/bin/jq -r '.floating')
       if [ "$is_floating" = "true" ]; then
         hyprctl dispatch togglefloating
       else
