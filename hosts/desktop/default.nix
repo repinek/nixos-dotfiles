@@ -66,7 +66,10 @@
   };
 
   modules.hardware = {
-    audio.system.enable = true;
+    audio.system = {
+      enable = true;
+      audio_buffer = 256;
+    };
     nvidia.system.enable = true;
     hid.system.enable = true;
   };

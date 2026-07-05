@@ -15,13 +15,10 @@ in {
       osu-lazer-bin
     ];
 
-    # FIXME: maybe move latency to host specific
+    # Audio buffer settings stored in hardware/audio
     home.sessionVariables = {
       OSU_SDL3 = "1";
       SDL_VIDEO_DOUBLE_BUFFER = "1";
-      SDL_AUDIODRIVER = "pipewire";
-      SDL_AUDIO_DEVICE_SAMPLE_FRAMES = "128";
-      PIPEWIRE_LATENCY = "128/48000";
     };
   };
 }
