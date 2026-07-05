@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ../../../modules/cli/gh/user.nix
     ../../../modules/cli/ssh/user.nix
 
     ../../../modules/desktop/hypr/user.nix
@@ -20,7 +21,10 @@
     ../../../modules/programs/vesktop/user.nix
   ];
 
-  modules.cli.ssh.user.enable = true;
+  modules.cli = {
+    gh.user.enable = true;
+    ssh.user.enable = true;
+  };
 
   modules.desktop = {
     hypr.user.enable = true;
