@@ -1,7 +1,6 @@
 let
   dotfilesPath = "~/nixos-dotfiles";
 in {
-  # FIXME: add cd aliases
   btw = "echo I use NixOS, btw";
 
   # NixOS
@@ -19,7 +18,7 @@ in {
   ls = "eza -al --color=always --group-directories-first --icons=always";
   la = "eza -a  --color=always --group-directories-first --icons=always";
   lt = "eza -aT --color=always --group-directories-first --icons=always";
-  ld = "eza -a  --color=never | rg '^\.'";
+  ld = "eza -a  --color=never | rg '^\\.'";
   tree = "lt";
 
   # Replace grep with ripgrep
@@ -28,8 +27,7 @@ in {
   rgl = "rg --files-with-matches";
 
   # Replace rm with trashy
-  fm = "rm";
-  rm = "trash";
+  rmt = "trash";
   rml = "trash list";
   rmr = "trash restore";
   rme = "trash empty";
