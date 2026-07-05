@@ -80,11 +80,5 @@
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
 
-  # FIXME: move to different place
-  virtualisation.vmVariant = {
-    users.users.repinek.password = "123";
-    users.users.root.password = "123";
-  };
-
   system.stateVersion = "26.05";
 }
