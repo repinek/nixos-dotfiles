@@ -7,7 +7,7 @@
     # We are using systemd service, so enable it
     # Otherwise any apps launched by Noctalia
     # Will be terminated when the service restarts
-    # launch_apps_as_systemd_services = true;
+    launch_apps_as_systemd_services = true;
 
     screen_time_enabled = true; # I was used niri-screen-time before (vibecoded as I know, btw)
     settings_show_advanced = true;

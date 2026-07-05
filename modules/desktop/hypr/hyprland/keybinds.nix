@@ -27,10 +27,10 @@
       "$mainMod SHIFT, P, exec, noctalia msg panel-toggle session"
 
       # Take screenshots with Print
-      ",             Print, exec, noctalia msg screenshot-region"
-      # FIXME: shift + print exec hyprshot region + pipes to satty
-      "CTRL,         Print, exec, noctalia msg screenshot-fullscreen DP-3"
-      "CTRL SHIFT,   Print, exec, hyprpicker -a -b -r -s 7"
+      ",           Print, exec, $hyprshotRegion"
+      "CTRL,       Print, exec, $hyprshotFull"
+      "SHIFT,      Print, exec, $hyprshotSatty"
+      "CTRL SHIFT, Print, exec, $hyprpicker"
 
       # Switch workspaces with mainMod + [1/9]
       "$mainMod, 1, workspace, 1"

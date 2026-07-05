@@ -18,7 +18,6 @@ in {
     ./lockscreen.nix
     ./nightlight.nix
     ./osd.nix
-    ./screenshot.nix
     ./shell.nix
     ./theme.nix
     ./widgets.nix
@@ -32,7 +31,7 @@ in {
       enable = true;
 
       # Run as systemd service
-      # systemd.enable = true;
+      systemd.enable = true;
     };
   };
 }

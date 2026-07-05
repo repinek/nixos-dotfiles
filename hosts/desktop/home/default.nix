@@ -27,7 +27,12 @@
   };
 
   modules.desktop = {
-    hypr.user.enable = true;
+    hypr.user = {
+      enable = true;
+      hyprshot.enable = true;
+      hyprpicker.enable = true;
+    };
+
     noctalia.user.enable = true;
     theme.user.enable = true;
   };
