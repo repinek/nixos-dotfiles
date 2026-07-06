@@ -26,6 +26,8 @@
     ../../modules/programs/localsend/system.nix
     ../../modules/programs/throne/system.nix
 
+    ../../modules/services/gnome-keyring/system.nix
+
     ../../modules/shell/fish/system.nix
   ];
 
@@ -72,6 +74,8 @@
     localsend.system.enable = true;
     throne.system.enable = true;
   };
+
+  modules.services.gnome-keyring.system.enable = true;
 
   modules.shell.fish.system.enable = true;
 

@@ -15,10 +15,13 @@
     ../../../modules/programs/alacritty/user.nix
     ../../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../../modules/programs/browsers/waterfox/user.nix
+    ../../../modules/programs/messengers/element-desktop/user.nix
+    ../../../modules/programs/messengers/telegram-desktop/user.nix
+    ../../../modules/programs/messengers/vesktop/user.nix
     ../../../modules/programs/nemo/user.nix
     ../../../modules/programs/obs-studio/user.nix
-    ../../../modules/programs/telegram-desktop/user.nix
-    ../../../modules/programs/vesktop/user.nix
+
+    ../../../modules/services/gnome-keyring/user.nix
   ];
 
   modules.cli = {
@@ -52,9 +55,14 @@
       ungoogled-chromium.user.enable = true;
       waterfox.user.enable = true;
     };
+    messengers = {
+      element-desktop.user.enable = true;
+      telegram-desktop.user.enable = true;
+      vesktop.user.enable = true;
+    };
     nemo.user.enable = true;
     obs-studio.user.enable = true;
-    telegram-desktop.user.enable = true;
-    vesktop.user.enable = true;
   };
+
+  modules.services.gnome-keyring.user.enable = true;
 }
