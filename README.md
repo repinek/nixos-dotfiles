@@ -77,6 +77,7 @@ cd nixos-dotfiles
 ```
 
 ## TODO
+- [ ] Try niri one day
 - [ ] Configure MIME types
 - [ ] Configure Media viewer (video, photos, audio, etc.)
 
