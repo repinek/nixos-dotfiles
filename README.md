@@ -23,7 +23,7 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - **Messengers**:  
     - [Telegram desktop](https://github.com/telegramdesktop/tdesktop)  
     - [Vesktop](https://github.com/Vencord/Vesktop)
-    - _TODO: Element_
+    - [Element](https://github.com/element-hq/element-web)
 - **Editors**:  
     - [VSCodium](https://github.com/VSCodium/vscodium)  
     - [Rider](https://www.jetbrains.com/rider/)* (not configured yet)  
@@ -36,7 +36,7 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
     - [Steam](https://store.steampowered.com/about/)*
-    - _TODO gamemoded_
+    - _TODO: gamemoded_
 - **Other Utilities with GUI**:
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [Local Send](https://github.com/localsend/localsend)
@@ -61,7 +61,6 @@ cd nixos-dotfiles
 
 ## TODO
 - [ ] Configure Dissasembler (IDA Pro, but maybe I should give a try to Ghidra)
-- [ ] Configure Element
 - [ ] Configure Rider
 - [ ] Configure Neovim
 - [ ] Configure MIME types
