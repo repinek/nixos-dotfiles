@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ../../../modules/cli/gh/user.nix
+    ../../../modules/cli/scrcpy/user.nix
     ../../../modules/cli/ssh/user.nix
 
     ../../../modules/desktop/hypr/user.nix
@@ -27,6 +28,7 @@
 
   modules.cli = {
     gh.user.enable = true;
+    scrcpy.user.enable = true;
     ssh.user.enable = true;
   };
 
