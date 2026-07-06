@@ -27,7 +27,7 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - **Editors**:  
     - [VSCodium](https://github.com/VSCodium/vscodium)  
     - [Rider](https://www.jetbrains.com/rider/)* (not configured yet)  
-    - Vim (not configured yet)  
+    - [Vim](https://github.com/vim/vim) (not configured yet)  
     - [opencode CLI](https://github.com/anomalyco/opencode/)
     - _TODO: Neovim_
 - **Browsers**:
