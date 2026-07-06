@@ -11,7 +11,12 @@ in {
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      gammastep # We are playing DT :fire:
+      # We are playing DT :fire:
+      (gammastep.overrideAttrs (old: {
+        postInstall = (old.postInstall or "") + ''
+          rm -f $out/share/applications/gammastep-indicator.desktop
+        '';
+      })) 
       osu-lazer-bin
     ];
 
