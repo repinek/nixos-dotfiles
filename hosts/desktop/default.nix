@@ -29,6 +29,7 @@
     ../../modules/hardware/nvidia/system.nix
     ../../modules/hardware/hid/system.nix
 
+    ../../modules/programs/localsend/system.nix
     ../../modules/programs/throne/system.nix
 
     ../../modules/shell/fish/system.nix
@@ -74,7 +75,11 @@
     hid.system.enable = true;
   };
 
-  modules.programs.throne.system.enable = true;
+  modules.programs = {
+    localsend.system.enable = true;
+    throne.system.enable = true;
+  };
+
   modules.shell.fish.system.enable = true;
 
   networking.hostName = hostname;
