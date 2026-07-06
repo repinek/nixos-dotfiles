@@ -37,6 +37,7 @@ in {
 
     # Use noctalia color scheme
     xdg.configFile = {
+      # FIXME: Broken
       "qt5ct/qt5ct.conf".text = ''
         [Appearance]
         color_palette=true

@@ -1,4 +1,4 @@
-{hostname, ...}: {
+{config, ...}: {
   wayland.windowManager.hyprland.settings = {
     "$fileManager" = "nemo";
     "$terminal" = "alacritty";
@@ -7,7 +7,7 @@
     # Screenshots
     "$hyprpicker" = "hyprpicker --autocopy --no-fancy --render-inactive --scale=8";
 
-    "$screenshotDir" = "/home/${hostname}/Media/Screenshots/$(date +%Y-%m)";
+    "$screenshotDir" = "${config.home.homeDirectory}/Media/Screenshots/$(date +%Y-%m)";
     "$screenshotName" = "Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png";
     "$mkdirScreenshot" = "mkdir -p $screenshotDir";
     "$hyprshotRegion" = "$mkdirScreenshot && hyprshot --freeze --mode region --output-folder $screenshotDir --filename $screenshotName";
