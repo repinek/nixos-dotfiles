@@ -1,7 +1,7 @@
 {hostname, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ./btrfs-subvolumes.nix
+    ./file-system.nix
 
     ../../modules/cli/platform-tools/system.nix
     ../../modules/cli/ssh/system.nix
