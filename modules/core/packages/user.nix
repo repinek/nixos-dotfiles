@@ -24,14 +24,12 @@ in {
       bat.enable = true; # cat
       eza.enable = true; # ls
       ripgrep.enable = true; # grep
-      zoxide.enable = true; # ls
 
       direnv = {
         enable = true;
         nix-direnv.enable = true;
       };
       jq.enable = true; # CLI JSON
-      fzf.enable = true;
     };
   };
 }
