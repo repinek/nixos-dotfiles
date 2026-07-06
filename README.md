@@ -45,7 +45,7 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - btrfs related, gh, git, ssh, fastfetch, platform-tools* (adb and fastboot), [see more](modules/core/packages/)
 
 \* - propietary software  
-\** - has propietary pieces (e.g. anticheat in osu!lazer)
+\** - open source but has propietary pieces (e.g. anticheat in osu!lazer)
 
 ## Usage
 > [!WARNING]  
@@ -64,6 +64,7 @@ cd nixos-dotfiles
 - [ ] Configure Rider
 - [ ] Configure Neovim
 - [ ] Configure MIME types
+- [ ] Configure Media viewer (video, photos, audio, etc.)
 
 Also, there's a lot of `FIXME` comments 
 
