@@ -2,8 +2,8 @@
   config,
   lib,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.programs.localsend.system;
 in {
   options.modules.programs.localsend.system.enable = mkEnableOption "Localsend";

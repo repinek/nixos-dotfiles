@@ -1,7 +1,4 @@
-{
-  hostname,
-  ...
-}: {
+{hostname, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./btrfs-subvolumes.nix
