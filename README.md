@@ -20,19 +20,21 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - **File Manager**: [Nemo with extensions](https://github.com/linuxmint/nemo)
 - **Terminal**: [Alacritty](https://github.com/alacritty/alacritty)  
 - **Shell**: [fish](https://github.com/fish-shell/fish-shell)
+- **Browsers**:
+    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _(3-rd party flake)_
+    - [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
 - **Messengers**:  
     - [Telegram desktop](https://github.com/telegramdesktop/tdesktop)  
     - [Vesktop](https://github.com/Vencord/Vesktop)
     - [Element](https://github.com/element-hq/element-web)
-- **Editors**:  
+- **Development & Reverse Engineering**:  
+    - [JADX](https://github.com/skylot/jadx)
     - [VSCodium](https://github.com/VSCodium/vscodium)  
     - [Rider](https://www.jetbrains.com/rider/)* (not configured yet)  
     - [Vim](https://github.com/vim/vim) (not configured yet)  
     - [opencode CLI](https://github.com/anomalyco/opencode/)
-    - _TODO: Neovim_
-- **Browsers**:
-    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _(3-rd party flake)_
-    - [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+    - _TODO: IDA Pro_
+    - _TODO: Neovim (nvf or nixvim idk)_
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
     - [Steam](https://store.steampowered.com/about/)*
@@ -42,7 +44,8 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - [Local Send](https://github.com/localsend/localsend)
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
-    - btrfs related, gh, git, ssh, fastfetch, platform-tools* (adb and fastboot), [see more](modules/core/packages/)
+    - btrfs related, gh, git, ssh, fastfetch, starship, scrcpy, platform-tools* (adb and fastboot) and many others...
+    see all [here](modules/core/packages/) and [here](modules/cli/)
 
 \* - propietary software  
 \** - open source but has propietary pieces (e.g. anticheat in osu!lazer)
@@ -60,9 +63,6 @@ cd nixos-dotfiles
 ```
 
 ## TODO
-- [ ] Configure Dissasembler (IDA Pro, but maybe I should give a try to Ghidra)
-- [ ] Configure Rider
-- [ ] Configure Neovim
 - [ ] Configure MIME types
 - [ ] Configure Media viewer (video, photos, audio, etc.)
 
