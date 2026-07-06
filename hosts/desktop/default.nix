@@ -22,7 +22,6 @@
 
     ../../modules/hardware/audio/system.nix
     ../../modules/hardware/nvidia/system.nix
-    ../../modules/hardware/hid/system.nix
 
     ../../modules/programs/localsend/system.nix
     ../../modules/programs/throne/system.nix
@@ -67,7 +66,6 @@
       audio_buffer = 256;
     };
     nvidia.system.enable = true;
-    hid.system.enable = true;
   };
 
   modules.programs = {
@@ -76,6 +74,19 @@
   };
 
   modules.shell.fish.system.enable = true;
+
+  # HID devices
+  services.udev.extraRules = ''
+    # Explored by usbutils lsusb
+    # 352d:2383 Drunkdeer A75 Pro ANSI
+    KERNEL=="hidraw*", ATTRS{idVendor}=="352d", ATTRS{idProduct}=="2383", MODE="0660", GROUP="users", TAG+="uaccess"
+
+    # 3554:f5f7 Compx SCYROX V8 Dongle
+    KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f7", MODE="0660", GROUP="users", TAG+="uaccess"
+
+    # 3554:f5f6 Compx SCYROX V8
+    KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f6", MODE="0660", GROUP="users", TAG+="uaccess"
+  '';
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
