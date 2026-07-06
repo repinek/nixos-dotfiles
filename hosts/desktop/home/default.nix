@@ -7,6 +7,7 @@
     ../../../modules/desktop/noctalia/user.nix
     ../../../modules/desktop/theme/user.nix
 
+    ../../../modules/editors/jadx/user.nix
     ../../../modules/editors/rider/user.nix
     ../../../modules/editors/vscodium/user.nix
 
@@ -41,6 +42,7 @@
   };
 
   modules.editors = {
+    jadx.user.enable = true;
     rider.user.enable = true;
     vscodium.user.enable = true;
   };
