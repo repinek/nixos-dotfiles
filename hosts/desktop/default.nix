@@ -1,10 +1,8 @@
 {
-  modulesPath,
   hostname,
   ...
 }: {
   imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
     ./hardware-configuration.nix
     ./btrfs-subvolumes.nix
 
