@@ -15,35 +15,37 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - Ergonomic [keybindings](modules/desktop/hypr/hyprland/keybinds.nix) for Hyprland
 
 ### Programs
-- WM: Hyprland  
-- Desktop Shell: Noctalia Shell  
-- Terminal: Alacritty  
-- Shell: fish
-- File Manager: Nemo
-- Messengers:  
-    - Telegram desktop  
-    - Vesktop (Discord)
-    - TODO: Element
-- Editors:  
-    - Rider (not configured yet)  
-    - VSCodium  
+- **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
+- **Desktop Shell**: [Noctalia Shell](https://github.com/noctalia-dev/noctalia)  
+- **File Manager**: [Nemo with extensions](https://github.com/linuxmint/nemo)
+- **Terminal**: [Alacritty](https://github.com/alacritty/alacritty)  
+- **Shell**: [fish](https://github.com/fish-shell/fish-shell)
+- **Messengers**:  
+    - [Telegram desktop](https://github.com/telegramdesktop/tdesktop)  
+    - [Vesktop](https://github.com/Vencord/Vesktop)
+    - _TODO: Element_
+- **Editors**:  
+    - [VSCodium](https://github.com/VSCodium/vscodium)  
+    - [Rider](https://www.jetbrains.com/rider/)* (not configured yet)  
     - Vim (not configured yet)  
-    - opencode CLI
-    - _TODO Neovim_
-- Browsers:
-    - Waterfox (3-rd party flake)
-    - ungoogled-chromium
-- VPN Client: Throne (powered by sing-box)
-- Games: 
-    - osu!lazer _(w/ gammastep)_
-    - Steam
+    - [opencode CLI](https://github.com/anomalyco/opencode/)
+    - _TODO: Neovim_
+- **Browsers**:
+    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _(3-rd party flake)_
+    - [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+- **Games**: 
+    - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
+    - [Steam](https://store.steampowered.com/about/)*
     - _TODO gamemoded_
-- Other Utilities with GUI:
-    - OBS Studio
-- Other CLI Utilities:
-    - btrfs related, gh, git, ssh, fastfetch, platform-tools (adb and fastboot), [see more](modules/core/packages/)
+- **Other Utilities with GUI**:
+    - [OBS Studio](https://github.com/obsproject/obs-studio)
+    - [Local Send](https://github.com/localsend/localsend)
+- **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
+- **Other CLI Utilities**:
+    - btrfs related, gh, git, ssh, fastfetch, platform-tools* (adb and fastboot), [see more](modules/core/packages/)
 
-_TODO: add links_
+\* - propietary software  
+\** - has propietary pieces (e.g. anticheat in osu!lazer)
 
 ## Usage
 > [!WARNING]  
