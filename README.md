@@ -30,9 +30,12 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - **Development & Reverse Engineering**:  
     - [JADX](https://github.com/skylot/jadx)
     - [VSCodium](https://github.com/VSCodium/vscodium)  
-    - [Rider](https://www.jetbrains.com/rider/)* (not configured yet)  
-    - [Vim](https://github.com/vim/vim) (not configured yet)  
+    - [Rider](https://www.jetbrains.com/rider/)* _(not configured yet)_
+    - [Vim](https://github.com/vim/vim) _(not configured yet)_  
     - [opencode CLI](https://github.com/anomalyco/opencode/)
+    - _TODO: ilspycmd_
+    - _TODO: Detect it easy_
+    - _TODO: reqable* or proxypin_
     - _TODO: IDA Pro_
     - _TODO: Neovim (nvf or nixvim idk)_
 - **Games**: 
@@ -42,10 +45,21 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - **Other Utilities with GUI**:
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [Local Send](https://github.com/localsend/localsend)
+    - _TODO: try logseq??_
+    - _TODO: Audacity_
+    - _TODO: Krita_
+    - _TODO: Filezilla_
+    - _TODO: losslesscut_
+    - _TODO: office_
+    - _TODO: GNOME Disk utility_
+    - _TODO: Github Desktop_
+    - _TODO: Filelight_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
     - btrfs related, gh, git, ssh, fastfetch, starship, scrcpy, platform-tools* (adb and fastboot) and many others...
     see all [here](modules/core/packages/) and [here](modules/cli/)
+    - _TODO: ffmpeg_
+    - _TODO: yazi_
 
 \* - propietary software  
 \** - open source but has propietary pieces (e.g. anticheat in osu!lazer)
