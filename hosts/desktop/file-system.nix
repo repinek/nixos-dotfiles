@@ -1,7 +1,7 @@
 {...}: {
   # subvol   - specify btrfs subvolume, / if none
-  # noatime  - don't update access time 
-  # atime    - update access time every read 
+  # noatime  - don't update access time
+  # atime    - update access time every read
   # relatime - update access time only if previous atime is older than the mtime
   # compress - transparent file compression [LZO / ZSTD / Zlib]. You can also set a compression ratio by doing zstd:[1-19]
   # discard  - TRIM [async]

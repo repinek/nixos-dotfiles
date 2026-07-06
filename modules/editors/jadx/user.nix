@@ -3,8 +3,8 @@
   lib,
   config,
   ...
-}: with lib;
-let
+}:
+with lib; let
   cfg = config.modules.editors.jadx.user;
 in {
   options.modules.editors.jadx.user.enable = mkEnableOption "JADX Dex to Java decompiler";
@@ -25,4 +25,4 @@ in {
       categories = ["Development" "Utility"];
     };
   };
-} 
+}
