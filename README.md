@@ -27,17 +27,18 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - [Telegram desktop](https://github.com/telegramdesktop/tdesktop)  
     - [Vesktop](https://github.com/Vencord/Vesktop)
     - [Element](https://github.com/element-hq/element-web)
-- **Development & Reverse Engineering**:  
-    - [JADX](https://github.com/skylot/jadx)
+- **Development**:  
     - [VSCodium](https://github.com/VSCodium/vscodium)  
     - [Rider](https://www.jetbrains.com/rider/)* _(not configured yet)_
     - [Vim](https://github.com/vim/vim) _(not configured yet)_  
     - [opencode CLI](https://github.com/anomalyco/opencode/)
+    - _TODO: Neovim (nvf or nixvim idk)_
+- **Reverse Engineering**
+    - [JADX](https://github.com/skylot/jadx)
+    - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
     - _TODO: ilspycmd_
-    - _TODO: Detect it easy_
     - _TODO: reqable* or proxypin_
     - _TODO: IDA Pro_
-    - _TODO: Neovim (nvf or nixvim idk)_
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
     - [Steam](https://store.steampowered.com/about/)*
