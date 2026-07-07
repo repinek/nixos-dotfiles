@@ -20,7 +20,9 @@ in {
           # Themes
           catppuccin.catppuccin-vsc
           mvllow.rose-pine
-          # noctalia.noctaliatheme # There's no noctalia theme vscode extension
+          # FIXME: Unavailable in vscode-extensions 
+          # noctalia.noctaliatheme # https://open-vsx.org/extension/Noctalia/noctaliatheme
+          # daitsuku.cherry-blossom-vscode-theme # https://open-vsx.org/extension/daitsuku/cherry-blossom-vscode-theme
 
           # Other
           esbenp.prettier-vscode
