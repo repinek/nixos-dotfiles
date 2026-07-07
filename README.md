@@ -1,6 +1,15 @@
 # repinek's NixOS dotfiles
 Declarative [NixOS](https://nixos.org) config for personal use. 
 
+##### Contents
+- [Screenshots](#screenshots)
+- [Features](#features-and-main-packages)
+    - [Programs](#programs)
+- [Usage](#usage)
+- [TODO](#todo)
+- [License](#license)
+- [Credits](#credits)
+
 ## Screenshots
 
 <img src="assets/screenshots/screenshot_1.png" width="700" alt="Rose Pine Theme, Noctalia Shell, Hyprland, Alacritty and Control Center">
@@ -89,5 +98,5 @@ This project is licensed under the **MIT License**.
 See the [LICENSE](LICENSE) file for details.
 
 ## Credits
-[datsfilipe dotfiles](https://github.com/datsfilipe/dotfiles) - Highly inspired  
-[Ruject nixos-infra](https://git.ruject.fun/RuJect/nixos-infra)
+- [datsfilipe dotfiles](https://github.com/datsfilipe/dotfiles) - Architecture is highly inspired by this dotfiles
+- [Ruject nixos-infra](https://git.ruject.fun/RuJect/nixos-infra) - Some modules and architecture things were taken from here
