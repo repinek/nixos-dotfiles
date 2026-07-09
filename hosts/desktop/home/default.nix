@@ -18,6 +18,7 @@
     ../../../modules/programs/alacritty/user.nix
     ../../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../../modules/programs/browsers/waterfox/user.nix
+    ../../../modules/programs/losslesscut/user.nix
     ../../../modules/programs/messengers/element-desktop/user.nix
     ../../../modules/programs/messengers/telegram-desktop/user.nix
     ../../../modules/programs/messengers/vesktop/user.nix
@@ -61,6 +62,7 @@
       ungoogled-chromium.user.enable = true;
       waterfox.user.enable = true;
     };
+    losslesscut.user.enable = true;
     messengers = {
       element-desktop.user.enable = true;
       telegram-desktop.user.enable = true;
