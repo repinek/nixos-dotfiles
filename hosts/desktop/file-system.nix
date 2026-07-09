@@ -5,6 +5,7 @@
   # relatime - update access time only if previous atime is older than the mtime
   # compress - transparent file compression [LZO / ZSTD / Zlib]. You can also set a compression ratio by doing zstd:[1-19]
   # discard  - TRIM [async]
+  # ro       - Read Only
 
   # Can be discovered using lsblk --fs
 
@@ -36,6 +37,6 @@
   fileSystems."mnt/Old" = {
     device = "/dev/disk/by-uuid/a224ed41-0f38-47b5-baa8-8f318d3a8cfa";
     fsType = "btrfs";
-    options = ["subvol=/" "noatime" "compress=zstd"];
+    options = ["subvol=/" "ro" "noatime" "compress=zstd"];
   };
 }
