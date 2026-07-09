@@ -62,7 +62,6 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - _TODO: Filezilla_
     - _TODO: office_
     - _TODO: GNOME Disk utility_
-    - _TODO: Github Desktop_
     - _TODO: Filelight_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
