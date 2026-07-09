@@ -39,7 +39,7 @@ in {
           "editor.wordWrap" = "on";
           "editor.mouseWheelZoom" = true;
 
-          "workbench.colorTheme" = "Catppuccin Mocha";
+          "workbench.colorTheme" = "Cherry Blossom Dimmed";
           "workbench.startupEditor" = "none";
 
           # QoL
