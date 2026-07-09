@@ -55,11 +55,11 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - **Other Utilities with GUI**:
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [Local Send](https://github.com/localsend/localsend)
+    - [LosslessCut](https://github.com/mifi/lossless-cut)
     - _TODO: try logseq??_
     - _TODO: Audacity_
     - _TODO: Krita_
     - _TODO: Filezilla_
-    - _TODO: losslesscut_
     - _TODO: office_
     - _TODO: GNOME Disk utility_
     - _TODO: Github Desktop_
