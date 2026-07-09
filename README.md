@@ -56,13 +56,13 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [Local Send](https://github.com/localsend/localsend)
     - [LosslessCut](https://github.com/mifi/lossless-cut)
+    - [Github Desktop](https://github.com/desktop/desktop)
     - _TODO: try logseq??_
     - _TODO: Audacity_
     - _TODO: Krita_
     - _TODO: Filezilla_
     - _TODO: office_
     - _TODO: GNOME Disk utility_
-    - _TODO: Github Desktop_
     - _TODO: Filelight_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
