@@ -29,10 +29,5 @@
       max_length = 500;
       title_scroll = "always";
     };
-
-    tray = {
-      drawer = true;
-      pinned = ["Throne"];
-    };
   };
 }
