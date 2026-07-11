@@ -13,10 +13,12 @@ in {
     home.packages = with pkgs; [
       # We are playing DT :fire:
       (gammastep.overrideAttrs (old: {
-        postInstall = (old.postInstall or "") + ''
-          rm -f $out/share/applications/gammastep-indicator.desktop
-        '';
-      })) 
+        postInstall =
+          (old.postInstall or "")
+          + ''
+            rm -f $out/share/applications/gammastep-indicator.desktop
+          '';
+      }))
       osu-lazer-bin
     ];
 

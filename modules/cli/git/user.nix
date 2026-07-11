@@ -22,7 +22,7 @@ in {
         };
 
         gpg.format = "ssh";
-  
+
         init = {
           defaultBranch = "main";
         };
@@ -34,7 +34,7 @@ in {
         pull = {
           ff = "only"; # Use fast-forward - no merge commits
         };
-        
+
         rebase = {
           autoStash = true;
           autoSquash = true;

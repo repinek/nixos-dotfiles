@@ -51,7 +51,7 @@
       users = ["repinek"];
       homeModules.repinek = [./hosts/desktop/home];
       modules = [];
-      overlays = [ inputs.repinek-pkgs.overlays.default ];
+      overlays = [inputs.repinek-pkgs.overlays.default];
     };
   };
 }

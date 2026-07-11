@@ -1,7 +1,7 @@
 # Original source is
 # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/by-name/id/ida-free/package.nix
 # All rights belong to it
-{ 
+{
   autoPatchelfHook,
   cairo,
   dbus,
@@ -38,7 +38,6 @@
   zlib,
   # I don't think I need hex patches
 }:
-
 stdenv.mkDerivation (finalAttrs: {
   pname = "ida-pro";
   version = "9.2";

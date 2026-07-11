@@ -22,6 +22,7 @@ Declarative [NixOS](https://nixos.org) config for personal use.
 - Theme management with Noctalia Shell: handles wallpapers, GTK, Qt5/6, btop, Alacritty, fastfetch, Hyprland, VSCodium 
 - A lot of useful [aliases](modules/shell/fish/fish-aliases.nix)
 - Ergonomic [keybindings](modules/desktop/hypr/hyprland/keybinds.nix) for Hyprland
+- Own [packages](pkgs/)
 
 ### Programs
 - **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
@@ -86,7 +87,6 @@ cd nixos-dotfiles
 ```
 
 ## TODO
-- [ ] README Programs by alphabet 
 - [ ] Same style for all mkEnableOptions 
 - [ ] Try niri one day
 - [ ] Configure MIME types

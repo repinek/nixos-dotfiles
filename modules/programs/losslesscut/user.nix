@@ -3,8 +3,8 @@
   config,
   lib,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.programs.losslesscut.user;
 in {
   options.modules.programs.losslesscut.user.enable = mkEnableOption "Lossless Cut";
