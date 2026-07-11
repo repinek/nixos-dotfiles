@@ -16,6 +16,7 @@
     ../../../modules/games/osu-lazer/user.nix
 
     ../../../modules/programs/alacritty/user.nix
+    ../../../modules/programs/audacity/user.nix
     ../../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../../modules/programs/browsers/waterfox/user.nix
     ../../../modules/programs/losslesscut/user.nix
@@ -58,6 +59,7 @@
 
   modules.programs = {
     alacritty.user.enable = true;
+    audacity.user.enable = true;
     browsers = {
       ungoogled-chromium.user.enable = true;
       waterfox.user.enable = true;
