@@ -43,11 +43,11 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - [opencode CLI](https://github.com/anomalyco/opencode/)
     - _TODO: Neovim (nvf or nixvim idk)_
 - **Reverse Engineering**
+    - [IDA Pro](https://hex-rays.com/ida-pro)*
     - [JADX](https://github.com/skylot/jadx)
     - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
     - _TODO: ilspycmd_
     - _TODO: reqable* or proxypin_
-    - _TODO: IDA Pro_
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
     - [Steam](https://store.steampowered.com/about/)*
@@ -86,6 +86,8 @@ cd nixos-dotfiles
 ```
 
 ## TODO
+- [ ] README Programs by alphabet 
+- [ ] Same style for all mkEnableOptions 
 - [ ] Try niri one day
 - [ ] Configure MIME types
 - [ ] Configure Media viewer (video, photos, audio, etc.)
