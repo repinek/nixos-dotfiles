@@ -13,7 +13,7 @@
       scale = 1;
       thickness = 32;
 
-      start = ["clock" "workspaces" "privacy"];
+      start = ["clock" "screentime_widget" "workspaces" "privacy"];
       center = ["active_window"];
       end = ["media" "group:g1" "keyboard_layout" "nightlight" "tray" "notifications" "session"];
 

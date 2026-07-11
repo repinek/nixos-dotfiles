@@ -18,6 +18,7 @@ in {
     ./lockscreen.nix
     ./nightlight.nix
     ./osd.nix
+    ./plugins.nix
     ./shell.nix
     ./theme.nix
     ./widgets.nix

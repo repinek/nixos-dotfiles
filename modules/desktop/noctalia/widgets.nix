@@ -10,6 +10,14 @@
       capsule_radius = 8;
     };
 
+    screentime_widget = {
+      type = "repinek/screentime-widget:screentime-widget";
+      capsule = true;
+      capsule_opacity = 0.5;
+      capsule_padding = 10;
+      capsule_radius = 8;
+    };
+
     workspaces = {
       empty_color = "shadow";
       occupied_color = "shadow";
