@@ -18,6 +18,8 @@
       url = "github:Hythera/nix-waterfox";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    repinek-pkgs.url = "path:./pkgs";
   };
 
   nixConfig = {
@@ -49,7 +51,7 @@
       users = ["repinek"];
       homeModules.repinek = [./hosts/desktop/home];
       modules = [];
-      overlays = [];
+      overlays = [ inputs.repinek-pkgs.overlays.default ];
     };
   };
 }
