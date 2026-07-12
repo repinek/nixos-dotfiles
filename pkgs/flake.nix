@@ -22,7 +22,7 @@
       ida-pro = pkgs.callPackage ./ida-pro {};
     });
 
-    overlays.default = final: prev: {
+    overlays.default = final: _: {
       ida-pro = final.callPackage ./ida-pro {};
     };
   };

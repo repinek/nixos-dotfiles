@@ -1,8 +1,4 @@
-{
-  hostname,
-  pkgs,
-  ...
-}: {
+{hostname, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./file-system.nix
