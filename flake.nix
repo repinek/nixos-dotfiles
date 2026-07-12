@@ -37,7 +37,7 @@
       packages = with legacyPackages; [
         alejandra # formatter
         statix # linter
-        deadnix # Find dead code
+        deadnix # dead code
       ];
     };
 
