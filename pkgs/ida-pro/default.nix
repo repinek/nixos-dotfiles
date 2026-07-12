@@ -126,7 +126,7 @@ stdenv.mkDerivation (finalAttrs: {
     $(cat $NIX_CC/nix-support/dynamic-linker) $src \
       --mode unattended --prefix $IDADIR
 
-    # Patch libida.so and generate license using keygen
+    # Yeah, I have no clue what is this
     (cd $IDADIR && python3 $keygen --patch --apply && python3 $keygen --license)
     rm -f $IDADIR/*.bak
 
