@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER"; # Set win as mainMod
 

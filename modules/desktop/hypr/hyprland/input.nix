@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings.input = {
     # Switch US / RU layout with SHIFT + ALT
     kb_layout = "us,ru";

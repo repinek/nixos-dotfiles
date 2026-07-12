@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.noctalia.settings.widget = {
     # Start
     clock = {

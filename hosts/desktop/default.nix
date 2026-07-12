@@ -1,7 +1,6 @@
 {hostname, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ./file-system.nix
 
     ../../modules/cli/platform-tools/system.nix
     ../../modules/cli/ssh/system.nix

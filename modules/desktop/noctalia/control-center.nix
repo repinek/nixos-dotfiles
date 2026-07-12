@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.noctalia.settings = {
     control_center = {
       sidebar = "full"; # Maybe for laptop don't enable it, make option here

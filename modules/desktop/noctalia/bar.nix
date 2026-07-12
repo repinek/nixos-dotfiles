@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.noctalia.settings.bar = {
     Top = {
       font_family = "JetBrainsMono Nerd Font Mono";

@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings = {
     # FIXME: should be controlled by specific host
     monitor = [

@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.noctalia.settings = {
     idle = {
       pre_action_fade_seconds = 0;

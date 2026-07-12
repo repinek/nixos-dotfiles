@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings = {
     # Get theme from noctalia
     source = "~/.config/hypr/noctalia.conf";

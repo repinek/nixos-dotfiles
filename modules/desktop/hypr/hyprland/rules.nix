@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
       "match:class osu!, immediate yes" # For tearing

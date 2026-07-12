@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.noctalia.settings = {
     location = {
       auto_locate = false; # Not used since VPN

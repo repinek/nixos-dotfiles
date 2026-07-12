@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.noctalia.settings.theme = {
     # Default is catppuccin, but you can use whatever you want
     # Just change it in settings

@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.settings.env = [
     # Cursor
     "XCURSOR_SIZE,20"

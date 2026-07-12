@@ -36,7 +36,7 @@
     devShells.x86_64-linux.default = legacyPackages.mkShell {
       packages = with legacyPackages; [
         alejandra # formatter
-        # statix
+        statix # linter
         deadnix # Find dead code
       ];
     };

@@ -25,8 +25,7 @@ in {
     };
 
     home.packages = with pkgs;
-      []
-      ++ optionals cfg.hyprshot.enable [hyprshot satty]
+      optionals cfg.hyprshot.enable [hyprshot satty]
       ++ optionals cfg.hyprpicker.enable [hyprpicker wl-clipboard];
   };
 }
