@@ -20,7 +20,7 @@
   };
 
   modules.editors.opencode.user.enable = true;
-  
+
   modules.shell.fish.user.enable = true;
 
   home.stateVersion = "26.05";
