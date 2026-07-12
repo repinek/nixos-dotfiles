@@ -1,10 +1,12 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ../../modules/core/packages/user.nix
 
     ../../modules/cli/fastfetch/user.nix
     ../../modules/cli/git/user.nix
     ../../modules/cli/starship/user.nix
+
+    ../../modules/editors/opencode/user.nix
 
     ../../modules/shell/fish/user.nix
   ];
@@ -17,11 +19,9 @@
     starship.user.enable = true;
   };
 
+  modules.editors.opencode.user.enable = true;
+  
   modules.shell.fish.user.enable = true;
-
-  home.packages = with pkgs; [
-    opencode
-  ];
 
   home.stateVersion = "26.05";
 }
