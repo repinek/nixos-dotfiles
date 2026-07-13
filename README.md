@@ -99,5 +99,5 @@ This project is licensed under the **MIT License**.
 See the [LICENSE](LICENSE) file for details.
 
 ## Credits
-- [datsfilipe dotfiles](https://github.com/datsfilipe/dotfiles) - Architecture is highly inspired by this dotfiles
+- [datsfilipe dotfiles](https://github.com/datsfilipe/dotfiles) - Architecture is highly inspired by these dotfiles
 - [Ruject nixos-infra](https://git.ruject.fun/RuJect/nixos-infra) - Some modules and architecture things were taken from here
