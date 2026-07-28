@@ -20,6 +20,7 @@
     ../../../modules/programs/audacity/user.nix
     ../../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../../modules/programs/browsers/waterfox/user.nix
+    ../../../modules/programs/gnome-disk-utility/user.nix
     ../../../modules/programs/losslesscut/user.nix
     ../../../modules/programs/messengers/element-desktop/user.nix
     ../../../modules/programs/messengers/telegram-desktop/user.nix
@@ -66,6 +67,7 @@
       ungoogled-chromium.user.enable = true;
       waterfox.user.enable = true;
     };
+    gnome-disk-utility.user.enable = true;
     losslesscut.user.enable = true;
     messengers = {
       element-desktop.user.enable = true;
