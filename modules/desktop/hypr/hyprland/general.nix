@@ -78,5 +78,7 @@ _: {
       focus_on_activate = true;
       vrr = 0; # 0 off, 1 on, 2 fullscreen only, 3 fullscreen video or game
     };
+
+    ecosystem.no_update_news = true;
   };
 }
