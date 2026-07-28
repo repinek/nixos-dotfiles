@@ -58,11 +58,11 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - [Local Send](https://github.com/localsend/localsend)
     - [LosslessCut](https://github.com/mifi/lossless-cut)
     - [Audacity](https://github.com/audacity/audacity)
+    - [GNOME Disk Utility]((https://gitlab.gnome.org/GNOME/gnome-disk-utility))
     - _TODO: try logseq??_
     - _TODO: Krita_
     - _TODO: Filezilla_
     - _TODO: office_
-    - _TODO: GNOME Disk utility_
     - _TODO: Filelight_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
