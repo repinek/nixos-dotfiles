@@ -15,6 +15,10 @@ in {
       enable = true;
 
       settings = {
+        general.import = [
+          "~/.config/alacritty/themes/noctalia.toml"
+        ];
+
         window = {
           padding = {
             x = 12;
