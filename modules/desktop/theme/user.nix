@@ -9,7 +9,7 @@ with lib; let
 in {
   # FIXME: maybe move something from noctalia here??
   # It's looks kinda messy idk
-  options.modules.desktop.theme.user.enable = mkEnableOption "Desktop theming";
+  options.modules.desktop.theme.user.enable = mkEnableOption "Theme";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

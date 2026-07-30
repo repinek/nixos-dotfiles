@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.modules.programs.localsend.system;
 in {
-  options.modules.programs.localsend.system.enable = mkEnableOption "Localsend";
+  options.modules.programs.localsend.system.enable = mkEnableOption "LocalSend";
 
   # FIXME: why he is white theme
   config = mkIf cfg.enable {

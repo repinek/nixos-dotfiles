@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.modules.services.gnome-keyring.system;
 in {
-  options.modules.services.gnome-keyring.system.enable = mkEnableOption "GNOME Keyring daemon, take care user's security credentials";
+  options.modules.services.gnome-keyring.system.enable = mkEnableOption "GNOME Keyring daemon";
 
   config = mkIf cfg.enable {
     services.gnome.gnome-keyring.enable = true; # gnome.gnome-keyring is system one

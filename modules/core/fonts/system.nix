@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.core.fonts.system;
 in {
-  options.modules.core.fonts.system.enable = mkEnableOption "Basic fonts";
+  options.modules.core.fonts.system.enable = mkEnableOption "Fonts";
 
   # FIXME: add Google Fonts
   config = mkIf cfg.enable {

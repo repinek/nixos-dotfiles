@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.games.osu-lazer.user;
 in {
-  options.modules.games.osu-lazer.user.enable = mkEnableOption "osu-lazer-bin";
+  options.modules.games.osu-lazer.user.enable = mkEnableOption "osu!lazer";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

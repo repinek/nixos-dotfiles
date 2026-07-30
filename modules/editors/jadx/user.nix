@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.editors.jadx.user;
 in {
-  options.modules.editors.jadx.user.enable = mkEnableOption "JADX Dex to Java decompiler";
+  options.modules.editors.jadx.user.enable = mkEnableOption "JADX - Dex to Java decompiler";
 
   config = mkIf cfg.enable {
     home.packages = [

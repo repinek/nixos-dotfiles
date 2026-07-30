@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.modules.cli.gh.user;
 in {
-  options.modules.cli.gh.user.enable = mkEnableOption "Github CLI tool (gh)";
+  options.modules.cli.gh.user.enable = mkEnableOption "GitHub CLI - command-line interface for GitHub";
 
   config = mkIf cfg.enable {
     programs.gh = {

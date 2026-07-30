@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.desktop.noctalia.user;
 in {
-  options.modules.desktop.noctalia.user.enable = mkEnableOption "Noctalia shell";
+  options.modules.desktop.noctalia.user.enable = mkEnableOption "Noctalia";
 
   imports = [
     inputs.noctalia.homeModules.default

@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.shell.fish.system;
 in {
-  options.modules.shell.fish.system.enable = mkEnableOption "Fish shell";
+  options.modules.shell.fish.system.enable = mkEnableOption "Fish default shell";
 
   config = mkIf cfg.enable {
     programs.fish.enable = true;

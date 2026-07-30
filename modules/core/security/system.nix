@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.modules.core.security.system;
 in {
-  options.modules.core.security.system.enable = mkEnableOption "Security defaults";
+  options.modules.core.security.system.enable = mkEnableOption "Security";
 
   config = mkIf cfg.enable {
     security = {

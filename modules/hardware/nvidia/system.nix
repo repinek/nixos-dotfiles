@@ -8,7 +8,7 @@ with lib; let
   cfg = config.modules.hardware.nvidia.system;
 in {
   options.modules.hardware.nvidia.system = {
-    enable = mkEnableOption "Nvidia drivers";
+    enable = mkEnableOption "Nvidia";
     powerManagement.enable = mkOption {
       type = types.bool;
       default = false;

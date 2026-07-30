@@ -7,7 +7,7 @@ with lib; let
   cfg = config.modules.cli.ssh.user;
 in {
   # FIXME: I quite don't understand how it's works... Add using ssh-add for now...
-  options.modules.cli.ssh.user.enable = mkEnableOption "ssh";
+  options.modules.cli.ssh.user.enable = mkEnableOption "SSH client config";
 
   config = mkIf cfg.enable {
     programs.ssh = {

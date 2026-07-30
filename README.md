@@ -80,7 +80,6 @@ cd nixos-dotfiles
 
 ## TODO
 - [ ] refactor core folder a little
-- [ ] Same style for all mkEnableOptions 
 - [ ] Try niri one day
 - [ ] Configure MIME types
 - [ ] Configure Media viewer (video, photos, audio, etc.)

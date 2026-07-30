@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.programs.messengers.telegram-desktop.user;
 in {
-  options.modules.programs.messengers.telegram-desktop.user.enable = mkEnableOption "telegram-desktop";
+  options.modules.programs.messengers.telegram-desktop.user.enable = mkEnableOption "Telegram Desktop";
 
   config = mkIf cfg.enable {
     home.packages = [pkgs.telegram-desktop];

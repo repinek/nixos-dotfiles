@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.modules.programs.messengers.element-desktop.user;
 in {
-  options.modules.programs.messengers.element-desktop.user.enable = mkEnableOption "element-desktop";
+  options.modules.programs.messengers.element-desktop.user.enable = mkEnableOption "Element";
 
   config = mkIf cfg.enable {
     # FIXME: If there's any way to fix

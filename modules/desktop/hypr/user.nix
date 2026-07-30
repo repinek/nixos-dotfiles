@@ -8,9 +8,9 @@ with lib; let
   cfg = config.modules.desktop.hypr.user;
 in {
   options.modules.desktop.hypr.user = {
-    enable = mkEnableOption "Hyprland user config";
-    hyprshot.enable = mkEnableOption "Hyprshot";
-    hyprpicker.enable = mkEnableOption "Hyprpicker";
+    enable = mkEnableOption "Hyprland";
+    hyprshot.enable = mkEnableOption "Hyprshot - screenshot tool";
+    hyprpicker.enable = mkEnableOption "Hyprpicker - color picker";
   };
 
   imports = [

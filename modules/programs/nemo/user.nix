@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.programs.nemo.user;
 in {
-  options.modules.programs.nemo.user.enable = mkEnableOption "Nemo file manager";
+  options.modules.programs.nemo.user.enable = mkEnableOption "Nemo - file manager";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

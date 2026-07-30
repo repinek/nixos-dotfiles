@@ -7,7 +7,7 @@ with lib; let
   cfg = config.modules.hardware.audio.system;
 in {
   options.modules.hardware.audio.system = {
-    enable = mkEnableOption "Audio defaults";
+    enable = mkEnableOption "Audio";
     audio_buffer = mkOption {
       type = types.ints.unsigned;
       default = 1024;

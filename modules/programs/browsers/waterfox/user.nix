@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.programs.browsers.waterfox.user;
 in {
-  options.modules.programs.browsers.waterfox.user.enable = mkEnableOption "Waterfox Browser";
+  options.modules.programs.browsers.waterfox.user.enable = mkEnableOption "Waterfox";
 
   config = mkIf cfg.enable {
     # 3-rd-party flake, be aware

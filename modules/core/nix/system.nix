@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.core.nix.system;
 in {
-  options.modules.core.nix.system.enable = mkEnableOption "Nix system settings";
+  options.modules.core.nix.system.enable = mkEnableOption "Nix";
 
   config = mkIf cfg.enable {
     # Set Nix latest version

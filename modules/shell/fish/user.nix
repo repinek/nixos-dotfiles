@@ -7,7 +7,7 @@ with lib; let
   cfg = config.modules.shell.fish.user;
   shellAliases = import ./fish-aliases.nix;
 in {
-  options.modules.shell.fish.user.enable = mkEnableOption "Fish configuration";
+  options.modules.shell.fish.user.enable = mkEnableOption "Fish config";
 
   config = mkIf cfg.enable {
     programs.fish = {

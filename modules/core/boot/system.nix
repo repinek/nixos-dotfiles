@@ -8,7 +8,7 @@ with lib; let
   cfg = config.modules.core.boot.system;
 in {
   options.modules.core.boot.system = {
-    enable = mkEnableOption "Boot settings";
+    enable = mkEnableOption "Boot";
 
     grub = {
       enable = mkEnableOption "GRUB bootloader";

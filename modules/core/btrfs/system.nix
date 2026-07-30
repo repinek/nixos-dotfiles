@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.core.btrfs.system;
 in {
-  options.modules.core.btrfs.system.enable = mkEnableOption "btrfs packages";
+  options.modules.core.btrfs.system.enable = mkEnableOption "Btrfs - snapshots and maintenance tools";
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [

@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.games.gamemode.system;
 in {
-  options.modules.games.gamemode.system.enable = mkEnableOption "GameMode daemon";
+  options.modules.games.gamemode.system.enable = mkEnableOption "GameMode";
 
   config = mkIf cfg.enable {
     programs.gamemode = {

@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.desktop.hypr.system;
 in {
-  options.modules.desktop.hypr.system.enable = mkEnableOption "Hyprland and XDG portals";
+  options.modules.desktop.hypr.system.enable = mkEnableOption "Hyprland";
 
   config = mkIf cfg.enable {
     programs.hyprland.enable = true;
