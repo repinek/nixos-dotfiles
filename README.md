@@ -1,5 +1,5 @@
 # repinek's NixOS dotfiles
-Declarative [NixOS](https://nixos.org) config for personal use. 
+Declarative [NixOS](https://nixos.org) config with home-manager for personal use. 
 
 ##### Contents
 - [Screenshots](#screenshots)
@@ -43,36 +43,28 @@ Declarative [NixOS](https://nixos.org) config for personal use.
     - [Vim](https://github.com/vim/vim) _(not configured yet)_  
     - [opencode CLI](https://github.com/anomalyco/opencode/)
     - _TODO: Neovim (nvf or nixvim idk)_
-- **Reverse Engineering**
+- **Reverse Engineering**:
     - [IDA Pro](https://hex-rays.com/ida-pro)*
     - [JADX](https://github.com/skylot/jadx)
     - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
-    - _TODO: ilspycmd_
-    - _TODO: reqable* or proxypin_
+    - _TODO: ilspycmd, reqable* or proxypin_
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
     - [Steam](https://store.steampowered.com/about/)*
-    - _TODO: gamemoded_
 - **Other Utilities with GUI**:
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [Local Send](https://github.com/localsend/localsend)
     - [LosslessCut](https://github.com/mifi/lossless-cut)
     - [Audacity](https://github.com/audacity/audacity)
-    - [GNOME Disk Utility]((https://gitlab.gnome.org/GNOME/gnome-disk-utility))
-    - _TODO: try logseq??_
-    - _TODO: Krita_
-    - _TODO: Filezilla_
-    - _TODO: office_
-    - _TODO: Filelight_
+    - [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility)
+    - _TODO: logseq, krita, filezilla, office, filelight_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
-    - btrfs related, gh, git, ssh, fastfetch, starship, scrcpy, platform-tools* (adb and fastboot) and many others...
-    see all [here](modules/core/packages/) and [here](modules/cli/)
-    - _TODO: ffmpeg_
-    - _TODO: yazi_
+    - scrcpy, platform-tools*, steamguard-cli, starship, btrfs related, gamemode, and all the basics (git, rsync, curl, bat, eza, ripgrep, ffmpeg, fastfetch, gh, ssh, etc.). 
+    see all [here](modules/core/packages/), [here](modules/cli/) and [here](modules/games/)
 
-\* - propietary software  
-\** - open source but has propietary pieces (e.g. anticheat in osu!lazer)
+\* - proprietary software  
+\** - open source but has proprietary pieces (e.g. anticheat in osu!lazer)
 
 ## Usage
 > [!WARNING]  
@@ -87,6 +79,7 @@ cd nixos-dotfiles
 ```
 
 ## TODO
+- [ ] refactor core folder a little
 - [ ] Same style for all mkEnableOptions 
 - [ ] Try niri one day
 - [ ] Configure MIME types
