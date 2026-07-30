@@ -7,8 +7,9 @@
 with lib; let
   cfg = config.modules.core.packages.user;
 in {
-  # FIXME: maybe reconfigure this a little bit???
-  # idk honestly
+  # Put user-level packages here: 
+  # 1. Have home-manager 
+  # 2. CLI replacements
   options.modules.core.packages.user.enable = mkEnableOption "Base user packages";
 
   config = mkIf cfg.enable {
@@ -24,7 +25,6 @@ in {
       bat.enable = true; # cat
       eza.enable = true; # ls
       ripgrep.enable = true; # grep
-
       direnv = {
         enable = true;
         nix-direnv.enable = true;
