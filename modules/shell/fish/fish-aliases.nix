@@ -9,7 +9,7 @@ in {
   nixos-vm = "sudo nixos-rebuild build-vm --flake ${dotfilesPath}#desktop";
 
   # Nix
-  nix-update = "dt && nix flake update";
+  nix-update = "nix flake update";
   nix-search = "nix search nixpkgs";
   nix-gc = "sudo nix-store --gc";
 
