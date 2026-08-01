@@ -13,6 +13,7 @@
     ../../../modules/editors/jadx/user.nix
     ../../../modules/editors/rider/user.nix
     ../../../modules/editors/vscodium/user.nix
+    ../../../modules/editors/zed/user.nix
 
     ../../../modules/games/osu-lazer/user.nix
     ../../../modules/games/steamguard-cli/user.nix
@@ -55,6 +56,7 @@
     jadx.user.enable = true;
     rider.user.enable = true;
     vscodium.user.enable = true;
+    zed.user.enable = true;
   };
 
   modules.games = {
