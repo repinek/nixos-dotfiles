@@ -19,11 +19,13 @@
         });
   in {
     packages = forEachSupportedSystem ({pkgs}: {
+      google-sans = pkgs.callPackage ./google-sans {};
       ida-pro = pkgs.callPackage ./ida-pro {};
       ida-pro-mcp = pkgs.callPackage ./ida-pro-mcp {};
     });
 
     overlays.default = final: _: {
+      google-sans = final.callPackage ./google-sans {};
       ida-pro = final.callPackage ./ida-pro {};
       ida-pro-mcp = final.callPackage ./ida-pro-mcp {};
     };

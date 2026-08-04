@@ -41,10 +41,11 @@ Declarative [NixOS](https://nixos.org) config with home-manager for personal use
     - [VSCodium](https://github.com/VSCodium/vscodium)  
     - [Rider](https://www.jetbrains.com/rider/)* _(not configured yet)_
     - [Vim](https://github.com/vim/vim) _(not configured yet)_  
+    - [Zed](https://github.com/zed-industries/zed) _(not configured yet)_
     - [opencode CLI](https://github.com/anomalyco/opencode/)
     - _TODO: Neovim (nvf or nixvim idk)_
 - **Reverse Engineering**:
-    - [IDA Pro](https://hex-rays.com/ida-pro)*
+    - [IDA Pro](https://hex-rays.com/ida-pro)* with [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp)
     - [JADX](https://github.com/skylot/jadx)
     - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
     - _TODO: ilspycmd, reqable* or proxypin_
@@ -57,6 +58,7 @@ Declarative [NixOS](https://nixos.org) config with home-manager for personal use
     - [LosslessCut](https://github.com/mifi/lossless-cut)
     - [Audacity](https://github.com/audacity/audacity)
     - [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility)
+    - [Proton Authenticator](https://github.com/ProtonMail/WebClients/)
     - _TODO: logseq, krita, filezilla, office, filelight_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
