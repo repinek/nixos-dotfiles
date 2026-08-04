@@ -36,6 +36,7 @@
   libice,
   libxcb,
   zlib,
+  python314,
   # I don't think I need hex patches
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -95,6 +96,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxcb-wm
     libxcb-cursor
     zlib
+    python314
   ];
   buildInputs = finalAttrs.runtimeDependencies;
 
