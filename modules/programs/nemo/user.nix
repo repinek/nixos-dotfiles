@@ -19,7 +19,7 @@ in {
     # FIXME: add bookmarks and mime types
 
     dconf.settings."org/nemo/preferences" = {
-      show-hidden-files = true;
+      # show-hidden-files = true;
       default-folder-viewer = "list-view";
       sort-directories-first = true;
     };
