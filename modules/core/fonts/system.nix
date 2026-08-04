@@ -9,10 +9,26 @@ with lib; let
 in {
   options.modules.core.fonts.system.enable = mkEnableOption "Fonts";
 
-  # FIXME: add Google Fonts
   config = mkIf cfg.enable {
     fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
+      iosevka
+
+      inter
+      roboto
+      plus-jakarta-sans
+      liberation_ttf
+      dejavu_fonts
+      google-sans # from custom pkgs
+
+      corefonts # Microsoft core fonts - unfree
+
+      noto-fonts
+      noto-fonts-extra
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+
+      source-serif-pro
     ];
   };
 }
