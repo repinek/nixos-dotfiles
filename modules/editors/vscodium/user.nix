@@ -67,6 +67,7 @@ in {
           # Terminal
           "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font Mono'";
           "terminal.integrated.smoothScrolling" = true;
+          "terminal.integrated.stickyScroll.enabled" = false;
 
           # Privacy
           "update.showReleaseNotes" = false;
