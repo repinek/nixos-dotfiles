@@ -5,7 +5,7 @@
 }: 
 stdenvNoCC.mkDerivation {
   pname = "google-sans";
-  version = "unstable-2026-08-03";
+  version = "0-unstable-2026-08-03";
 
   src = ./Google_Sans;
 

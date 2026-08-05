@@ -1,12 +1,12 @@
 {
   lib,
-  stdenv,
+  stdenvNoCC,
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation {
+stdenvNoCC.mkDerivation {
   pname = "ida-pro-mcp";
-  version = "unstable-2026-07-30";
+  version = "0-unstable-2026-07-30";
 
   src = fetchFromGitHub {
     owner = "mrexodia";
@@ -16,7 +16,6 @@ stdenv.mkDerivation {
   };
 
   dontBuild = true;
-  dontConfigure = true;
 
   installPhase = ''
     runHook preInstall
@@ -27,10 +26,10 @@ stdenv.mkDerivation {
     runHook postInstall
   '';
 
-  meta = {
-    description = "IDA Pro MCP plugin";
+  meta = with lib; {
+    description = "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.";
     homepage = "https://github.com/mrexodia/ida-pro-mcp";
-    license = lib.licenses.mit;
-    platforms = lib.platforms.linux;
+    license = licenses.mit;
+    platforms = ["x86_64-linux"];
   };
 }

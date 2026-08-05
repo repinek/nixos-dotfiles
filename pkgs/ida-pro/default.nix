@@ -157,13 +157,13 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-  meta = {
-    description = "A powerful disassembler, decompiler and a versatile debugger. In one tool";
+  meta = with lib; {
+    description = "A powerful disassembler, decompiler and a versatile debugger. In one tool.";
     homepage = "https://hex-rays.com/ida-pro/";
     changelog = "https://hex-rays.com/products/ida/news/";
-    license = lib.licenses.unfreeRedistributable;
+    license = licenses.unfreeRedistributable;
     mainProgram = "ida";
     platforms = ["x86_64-linux"];
-    sourceProvenance = with lib.sourceTypes; [binaryNativeCode];
+    sourceProvenance = with sourceTypes; [binaryNativeCode];
   };
 })
