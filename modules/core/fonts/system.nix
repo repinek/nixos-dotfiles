@@ -24,7 +24,6 @@ in {
       corefonts # Microsoft core fonts - unfree
 
       noto-fonts
-      noto-fonts-extra
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
 
