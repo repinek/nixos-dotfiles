@@ -1,15 +1,15 @@
 {
   lib,
   stdenvNoCC,
-  installFonts
-}: 
+  installFonts,
+}:
 stdenvNoCC.mkDerivation {
   pname = "google-sans";
   version = "0-unstable-2026-08-03";
 
   src = ./Google_Sans;
 
-  nativeBuildInputs = [ installFonts ];
+  nativeBuildInputs = [installFonts];
 
   postPatch = ''
     rm -f OFL.txt README.txt

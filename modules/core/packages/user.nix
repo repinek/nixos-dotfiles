@@ -7,8 +7,8 @@
 with lib; let
   cfg = config.modules.core.packages.user;
 in {
-  # Put user-level packages here: 
-  # 1. Have home-manager 
+  # Put user-level packages here:
+  # 1. Have home-manager
   # 2. CLI replacements
   options.modules.core.packages.user.enable = mkEnableOption "Base user packages";
 

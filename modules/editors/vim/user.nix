@@ -13,7 +13,7 @@ in {
     programs.vim = {
       enable = true;
       # We don't need GUI
-      # Use vim instead vim-full, remove gvim .desktop 
+      # Use vim instead vim-full, remove gvim .desktop
       packageConfigurable = pkgs.vim.overrideAttrs (old: {
         postInstall =
           (old.postInstall or "")

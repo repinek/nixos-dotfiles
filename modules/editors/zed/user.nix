@@ -2,8 +2,8 @@
   lib,
   config,
   ...
-}: with lib;
-let
+}:
+with lib; let
   cfg = config.modules.editors.zed.user;
 in {
   options.modules.editors.zed.user.enable = mkEnableOption "Zed - editor";

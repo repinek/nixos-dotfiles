@@ -18,7 +18,7 @@ in {
 
     # IDA can't find python, so we pointing it here
     home.activation.ida-python = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ${pkgs.ida-pro}/opt/ida-pro-9.2/idapyswitch --force-path ${pkgs.python314}/lib/libpython3.14.so 
+      ${pkgs.ida-pro}/opt/ida-pro-9.2/idapyswitch --force-path ${pkgs.python314}/lib/libpython3.14.so
     '';
   };
 }
