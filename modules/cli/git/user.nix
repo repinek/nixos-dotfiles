@@ -11,29 +11,27 @@ in {
   config = mkIf cfg.enable {
     programs.git = {
       enable = true;
+
       signing = {
         key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF/HPg31ljATQIHzqtBIvsStdENH57A3CxgstnWnUlxg repinek";
         signByDefault = true;
+        format = "ssh";
       };
+
       settings = {
         user = {
           name = "repinek";
           email = "137826826+repinek@users.noreply.github.com";
         };
 
-        gpg.format = "ssh";
-
-        init = {
-          defaultBranch = "main";
-        };
+        init.defaultBranch = "main";
 
         push = {
           autoSetupRemote = true; # Setup branch at remote if don't exist
+          followTags = true; # Send tags too
         };
 
-        pull = {
-          ff = "only"; # Use fast-forward - no merge commits
-        };
+        pull.ff = "only"; # Use fast-forward - no merge commits
 
         rebase = {
           autoStash = true;
