@@ -12,6 +12,7 @@
     screen_time_enabled = true; # I was used niri-screen-time before (vibecoded as I know, btw)
     settings_show_advanced = true;
     app_icon_colorize = true; # This is looks cool
+    external_ip_enabled = true; # Show external IP in the control center network tab
     time_format = "{:%H:%M:%S}";
 
     shadow.direction = "center";

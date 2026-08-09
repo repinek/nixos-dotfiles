@@ -17,8 +17,8 @@ in {
     ./location.nix
     ./lockscreen.nix
     ./nightlight.nix
+    ./notification.nix
     ./osd.nix
-    ./plugins.nix
     ./shell.nix
     ./theme.nix
     ./widgets.nix

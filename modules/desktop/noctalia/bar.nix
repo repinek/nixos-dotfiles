@@ -4,6 +4,7 @@ _: {
       font_family = "JetBrainsMono Nerd Font Mono";
 
       # Same as hyprland windows
+      margin_edge = 10;
       margin_ends = 10;
       padding = 10;
       radius = 10;
@@ -13,7 +14,7 @@ _: {
       scale = 1;
       thickness = 32;
 
-      start = ["clock" "screentime_widget" "workspaces" "privacy"];
+      start = ["clock" "workspaces" "privacy"];
       center = ["active_window"];
       end = ["media" "group:g1" "keyboard_layout" "nightlight" "tray" "notifications" "session"];
 
