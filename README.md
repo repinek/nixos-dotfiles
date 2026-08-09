@@ -40,7 +40,7 @@ Declarative [NixOS](https://nixos.org) config with home-manager for personal use
 - **Development**:  
     - [VSCodium](https://github.com/VSCodium/vscodium)  
     - [Rider](https://www.jetbrains.com/rider/)* _(not configured yet)_
-    - [Vim](https://github.com/vim/vim) _(not configured yet)_  
+    - [Vim](https://github.com/vim/vim)   
     - [Zed](https://github.com/zed-industries/zed) _(not configured yet)_
     - [opencode CLI](https://github.com/anomalyco/opencode/)
     - _TODO: Neovim (nvf or nixvim idk)_
