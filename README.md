@@ -68,6 +68,56 @@ Declarative [NixOS](https://nixos.org) config with home-manager for personal use
 \* - proprietary software  
 \** - open source but has proprietary pieces (e.g. anticheat in osu!lazer)
 
+## Structure
+
+```
+nixos-dotfiles
+├── assets                  # Static assets: screenshots, wallpapers, etc.
+├── hosts                   # per-host configuration
+│   └── desktop
+│       ├── home            # home-manager options for this host (user.nix files only)
+│       ├── default.nix     # NixOS options for this host (system.nix files only)
+│       └── hardware-configuration.nix
+├── lib                     # Nix build helpers
+│   └── mkNixos.nix
+├── modules                 # Reusable system and user modules
+│   ├── cli
+│   ├── core
+│   │   ├── boot
+│   │   ├── btrfs
+│   │   ├── fonts
+│   │   ├── nix
+│   │   ├── packages        # Base system packages
+│   │   ├── security
+│   │   └── system
+│   ├── desktop
+│   │   ├── hypr            # hypr ecosystem
+│   │   │   └── hyprland
+│   │   ├── ly
+│   │   ├── noctalia
+│   │   └── theme
+│   ├── editors
+│   ├── games
+│   ├── hardware
+│   │   ├── audio
+│   │   └── nvidia
+│   ├── programs
+│   ├── services
+│   └── shell
+│       └── fish
+├── pkgs                    # Custom packages (Standalone flake)
+│   ├── google-sans
+│   ├── ida-pro
+│   ├── ida-pro-mcp
+│   ├── flake.nix
+│   └── README.md
+├── users                   # per-user configuration
+│   └── repinek
+│       ├── home.nix        # home-manager options for this user (user.nix files only)
+│       └── system.nix      # NixOS options for this user
+└── flake.nix
+```
+
 ## Usage
 > [!WARNING]  
 > This is my personal configuration, created only for me, for my personal hardware and workflow.  
