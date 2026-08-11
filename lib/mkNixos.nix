@@ -1,7 +1,7 @@
 {inputs, ...}: {
   host,
   hostname ? host,
-  username ? hostname,
+  username,
   system ? "x86_64-linux",
   modules ? [],
   users ? [],

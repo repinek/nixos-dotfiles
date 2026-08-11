@@ -46,7 +46,6 @@
     # mkNixos doing all magic for us
     nixosConfigurations.desktop = mkNixos {
       host = "desktop";
-      hostname = "repinek";
       username = "repinek";
       users = ["repinek"];
       homeModules.repinek = [./hosts/desktop/home];
