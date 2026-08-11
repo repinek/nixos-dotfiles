@@ -3,10 +3,13 @@
     ../../modules/core/packages/user.nix
 
     ../../modules/cli/fastfetch/user.nix
+    ../../modules/cli/gh/user.nix
     ../../modules/cli/git/user.nix
+    ../../modules/cli/ssh/user.nix
     ../../modules/cli/starship/user.nix
 
     ../../modules/editors/opencode/user.nix
+    ../../modules/editors/vim/user.nix
 
     ../../modules/shell/fish/user.nix
   ];
@@ -15,6 +18,7 @@
 
   modules.cli = {
     fastfetch.user.enable = true;
+    gh.user.enable = true;
     git.user = {
       enable = true;
       signing = {
@@ -27,10 +31,14 @@
         email = "137826826+repinek@users.noreply.github.com";
       };
     };
+    ssh.user.enable = true;
     starship.user.enable = true;
   };
 
-  modules.editors.opencode.user.enable = true;
+  modules.editors = {
+    opencode.user.enable = true;
+    vim.user.enable = true;
+  };
 
   modules.shell.fish.user.enable = true;
 

@@ -1,8 +1,6 @@
 {...}: {
   imports = [
-    ../../../modules/cli/gh/user.nix
     ../../../modules/cli/scrcpy/user.nix
-    ../../../modules/cli/ssh/user.nix
 
     ../../../modules/desktop/hypr/user.nix
     ../../../modules/desktop/noctalia/user.nix
@@ -12,7 +10,6 @@
     ../../../modules/editors/ida-pro/user.nix
     ../../../modules/editors/jadx/user.nix
     ../../../modules/editors/rider/user.nix
-    ../../../modules/editors/vim/user.nix
     ../../../modules/editors/vscodium/user.nix
     ../../../modules/editors/zed/user.nix
 
@@ -35,11 +32,7 @@
     ../../../modules/services/gnome-keyring/user.nix
   ];
 
-  modules.cli = {
-    gh.user.enable = true;
-    scrcpy.user.enable = true;
-    ssh.user.enable = true;
-  };
+  modules.cli.scrcpy.user.enable = true;
 
   modules.desktop = {
     hypr.user = {
@@ -58,7 +51,6 @@
     ida-pro.user.enable = true;
     jadx.user.enable = true;
     rider.user.enable = true;
-    vim.user.enable = true;
     vscodium.user.enable = true;
     zed.user.enable = true;
   };
