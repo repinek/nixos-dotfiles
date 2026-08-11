@@ -7,6 +7,8 @@ _: {
 
       "match:class org.telegram.desktop, workspace 2 silent"
 
+      "match:class osu!, workspace 3 silent"
+
       # Run OBS Studio silently on magic workspace, set float, size 1200 700 and center it
       "match:class com.obsproject.Studio, workspace special:magic silent"
       "match:class com.obsproject.Studio, float true"
