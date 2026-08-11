@@ -46,6 +46,7 @@
       enable = true;
       hyprshot.enable = true;
       hyprpicker.enable = true;
+      monitors = ["DP-3, 2560x1440@165.0, 0x0, 1"];
     };
 
     noctalia.user.enable = true;

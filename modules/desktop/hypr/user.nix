@@ -11,6 +11,11 @@ in {
     enable = mkEnableOption "Hyprland";
     hyprshot.enable = mkEnableOption "Hyprshot - screenshot tool";
     hyprpicker.enable = mkEnableOption "Hyprpicker - color picker";
+    monitors = mkOption {
+      type = types.listOf types.str;
+      default = [];
+      description = "Monitors for Hyprland, e.g. \"DP-3, 2560x1440@165.0, 0x0, 1\"";
+    };
   };
 
   imports = [
@@ -22,6 +27,8 @@ in {
       enable = true;
       xwayland.enable = true;
       configType = "hyprlang"; # FIXME: move to .lua
+
+      settings.monitors = cfg.monitors;
     };
 
     home.packages = with pkgs;

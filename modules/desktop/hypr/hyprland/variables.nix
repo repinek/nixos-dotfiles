@@ -12,6 +12,6 @@
     "$mkdirScreenshot" = "mkdir -p $screenshotDir";
     "$hyprshotRegion" = "$mkdirScreenshot && hyprshot --freeze --mode region --output-folder $screenshotDir --filename $screenshotName";
     "$hyprshotSatty" = "$mkdirScreenshot && hyprshot --freeze --mode region --raw | satty --filename - --output-filename $screenshotDir/$screenshotName";
-    "$hyprshotFull" = "$mkdirScreenshot && hyprshot --freeze --mode output --mode DP-3 --output-folder $screenshotDir --filename $screenshotName"; # FIXME: remove hardcode
+    "$hyprshotFull" = "$mkdirScreenshot && hyprshot --freeze --mode output --mode active --output-folder $screenshotDir --filename $screenshotName"; # FIXME: remove hardcode
   };
 }
