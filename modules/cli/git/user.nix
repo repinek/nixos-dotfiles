@@ -6,22 +6,45 @@
 with lib; let
   cfg = config.modules.cli.git.user;
 in {
-  options.modules.cli.git.user.enable = mkEnableOption "Git";
+  options.modules.cli.git.user = {
+    enable = mkEnableOption "Git";
+
+    # https://github.com/nix-community/home-manager/blob/165228b0efefc3e635e5174020c40ea64271dc25/modules/programs/git.nix
+    signing = {
+      key = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+      };
+      format = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+      }; # In original there's enum instead str
+      signByDefault = mkOption {
+        type = types.nullOr types.bool;
+        default = null;
+      };
+    };
+
+    user = {
+      name = mkOption {type = types.str;};
+      email = mkOption {type = types.str;};
+    };
+  };
 
   config = mkIf cfg.enable {
     programs.git = {
       enable = true;
 
       signing = {
-        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF/HPg31ljATQIHzqtBIvsStdENH57A3CxgstnWnUlxg repinek";
-        signByDefault = true;
-        format = "ssh";
+        key = cfg.signing.key;
+        format = cfg.signing.format;
+        signByDefault = cfg.signing.signByDefault;
       };
 
       settings = {
         user = {
-          name = "repinek";
-          email = "137826826+repinek@users.noreply.github.com";
+          name = cfg.user.name;
+          email = cfg.user.email;
         };
 
         init.defaultBranch = "main";
@@ -38,9 +61,9 @@ in {
           autoSquash = true;
         };
 
-        rerere.enabled = true;
+        rerere.enabled = true; # reuse recorded resolution for merge conflicts 
 
-        help.autocorrect = 0; # You called y, which does not exist, we assume you meant x
+        help.autocorrect = 1; # You called y, which does not exist, we assume you meant x
 
         log.date = "relative";
         core.editor = "vim";
