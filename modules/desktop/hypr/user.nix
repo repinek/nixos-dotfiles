@@ -28,7 +28,7 @@ in {
       xwayland.enable = true;
       configType = "hyprlang"; # FIXME: move to .lua
 
-      settings.monitors = cfg.monitors;
+      settings.monitor = cfg.monitors;
     };
 
     home.packages = with pkgs;

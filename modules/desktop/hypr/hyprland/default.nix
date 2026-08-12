@@ -11,8 +11,6 @@
     ./general.nix
     ./keybinds.nix
     ./input.nix
-
-    ./monitors.nix
   ];
 
   wayland.windowManager.hyprland = {
