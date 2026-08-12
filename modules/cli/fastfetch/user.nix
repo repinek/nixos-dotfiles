@@ -8,9 +8,7 @@ with lib; let
 in {
   options.modules.cli.fastfetch.user.enable = mkEnableOption "Fastfetch";
 
-  # Config in config.jsonc
-  # If home-manager it's probably won't work with template
-  # FIXME: maybe try rewrite this as home-manager??
+  # Noctalia generates the fastfetch config
   config = mkIf cfg.enable {
     programs.fastfetch.enable = true;
   };
