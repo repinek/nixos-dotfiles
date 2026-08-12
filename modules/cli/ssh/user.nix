@@ -6,7 +6,6 @@
 with lib; let
   cfg = config.modules.cli.ssh.user;
 in {
-  # FIXME: I quite don't understand how it's works... Add using ssh-add for now...
   options.modules.cli.ssh.user.enable = mkEnableOption "SSH client config";
 
   config = mkIf cfg.enable {
@@ -29,5 +28,12 @@ in {
     };
 
     services.ssh-agent.enable = true;
+
+    # Load ssh key at startup, check if not any key in ssh-add -l
+    programs.fish.interactiveShellInit = ''
+      if not ssh-add -l >/dev/null 2>&1
+        ssh-add -q ~/.ssh/id_ed25519
+      end
+    '';
   };
 }
