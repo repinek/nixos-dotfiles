@@ -40,7 +40,11 @@
       enable = true;
       grub.enable = true;
     };
-    btrfs.system.enable = true;
+    btrfs.system = {
+      enable = true;
+      scrub.enable = true;
+      backup.enable = true;
+    };
     fonts.system.enable = true;
     nix.system.enable = true;
     packages.system.enable = true;

@@ -84,7 +84,14 @@
     "/mnt/Old" = {
       device = "/dev/disk/by-uuid/a224ed41-0f38-47b5-baa8-8f318d3a8cfa";
       fsType = "btrfs";
-      options = ["subvol=/" "ro" "noatime" "compress=zstd"];
+      options = ["subvol=/" "noatime" "compress=zstd"];
+    };
+
+    # Used by btrbk to snapshot the source subvolumes
+    "/btrfs" = {
+      device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
+      fsType = "btrfs";
+      options = ["subvolid=5" "noatime" "compress=zstd"];
     };
   };
 

@@ -23,6 +23,7 @@ Declarative [NixOS](https://nixos.org) config with home-manager for personal use
 - A lot of useful [aliases](modules/shell/fish/fish-aliases.nix)
 - Ergonomic [keybindings](modules/desktop/hypr/hyprland/keybinds.nix) for Hyprland
 - Own [packages](pkgs/)
+- Automatic [btrfs backups](modules/core/btrfs/system.nix) 
 
 ### Programs
 - **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
