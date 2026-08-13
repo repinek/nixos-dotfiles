@@ -101,6 +101,8 @@
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
+  # Fixes Throne TUN UDP traffic
+  networking.firewall.checkReversePath = "loose";
 
   system.stateVersion = "26.05";
 }
