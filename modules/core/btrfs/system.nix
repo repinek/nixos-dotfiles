@@ -17,7 +17,6 @@ in {
     environment.systemPackages = with pkgs; [
       btrfs-progs # Btrfs utilities
       btrfs-list # Tree-style Btrfs subvolume viewer
-      btrfs-assistant # Graphical Btrfs management tool
     ];
 
     services.btrfs.autoScrub = mkIf cfg.scrub.enable {
