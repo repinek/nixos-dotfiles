@@ -42,7 +42,8 @@ Declarative [NixOS](https://nixos.org) config with home-manager for personal use
     - [Rider](https://www.jetbrains.com/rider/)* _(not configured yet)_
     - [Vim](https://github.com/vim/vim)   
     - [Zed](https://github.com/zed-industries/zed) _(not configured yet)_
-    - [opencode CLI](https://github.com/anomalyco/opencode/)
+    - [Codex](https://github.com/openai/codex)
+    - [opencode](https://github.com/anomalyco/opencode/)
     - _TODO: Neovim (nvf or nixvim idk)_
 - **Reverse Engineering**:
     - [IDA Pro](https://hex-rays.com/ida-pro)* with [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp)

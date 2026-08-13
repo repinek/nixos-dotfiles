@@ -8,6 +8,7 @@
     ../../modules/cli/ssh/user.nix
     ../../modules/cli/starship/user.nix
 
+    ../../modules/editors/codex/user.nix
     ../../modules/editors/opencode/user.nix
     ../../modules/editors/vim/user.nix
 
@@ -36,6 +37,7 @@
   };
 
   modules.editors = {
+    codex.user.enable = true;
     opencode.user.enable = true;
     vim.user.enable = true;
   };
