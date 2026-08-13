@@ -6,7 +6,7 @@
     ../../modules/cli/gh/user.nix
     ../../modules/cli/git/user.nix
     ../../modules/cli/ssh/user.nix
-    ../../modules/cli/starship/user.nix
+    ../../modules/shell/starship/user.nix
 
     ../../modules/editors/codex/user.nix
     ../../modules/editors/opencode/user.nix
@@ -33,7 +33,6 @@
       };
     };
     ssh.user.enable = true;
-    starship.user.enable = true;
   };
 
   modules.editors = {
@@ -42,7 +41,10 @@
     vim.user.enable = true;
   };
 
-  modules.shell.fish.user.enable = true;
+  modules.shell = {
+    fish.user.enable = true;
+    starship.user.enable = true;
+  };
 
   home.stateVersion = "26.05";
 }

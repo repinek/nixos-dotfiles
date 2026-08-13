@@ -28,6 +28,7 @@
     ../../modules/services/gnome-keyring/system.nix
 
     ../../modules/shell/fish/system.nix
+    ../../modules/shell/starship/system.nix
   ];
 
   modules.cli = {
@@ -80,7 +81,10 @@
 
   modules.services.gnome-keyring.system.enable = true;
 
-  modules.shell.fish.system.enable = true;
+  modules.shell = {
+    fish.system.enable = true;
+    starship.system.enable = true;
+  };
 
   # HID devices
   services.udev.extraRules = ''
