@@ -12,7 +12,7 @@ _: {
     # Also see template folder
     templates = {
       builtin_ids = ["alacritty" "btop" "hyprland" "gtk3" "gtk4" "qt"];
-      community_ids = ["vscode" "discord"];
+      community_ids = ["vscode" "discord" "fastfetch" "obs"];
     };
   };
 }
