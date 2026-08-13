@@ -10,7 +10,7 @@ in {
 
   config = mkIf cfg.enable {
     # home-manager configuration applies only to the user
-    # 
+    #
     programs.starship = {
       enable = true;
       enableInteractive = true;

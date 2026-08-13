@@ -2,8 +2,8 @@
   lib,
   config,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.editors.codex.user;
 in {
   options.modules.editors.codex.user.enable = mkEnableOption "codex - coding agent";

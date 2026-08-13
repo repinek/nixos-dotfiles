@@ -61,7 +61,7 @@ in {
           autoSquash = true;
         };
 
-        rerere.enabled = true; # reuse recorded resolution for merge conflicts 
+        rerere.enabled = true; # reuse recorded resolution for merge conflicts
 
         help.autocorrect = 1; # You called y, which does not exist, we assume you meant x
 
