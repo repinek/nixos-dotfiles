@@ -3,7 +3,7 @@ _: {
     Top = {
       font_family = "JetBrainsMono Nerd Font Mono";
 
-      # Same as hyprland windows
+      # Same as Hyprland windows
       margin_edge = 10;
       margin_ends = 10;
       padding = 10;

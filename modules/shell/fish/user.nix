@@ -15,7 +15,7 @@ in {
 
       inherit shellAliases;
 
-      # Run fastfetch as greeting
+      # Run Fastfetch as the greeting
       functions = {
         fish_greeting = "fastfetch";
       };

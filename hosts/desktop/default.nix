@@ -88,7 +88,7 @@
 
   # HID devices
   services.udev.extraRules = ''
-    # Explored by usbutils lsusb
+    # Identified with lsusb from usbutils
     # 352d:2383 Drunkdeer A75 Pro ANSI
     KERNEL=="hidraw*", ATTRS{idVendor}=="352d", ATTRS{idProduct}=="2383", MODE="0660", GROUP="users", TAG+="uaccess"
 

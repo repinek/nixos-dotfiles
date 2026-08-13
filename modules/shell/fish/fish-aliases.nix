@@ -13,8 +13,7 @@ in {
   nix-search = "nix search nixpkgs";
   nix-gc = "sudo nix-store --gc";
 
-  # Replace ls & tree with eza
-  # a - all, l - long
+  # Replace ls and tree with eza (a = all, l = long)
   ls = "eza -al --color=always --group-directories-first --icons=always";
   la = "eza -a  --color=always --group-directories-first --icons=always";
   lt = "eza -aT --color=always --group-directories-first --icons=always";
@@ -26,7 +25,7 @@ in {
   rgi = "rg --ignore-case";
   rgl = "rg --files-with-matches";
 
-  # Replace rm with trashy
+  # Use trashy instead of deleting files immediately
   rmt = "trash";
   rml = "trash list";
   rmr = "trash restore";
@@ -35,7 +34,7 @@ in {
   # Replace cat with bat
   cat = "bat --color=always --wrap=never --plain";
 
-  # tar
+  # Archive helpers
   untar = "tar -axvf";
   tarnow = "tar -acf";
 
@@ -48,7 +47,7 @@ in {
   "....." = "cd ../../../..";
 
   # Other
-  exp = "nemo -t $PWD"; # Open nemo EXPlorer in current folder
+  exp = "nemo -t $PWD"; # Open Nemo in the current directory
   mkdir = "mkdir -p";
   wget = "wget -c";
   myip = "curl api.ipify.org";

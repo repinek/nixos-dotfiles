@@ -9,16 +9,16 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  # btrfs flags
-  # subvol   - specify btrfs subvolume, / if none
-  # noatime  - don't update access time
-  # atime    - update access time every read
-  # relatime - update access time only if previous atime is older than the mtime
-  # compress - transparent file compression [LZO / ZSTD / Zlib]. You can also set a compression ratio by doing zstd:[1-19]
-  # discard  - TRIM [async]
-  # ro       - Read Only
+  # Btrfs mount options
+  # subvol   - Select a Btrfs subvolume, defaults to /
+  # noatime  - Do not update access time
+  # atime    - Update access time on every read
+  # relatime - Update access time only when it is older than modification time
+  # compress - Enable transparent compression (LZO, ZSTD, or Zlib), use zstd:[1-19] for a level
+  # discard  - Enable asynchronous TRIM
+  # ro       - Mount read-only
 
-  # Can be discovered using lsblk --fs
+  # Discover filesystem UUIDs with lsblk --fs
 
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
@@ -80,14 +80,14 @@
       options = ["subvol=@home/repinek/Games" "noatime" "compress=zstd"];
     };
 
-    # My second drive
+    # Secondary backup drive
     "/mnt/Old" = {
       device = "/dev/disk/by-uuid/a224ed41-0f38-47b5-baa8-8f318d3a8cfa";
       fsType = "btrfs";
       options = ["subvol=/" "noatime" "compress=zstd"];
     };
 
-    # Used by btrbk to snapshot the source subvolumes
+    # Used by btrbk to snapshot source subvolumes
     "/btrfs" = {
       device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
       fsType = "btrfs";

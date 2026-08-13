@@ -3,7 +3,7 @@ _: {
     idle = {
       pre_action_fade_seconds = 0;
 
-      # lock - 5 minutes, screenoff - 10 minutes, lock and suspend - disabled
+      # Lock after 5 minutes; turn the screen off after 10; suspend is disabled
       behavior_order = ["lock" "screen-off" "lock-and-suspend"];
       behavior = {
         lock = {

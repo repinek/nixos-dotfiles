@@ -1,6 +1,6 @@
 _: {
   wayland.windowManager.hyprland.settings = {
-    # Get theme from noctalia
+    # Load the theme from Noctalia
     source = "~/.config/hypr/noctalia.conf";
 
     general = {

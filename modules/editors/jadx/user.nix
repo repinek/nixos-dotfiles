@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.editors.jadx.user;
 in {
-  options.modules.editors.jadx.user.enable = mkEnableOption "JADX - Dex to Java decompiler";
+  options.modules.editors.jadx.user.enable = mkEnableOption "JADX Dex-to-Java decompiler";
 
   config = mkIf cfg.enable {
     home.packages = [
@@ -15,7 +15,7 @@ in {
     ];
 
     # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/by-name/ja/jadx/package.nix
-    # we need _JAVA_AWT_WM_NONREPARENTING=1 instead GUI will be broken
+    # _JAVA_AWT_WM_NONREPARENTING=1 is required for the GUI to work
     xdg.desktopEntries.jadx = {
       name = "JADX";
       exec = "env _JAVA_AWT_WM_NONREPARENTING=1 jadx-gui %F";

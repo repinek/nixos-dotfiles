@@ -7,7 +7,7 @@ with lib; let
   cfg = config.modules.desktop.ly.system;
 in {
   options.modules.desktop.ly.system = {
-    enable = mkEnableOption "Ly - display manager";
+    enable = mkEnableOption "Ly display manager";
     remove_brightness_keys = mkEnableOption "Remove brightness keys";
   };
 

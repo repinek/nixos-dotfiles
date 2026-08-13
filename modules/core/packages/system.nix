@@ -7,11 +7,11 @@
 with lib; let
   cfg = config.modules.core.packages.system;
 in {
-  # Put system-level packages here:
-  # 1. Needed before user session
+  # Put system-level packages here when they are:
+  # 1. Needed before the user session starts
   # 2. Needed when running as root
-  # 3. Works with hardware
-  # 4. No home-manager module available
+  # 3. Used with hardware
+  # 4. Not available as a Home Manager module
   options.modules.core.packages.system.enable = mkEnableOption "Base system packages";
 
   config = mkIf cfg.enable {
@@ -34,7 +34,7 @@ in {
       rsync
       ffmpeg
 
-      # vim: Remove gvim .desktop
+      # vim: Remove the gvim .desktop entry
       (vim.overrideAttrs (old: {
         postInstall =
           (old.postInstall or "")

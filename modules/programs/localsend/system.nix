@@ -8,7 +8,7 @@ with lib; let
 in {
   options.modules.programs.localsend.system.enable = mkEnableOption "LocalSend";
 
-  # FIXME: why he is white theme
+  # FIXME: Investigate why LocalSend uses a light theme
   config = mkIf cfg.enable {
     programs.localsend = {
       enable = true;

@@ -12,8 +12,8 @@ in {
   config = mkIf cfg.enable {
     programs.vim = {
       enable = true;
-      # We don't need GUI
-      # Use vim instead vim-full, remove gvim .desktop
+      # The GUI is not needed
+      # Use vim instead of vim-full and remove the gvim .desktop entry
       packageConfigurable = pkgs.vim.overrideAttrs (old: {
         postInstall =
           (old.postInstall or "")

@@ -19,9 +19,9 @@ in {
       plus-jakarta-sans
       liberation_ttf
       dejavu_fonts
-      google-sans # from custom pkgs
+      google-sans # From custom packages
 
-      corefonts # Microsoft core fonts - unfree
+      corefonts # Microsoft Core Fonts (unfree)
 
       noto-fonts
       noto-fonts-cjk-sans

@@ -31,7 +31,7 @@ in {
     programs.noctalia = {
       enable = true;
 
-      # Run as systemd service
+      # Run as a systemd service
       systemd.enable = true;
     };
   };

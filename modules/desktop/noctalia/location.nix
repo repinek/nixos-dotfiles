@@ -1,9 +1,9 @@
 _: {
   programs.noctalia.settings = {
     location = {
-      auto_locate = false; # Not used since VPN
+      auto_locate = false; # A VPN makes automatic location unreliable
 
-      # For weather and night light
+      # Used for weather and night light
       address = "Yekaterinburg, Russia";
       latitude = 56.8355;
       longitude = 60.6061;

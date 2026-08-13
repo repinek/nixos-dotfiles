@@ -10,10 +10,10 @@ in {
   options.modules.core.nix.system.enable = mkEnableOption "Nix";
 
   config = mkIf cfg.enable {
-    # Set Nix latest version
+    # Use the latest Nix version
     nix.package = pkgs.nixVersions.latest;
 
-    # Disable channels, use flakes instead
+    # Disable channels and use flakes instead
     nix.settings.experimental-features = ["nix-command" "flakes"];
     nix.channel.enable = false;
 

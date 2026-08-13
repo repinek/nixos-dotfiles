@@ -8,7 +8,7 @@ with lib; let
 in {
   options.modules.cli.fastfetch.user.enable = mkEnableOption "Fastfetch";
 
-  # Noctalia generates the fastfetch config
+  # Noctalia generates the Fastfetch configuration
   config = mkIf cfg.enable {
     programs.fastfetch.enable = true;
   };

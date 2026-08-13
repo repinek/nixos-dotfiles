@@ -1,6 +1,6 @@
 _: {
   programs.noctalia.settings.widget = {
-    # Start
+    # Start section
     clock = {
       format = "{:%d/%m %H:%M:%S}";
       tooltip_format = "{:%H:%M:%S %A, %d %B %Y}";
@@ -17,13 +17,13 @@ _: {
 
     privacy.hide_inactive = true;
 
-    # Center
+    # Center section
     active_window = {
       title_scroll = "on_hover";
       max_length = 600;
     };
 
-    # End
+    # End section
     media = {
       hide_when_no_media = true;
       max_length = 500;

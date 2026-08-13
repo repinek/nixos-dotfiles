@@ -9,7 +9,7 @@ in {
   options.modules.shell.starship.system.enable = mkEnableOption "Starship";
 
   config = mkIf cfg.enable {
-    # NixOS options also applies to root, that's why we use it
+    # NixOS options also apply to root
     programs.starship = {
       enable = true;
       interactiveOnly = true;

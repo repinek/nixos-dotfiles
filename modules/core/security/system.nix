@@ -10,8 +10,8 @@ in {
 
   config = mkIf cfg.enable {
     security = {
-      polkit.enable = true; # For controlling system-wide privileges
-      sudo.keepTerminfo = true; # Keep terminal info while using sudo
+      polkit.enable = true; # Control system-wide privileges
+      sudo.keepTerminfo = true; # Preserve terminal information when using sudo
     };
   };
 }

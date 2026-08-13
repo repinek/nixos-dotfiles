@@ -7,11 +7,11 @@
 with lib; let
   cfg = config.modules.cli.scrcpy.user;
 in {
-  options.modules.cli.scrcpy.user.enable = mkEnableOption "scrcpy - display and control Android devices";
+  options.modules.cli.scrcpy.user.enable = mkEnableOption "scrcpy display and control Android devices";
 
   config = mkIf cfg.enable {
     home.packages = [
-      # We don't need .desktop files for these
+      # Desktop entries are not needed for this package 
       (pkgs.scrcpy.overrideAttrs (old: {
         postInstall =
           (old.postInstall or "")

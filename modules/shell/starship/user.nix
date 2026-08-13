@@ -9,7 +9,7 @@ in {
   options.modules.shell.starship.user.enable = mkEnableOption "Starship";
 
   config = mkIf cfg.enable {
-    # home-manager configuration applies only to the user
+    # Home Manager configuration applies only to this user
     #
     programs.starship = {
       enable = true;

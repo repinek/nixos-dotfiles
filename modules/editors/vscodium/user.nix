@@ -12,7 +12,7 @@ in {
   config = mkIf cfg.enable {
     programs.vscodium = {
       enable = true;
-      # package = pkgs.vscodium-fhs; # Use wrapped variant in FHS environment UPD: I don't think we need it rn
+      # package = pkgs.vscodium-fhs; # Use the wrapped variant in an FHS environment if needed
       mutableExtensionsDir = true;
 
       profiles.default = {
@@ -42,7 +42,7 @@ in {
           "workbench.colorTheme" = "Catppuccin Mocha";
           "workbench.startupEditor" = "none";
 
-          # QoL
+          # Quality of life
           "editor.minimap.enabled" = false;
           "editor.linkedEditing" = true;
           "editor.lineNumbers" = "relative"; # Since we are using VIM plugin
@@ -75,7 +75,7 @@ in {
           "chat.agent.enabled" = false;
           "terminal.integrated.inheritEnv" = false;
 
-          # Exclude dependencies and build outputs (Idk if these makes any sense)
+          # Exclude dependencies and build outputs
           "search.exclude" = {
             "**/node_modules" = true;
             "**/dist" = true;
@@ -96,14 +96,14 @@ in {
           "vim.hlsearch" = true;
 
           "vim.insertModeKeyBindings" = [
-            # jj to exit insert mode
+            # Use jj to exit insert mode
             {
               "before" = ["j" "j"];
               "after" = ["<Esc>"];
             }
           ];
 
-          # use jkl; instead hjkl
+          # Use jkl; instead of hjkl
           "vim.normalModeKeyBindingsNonRecursive" = [
             {
               "before" = ["j"];

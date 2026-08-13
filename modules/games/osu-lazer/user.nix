@@ -11,7 +11,7 @@ in {
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      # We are playing DT :fire:
+      # Play with Double Time
       (gammastep.overrideAttrs (old: {
         postInstall =
           (old.postInstall or "")
@@ -22,7 +22,7 @@ in {
       osu-lazer-bin
     ];
 
-    # Audio buffer settings stored in hardware/audio
+    # Audio buffer settings are defined in hardware/audio
     home.sessionVariables = {
       OSU_SDL3 = "1";
       SDL_VIDEO_DOUBLE_BUFFER = "1";

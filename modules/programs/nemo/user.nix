@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.modules.programs.nemo.user;
 in {
-  options.modules.programs.nemo.user.enable = mkEnableOption "Nemo - file manager";
+  options.modules.programs.nemo.user.enable = mkEnableOption "Nemo file manager";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
@@ -16,7 +16,7 @@ in {
       nemo-preview # Previews on SPACE
     ];
 
-    # FIXME: add bookmarks and mime types
+    # FIXME: Add bookmarks and MIME types
 
     dconf.settings."org/nemo/preferences" = {
       # show-hidden-files = true;

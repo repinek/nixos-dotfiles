@@ -7,8 +7,8 @@
 with lib; let
   cfg = config.modules.desktop.theme.user;
 in {
-  # FIXME: maybe move something from noctalia here??
-  # It's looks kinda messy idk
+  # FIXME: Consider moving shared settings from Noctalia here
+  # The current split between theme and Noctalia settings is unclear
   options.modules.desktop.theme.user.enable = mkEnableOption "Theme";
 
   config = mkIf cfg.enable {
@@ -17,7 +17,7 @@ in {
       qt6Packages.qt6ct
     ];
 
-    # Configure GTK 3 / 4
+    # Configure GTK 3 and GTK 4
     gtk = {
       enable = true;
       gtk3.extraConfig = {gtk-application-prefer-dark-theme = true;};
@@ -29,13 +29,13 @@ in {
       gtk-theme = "adw-gtk3";
     };
 
-    # Configure QT
+    # Configure Qt
     qt = {
       enable = true;
       platformTheme.name = "qtct";
     };
 
-    # Use noctalia color scheme
+    # Use the Noctalia color scheme
     xdg.configFile = {
       # FIXME: Broken
       "qt5ct/qt5ct.conf".text = ''
@@ -51,7 +51,7 @@ in {
       '';
     };
 
-    # Setup cursor
+    # Configure the cursor
     home.pointerCursor = {
       enable = true;
       gtk.enable = true;

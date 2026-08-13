@@ -6,10 +6,10 @@
 with lib; let
   cfg = config.modules.editors.codex.user;
 in {
-  options.modules.editors.codex.user.enable = mkEnableOption "codex - coding agent";
+  options.modules.editors.codex.user.enable = mkEnableOption "Codex coding agent";
 
   config = mkIf cfg.enable {
-    # No settings here because config.toml must stay mutable for directory approvals and other stuff
+    # Keep config.toml mutable for directory approvals and local settings
     programs.codex.enable = true;
   };
 }

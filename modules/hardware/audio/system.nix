@@ -11,7 +11,7 @@ in {
     audio_buffer = mkOption {
       type = types.ints.unsigned;
       default = 1024;
-      description = "Audio buffer size for pipewire and SDL";
+      description = "Audio buffer size for PipeWire and SDL";
     };
   };
 
@@ -19,7 +19,7 @@ in {
     # Mic
     security.rtkit.enable = true;
 
-    # Pipewire
+    # PipeWire
     services.pipewire = {
       enable = true;
       alsa.enable = true;

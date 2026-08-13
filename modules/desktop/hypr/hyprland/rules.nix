@@ -9,7 +9,7 @@ _: {
 
       "match:class osu!, workspace 3 silent"
 
-      # Run OBS Studio silently on magic workspace, set float, size 1200 700 and center it
+      # Run OBS Studio silently on the magic workspace; float, size, and center it
       "match:class com.obsproject.Studio, workspace special:magic silent"
       "match:class com.obsproject.Studio, float true"
       "match:class com.obsproject.Studio, size 1200 700"

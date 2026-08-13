@@ -3,12 +3,12 @@ _: {
     "$mainMod" = "SUPER"; # Set win as mainMod
 
     bind = [
-      # Open apps with mainMod + key
+      # Open applications with mainMod + key
       "$mainMod, Q, exec, $terminal"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, B, exec, $browser"
 
-      # Manage window with mainMod + key
+      # Manage windows with mainMod + key
       "$mainMod, C, killactive"
       "$mainMod, F, fullscreen"
       "$mainMod, Y, pin"
@@ -16,7 +16,7 @@ _: {
       "$mainMod, V, exec, toggle-float 1200 700" # Using custom script
       "$mainMod, J, layoutmsg, togglesplit"
 
-      # Quit hyprland with mainMod + M
+      # Quit Hyprland with mainMod + M
       "$mainMod, M, exit"
 
       # Noctalia IPC with mainMod + key
@@ -43,7 +43,7 @@ _: {
       "$mainMod, 8, workspace, 8"
       "$mainMod, 9, workspace, 9"
 
-      # Move active window to a workspace and move to that workspace with mainMod + SHIFT + [1/9]
+      # Move the active window to a workspace and follow it with mainMod + Shift + [1/9]
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
       "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -54,7 +54,7 @@ _: {
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
 
-      # Scroll through existing workspaces with mainMod + scroll whell [up/down]
+      # Scroll through existing workspaces with mainMod + scroll wheel [up/down]
       "$mainMod, mouse_up,   workspace, e-1"
       "$mainMod, mouse_down, workspace, e+1"
 
@@ -64,7 +64,7 @@ _: {
       "$mainMod, up,    movefocus, u"
       "$mainMod, down,  movefocus, d"
 
-      # Move window with mainMod + SHIFT + arrow keys
+      # Move windows with mainMod + Shift + arrow keys
       "$mainMod SHIFT, left,  movewindow, l"
       "$mainMod SHIFT, right, movewindow, r"
       "$mainMod SHIFT, up,    movewindow, u"
@@ -75,14 +75,14 @@ _: {
       "$mainMod SHIFT, S, movetoworkspace,        special:magic"
     ];
 
-    # Bind Mouse
+    # Mouse bindings
     bindm = [
-      # Move/resize windows with mainMod + LMB/RMB and dragging
+      # Move or resize windows with mainMod + LMB/RMB and dragging
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
     ];
 
-    # Bind Locked
+    # Locked bindings
     bindl = [
       # Noctalia OSD
       ", XF86AudioRaiseVolume, exec, noctalia msg volume-up"

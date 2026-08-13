@@ -9,8 +9,8 @@ with lib; let
 in {
   options.modules.desktop.hypr.user = {
     enable = mkEnableOption "Hyprland";
-    hyprshot.enable = mkEnableOption "Hyprshot - screenshot tool";
-    hyprpicker.enable = mkEnableOption "Hyprpicker - color picker";
+    hyprshot.enable = mkEnableOption "Hyprshot screenshot tool";
+    hyprpicker.enable = mkEnableOption "Hyprpicker color picker";
     monitors = mkOption {
       type = types.listOf types.str;
       default = [];

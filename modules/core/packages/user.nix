@@ -7,21 +7,21 @@
 with lib; let
   cfg = config.modules.core.packages.user;
 in {
-  # Put user-level packages here:
-  # 1. Have home-manager
-  # 2. CLI replacements
+  # Put user-level packages here when they:
+  # 1. Have a Home Manager module
+  # 2. Replace common CLI tools
   options.modules.core.packages.user.enable = mkEnableOption "Base user packages";
 
   config = mkIf cfg.enable {
-    # Replaces aliased in fish
+    # Replaces commands aliased in Fish
     home.packages = with pkgs; [
-      trashy # Replace rm, there's no home-manager option
+      trashy # Replaces rm; no Home Manager module is available
       libnotify
       nixd # Nix LSP
     ];
 
     programs = {
-      # Replacements
+      # Command replacements
       bat.enable = true; # cat
       eza.enable = true; # ls
       ripgrep.enable = true; # grep

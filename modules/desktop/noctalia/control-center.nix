@@ -1,10 +1,10 @@
 _: {
   programs.noctalia.settings = {
     control_center = {
-      sidebar = "full"; # Maybe for laptop don't enable it, make option here
-      width = 800; # Same here
+      sidebar = "full"; # Consider exposing this as an option for laptops
+      width = 800; # Consider exposing this as an option for laptops
 
-      # We can have only 6
+      # Noctalia supports at most six shortcuts
       shortcuts = [
         {type = "caffeine";}
         {type = "nightlight";}

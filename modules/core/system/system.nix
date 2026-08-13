@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.modules.core.system;
 in {
-  options.modules.core.system.enable = mkEnableOption "System - locale and default settings";
+  options.modules.core.system.enable = mkEnableOption "System locale and default settings";
 
   config = mkIf cfg.enable {
     # Locales
@@ -35,8 +35,8 @@ in {
 
     programs = {
       dconf.enable = true; # Required for GTK apps
-      fish.enable = true; # Use fish always
-      nix-ld.enable = true; # Run unpatched dynamic libs on NixOS
+      fish.enable = true; # Always use Fish
+      nix-ld.enable = true; # Run unpatched dynamically linked programs on NixOS
     };
 
     gtk.iconCache.enable = true;

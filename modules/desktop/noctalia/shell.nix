@@ -4,9 +4,8 @@
   programs.noctalia.settings.shell = {
     avatar_path = "${config.xdg.configHome}/noctalia/avatar.png";
 
-    # We are using systemd service, so enable it
-    # Otherwise any apps launched by Noctalia
-    # Will be terminated when the service restarts
+    # Enable the systemd service so applications launched by Noctalia are not
+    # terminated when the service restarts
     launch_apps_as_systemd_services = true;
 
     screen_time_enabled = true; # I was used niri-screen-time before (vibecoded as I know, btw)

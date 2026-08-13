@@ -11,10 +11,9 @@ in {
     input_path = "templates/nix-wallpaper.svg";
     output_path = "wallpaper/noctalia-wallpaper.svg";
 
-    # Generate unique .png from template .svg on each templates-apply
-    # wallpaper-set with the same path skips reload
-    # So we append a timestamp to force a unique path every time
-    # Keep last 2 files so latest.png always has a valid target on startup
+    # Generate a unique PNG from the SVG template on each templates-apply
+    # wallpaper-set skips reloads when the path is unchanged, so append a timestamp
+    # Keep the last two files so latest.png always has a valid startup target
     post_hook = ''
       stamp=$(date +%s%N) && \
       rsvg-convert "${cfgDir}/noctalia-wallpaper.svg" -o "${cfgDir}/generated-wallpaper-$stamp.png" && \

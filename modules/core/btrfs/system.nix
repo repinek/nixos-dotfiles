@@ -8,16 +8,16 @@ with lib; let
   cfg = config.modules.core.btrfs.system;
 in {
   options.modules.core.btrfs.system = {
-    enable = mkEnableOption "Btrfs - snapshots and maintenance tools";
+    enable = mkEnableOption "Btrfs snapshots and maintenance tools";
     scrub.enable = mkEnableOption "Btrfs scrub";
     backup.enable = mkEnableOption "Btrfs and imperative backups";
   };
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      btrfs-progs # Utilities for btrfs
-      btrfs-list # tree-style view of btrfs things
-      btrfs-assistant # GUI management tool
+      btrfs-progs # Btrfs utilities
+      btrfs-list # Tree-style Btrfs subvolume viewer
+      btrfs-assistant # Graphical Btrfs management tool
     ];
 
     services.btrfs.autoScrub = mkIf cfg.scrub.enable {
@@ -33,7 +33,7 @@ in {
       "d /mnt/Old/backups/imperative 0700 root root -"
     ];
 
-    # Daily backups on /mnt/Old, store history (snapshots) for 7d.
+    # Create daily backups on /mnt/Old and retain snapshots for seven days
     services.btrbk.instances = mkIf cfg.backup.enable {
       local = {
         onCalendar = "daily";

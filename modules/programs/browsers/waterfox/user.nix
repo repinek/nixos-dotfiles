@@ -10,7 +10,7 @@ in {
   options.modules.programs.browsers.waterfox.user.enable = mkEnableOption "Waterfox";
 
   config = mkIf cfg.enable {
-    # 3-rd-party flake, be aware
+    # Third-party flake
     home.packages = [inputs.waterfox-bin.packages.x86_64-linux.waterfox-bin];
   };
 }

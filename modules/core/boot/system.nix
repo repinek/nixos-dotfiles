@@ -30,19 +30,19 @@ in {
   config = mkIf cfg.enable {
     boot = {
       kernelPackages = pkgs.linuxPackages_latest;
-      tmp.cleanOnBoot = true; # clear /tmp on every boot
+      tmp.cleanOnBoot = true; # Clear /tmp on every boot
 
       loader = {
         efi = {
           efiSysMountPoint = "/boot";
-          canTouchEfiVariables = true; # Auto manage EFI boot entries
+          canTouchEfiVariables = true; # Manage EFI boot entries automatically
         };
 
         grub = mkIf cfg.grub.enable {
           enable = true;
           device = cfg.grub.device;
           efiSupport = cfg.grub.efiSupport;
-          useOSProber = cfg.grub.useOSProber; # Find other OSes
+          useOSProber = cfg.grub.useOSProber; # Detect other operating systems
           configurationLimit = 10;
         };
       };
