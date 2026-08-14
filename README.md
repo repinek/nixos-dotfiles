@@ -67,7 +67,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, and SSH.
     See [core packages](modules/core/packages/), [CLI modules](modules/cli/), and [game modules](modules/games/).
 
-\* - `unfree` or proprietary software
+\* - `unfree` or proprietary software  
 \** - open source but has proprietary pieces (e.g. anticheat in osu!lazer)
 
 ## Structure
