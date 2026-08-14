@@ -11,7 +11,7 @@ in {
 
   config = mkIf cfg.enable {
     home.packages = [
-      # Desktop entries are not needed for this package 
+      # Desktop entries are not needed for this package
       (pkgs.scrcpy.overrideAttrs (old: {
         postInstall =
           (old.postInstall or "")
