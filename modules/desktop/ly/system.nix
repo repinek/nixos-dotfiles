@@ -23,6 +23,7 @@ in {
           full_color = true;
           animation = "dur_file";
           dur_file_path = "/etc/ly/blackhole-smooth-240x67.dur";
+          session_log = null;
         }
         (mkIf cfg.remove_brightness_keys {
           brightness_up_key = null;
