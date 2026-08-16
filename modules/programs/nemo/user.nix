@@ -28,6 +28,11 @@ in {
     '';
 
     dconf.settings = {
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = "alacritty";
+        exec-arg = "-e";
+      };
+
       "org/nemo/list-view".default-zoom-level = "standard";
 
       "org/nemo/plugins" = {
