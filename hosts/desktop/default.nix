@@ -99,10 +99,19 @@
     KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f6", MODE="0660", GROUP="users", TAG+="uaccess"
   '';
 
+  # Networking 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
-  # Fixes Throne TUN UDP traffic
-  networking.firewall.checkReversePath = "loose";
+  networking.firewall.checkReversePath = "loose"; # Fixes Throne TUN UDP traffic
+
+  services.resolved = {
+    enable = true;
+    settings.Resolve = {
+      DNS = "194.242.2.4#base.dns.mullvad.net";
+      DNSOverTLS = true;
+      Domains = "~.";
+    };
+  };
 
   system.stateVersion = "26.05";
 }
