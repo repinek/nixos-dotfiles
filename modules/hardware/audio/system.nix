@@ -30,7 +30,6 @@ in {
 
     environment.sessionVariables = {
       SDL_AUDIODRIVER = "pipewire";
-      SDL_AUDIO_DEVICE_SAMPLE_FRAMES = toString cfg.audio_buffer;
       PIPEWIRE_LATENCY = "${toString cfg.audio_buffer}/48000";
     };
   };
