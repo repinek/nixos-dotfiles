@@ -23,6 +23,7 @@
     ../../../modules/programs/filelight/user.nix
     ../../../modules/programs/gnome-disk-utility/user.nix
     ../../../modules/programs/krita/user.nix
+    ../../../modules/programs/libreoffice/user.nix
     ../../../modules/programs/losslesscut/user.nix
     ../../../modules/programs/messengers/element-desktop/user.nix
     ../../../modules/programs/messengers/telegram-desktop/user.nix
@@ -72,6 +73,7 @@
     filelight.user.enable = true;
     gnome-disk-utility.user.enable = true;
     krita.user.enable = true;
+    libreoffice.user.enable = true;
     losslesscut.user.enable = true;
     messengers = {
       element-desktop.user.enable = true;
