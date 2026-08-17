@@ -20,6 +20,7 @@
     ../../../modules/programs/audacity/user.nix
     ../../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../../modules/programs/browsers/waterfox/user.nix
+    ../../../modules/programs/filelight/user.nix
     ../../../modules/programs/gnome-disk-utility/user.nix
     ../../../modules/programs/krita/user.nix
     ../../../modules/programs/losslesscut/user.nix
@@ -68,6 +69,7 @@
       ungoogled-chromium.user.enable = true;
       waterfox.user.enable = true;
     };
+    filelight.user.enable = true;
     gnome-disk-utility.user.enable = true;
     krita.user.enable = true;
     losslesscut.user.enable = true;

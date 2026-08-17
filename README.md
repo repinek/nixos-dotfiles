@@ -62,7 +62,8 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility)
     - [Proton Authenticator](https://github.com/ProtonMail/WebClients/)
     - [Krita](https://github.com/kde/krita)
-    - _TODO: logseq, filezilla, office, filelight_
+    - [Filelight](https://github.com/kde/filelight)
+    - _TODO: logseq, filezilla, office_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
     - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, and SSH.
