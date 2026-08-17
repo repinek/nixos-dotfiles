@@ -11,14 +11,15 @@ in {
 
   config = mkIf cfg.enable {
     home.packages = [
-      (pkgs.krita.overrideAttrs (old: {
-        nativeBuildInputs = (old.nativeBuildInputs or []) ++ [pkgs.makeWrapper];
-        postFixup =
-          (old.postFixup or "")
-          + ''
-            wrapProgram $out/bin/krita --set QT_QPA_PLATFORM wayland
-          '';
-      }))
+      pkgs.krita
+      # (pkgs.krita.overrideAttrs (old: {
+      #   nativeBuildInputs = (old.nativeBuildInputs or []) ++ [pkgs.makeWrapper];
+      #   postFixup =
+      #     (old.postFixup or "")
+      #     + ''
+      #       wrapProgram $out/bin/krita --set QT_QPA_PLATFORM wayland
+      #     '';
+      # }))
     ];
   };
 }
