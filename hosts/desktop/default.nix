@@ -99,7 +99,7 @@
     KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f6", MODE="0660", GROUP="users", TAG+="uaccess"
   '';
 
-  # Networking 
+  # Networking
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose"; # Fixes Throne TUN UDP traffic

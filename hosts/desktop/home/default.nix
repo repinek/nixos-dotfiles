@@ -30,6 +30,7 @@
     ../../../modules/programs/messengers/vesktop/user.nix
     ../../../modules/programs/nemo/user.nix
     ../../../modules/programs/obs-studio/user.nix
+    ../../../modules/programs/obsidian/user.nix
     ../../../modules/programs/proton-authenticator/user.nix
 
     ../../../modules/services/gnome-keyring/user.nix
@@ -82,6 +83,7 @@
     };
     nemo.user.enable = true;
     obs-studio.user.enable = true;
+    obsidian.user.enable = true;
     proton-authenticator.user.enable = true;
   };
 
