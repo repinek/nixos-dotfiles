@@ -15,6 +15,7 @@
 
     ../../../modules/games/osu-lazer/user.nix
     ../../../modules/games/steamguard-cli/user.nix
+    ../../../modules/games/touhou/user.nix
 
     ../../../modules/programs/alacritty/user.nix
     ../../../modules/programs/audacity/user.nix
@@ -62,6 +63,7 @@
   modules.games = {
     osu-lazer.user.enable = true;
     steamguard-cli.user.enable = true;
+    touhou.user.enable = true;
   };
 
   modules.programs = {

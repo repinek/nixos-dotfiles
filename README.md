@@ -54,6 +54,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
     - [Steam](https://store.steampowered.com/about/)*
+    - [Touhou wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper)
 - **Other Utilities with GUI**:
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [Local Send](https://github.com/localsend/localsend)
