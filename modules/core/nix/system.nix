@@ -22,12 +22,5 @@ in {
     nix.settings.trusted-public-keys = ["noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="];
 
     nixpkgs.config.allowUnfree = mkForce true;
-
-    # Nix garbage collector
-    nix.gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
   };
 }

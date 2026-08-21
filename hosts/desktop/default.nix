@@ -25,7 +25,10 @@
     ../../modules/programs/localsend/system.nix
     ../../modules/programs/throne/system.nix
 
+    ../../modules/services/backup/system.nix
+    ../../modules/services/btrfs-scrub/system.nix
     ../../modules/services/gnome-keyring/system.nix
+    ../../modules/services/nix-gc/system.nix
 
     ../../modules/shell/fish/system.nix
     ../../modules/shell/starship/system.nix
@@ -41,11 +44,7 @@
       enable = true;
       grub.enable = true;
     };
-    btrfs.system = {
-      enable = true;
-      scrub.enable = true;
-      backup.enable = true;
-    };
+    btrfs.system.enable = true;
     fonts.system.enable = true;
     nix.system.enable = true;
     packages.system.enable = true;
@@ -79,7 +78,12 @@
     throne.system.enable = true;
   };
 
-  modules.services.gnome-keyring.system.enable = true;
+  modules.services = {
+    backup.system.enable = true;
+    btrfs-scrub.system.enable = true;
+    gnome-keyring.system.enable = true;
+    nix-gc.system.enable = true;
+  };
 
   modules.shell = {
     fish.system.enable = true;
