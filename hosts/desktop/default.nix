@@ -25,13 +25,13 @@
     ../../modules/programs/localsend/system.nix
     ../../modules/programs/throne/system.nix
 
-    ../../modules/services/backup/system.nix
-    ../../modules/services/btrfs-scrub/system.nix
-    ../../modules/services/gnome-keyring/system.nix
-    ../../modules/services/nix-gc/system.nix
-
     ../../modules/shell/fish/system.nix
     ../../modules/shell/starship/system.nix
+
+    ../../services/backup/system.nix
+    ../../services/btrfs-scrub/system.nix
+    ../../services/gnome-keyring/system.nix
+    ../../services/nix-gc/system.nix
   ];
 
   modules.cli = {
@@ -78,16 +78,16 @@
     throne.system.enable = true;
   };
 
-  modules.services = {
+  modules.shell = {
+    fish.system.enable = true;
+    starship.system.enable = true;
+  };
+
+  services = {
     backup.system.enable = true;
     btrfs-scrub.system.enable = true;
     gnome-keyring.system.enable = true;
     nix-gc.system.enable = true;
-  };
-
-  modules.shell = {
-    fish.system.enable = true;
-    starship.system.enable = true;
   };
 
   # HID devices

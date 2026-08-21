@@ -4,9 +4,9 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.services.nix-gc.system;
+  cfg = config.services.nix-gc.system;
 in {
-  options.modules.services.nix-gc.system.enable = mkEnableOption "Nix garbage collection and store optimisation";
+  options.services.nix-gc.system.enable = mkEnableOption "Nix garbage collection and store optimisation";
 
   config = mkIf cfg.enable {
     nix.gc = {

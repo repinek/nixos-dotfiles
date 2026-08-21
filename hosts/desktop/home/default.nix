@@ -34,7 +34,7 @@
     ../../../modules/programs/obsidian/user.nix
     ../../../modules/programs/proton-authenticator/user.nix
 
-    ../../../modules/services/gnome-keyring/user.nix
+    ../../../services/gnome-keyring/user.nix
   ];
 
   modules.cli.scrcpy.user.enable = true;
@@ -89,5 +89,5 @@
     proton-authenticator.user.enable = true;
   };
 
-  modules.services.gnome-keyring.user.enable = true;
+  services.gnome-keyring.user.enable = true;
 }

@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.services.backup.system;
+  cfg = config.services.backup.system;
 in {
-  options.modules.services.backup.system.enable = mkEnableOption "Btrfs and imperative backups";
+  options.services.backup.system.enable = mkEnableOption "Btrfs and imperative backups";
 
   config = mkIf cfg.enable {
     systemd.tmpfiles.rules = [
