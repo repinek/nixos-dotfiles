@@ -37,7 +37,7 @@ in {
         };
       };
 
-      vaults."Personal/Obsidian/repinek".settings = {};
+      vaults."Personal/Obsidian".settings = {};
     };
   };
 }
