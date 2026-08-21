@@ -32,6 +32,7 @@
     ../../services/btrfs-scrub/system.nix
     ../../services/gnome-keyring/system.nix
     ../../services/nix-gc/system.nix
+    ../../services/syncthing/system.nix
   ];
 
   modules.cli = {
@@ -88,34 +89,66 @@
     btrfs-scrub.system.enable = true;
     gnome-keyring.system.enable = true;
     nix-gc.system.enable = true;
+    syncthing = {
+      system.enable = true;
+      overrideDevices = true;
+      overrideFolders = true;
+
+      settings = {
+        devices.android = {
+          id = "24MBTHJ-N23DFEZ-GVAP5FD-5B7ISLU-G4MJSEH-Y3LXWA4-6RWH2AW-3YXJEQM";
+          name = "OnePlus 13 (PJZ110)";
+        };
+
+        folders.obsidian = {
+          id = "nejof-v2ivg";
+          label = "Obsidian Vault";
+          path = "~/Personal/Obsidian";
+          type = "sendreceive";
+          devices = ["android"];
+          ignorePerms = true;
+
+          versioning = {
+            type = "trashcan";
+            params.cleanoutDays = "14";
+          };
+
+          ignorePatterns = [
+            ".obsidian"
+            ".trash"
+          ];
+        };
+      };
+    };
+
+    # HID devices
+    udev.extraRules = ''
+      # Identified with lsusb from usbutils
+      # 352d:2383 Drunkdeer A75 Pro ANSI
+      KERNEL=="hidraw*", ATTRS{idVendor}=="352d", ATTRS{idProduct}=="2383", MODE="0660", GROUP="users", TAG+="uaccess"
+
+      # 3554:f5f7 Compx SCYROX V8 Dongle
+      KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f7", MODE="0660", GROUP="users", TAG+="uaccess"
+
+      # 3554:f5f6 Compx SCYROX V8
+      KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f6", MODE="0660", GROUP="users", TAG+="uaccess"
+    '';
+
+    # DNS
+    resolved = {
+      enable = true;
+      settings.Resolve = {
+        DNS = "194.242.2.4#base.dns.mullvad.net";
+        DNSOverTLS = true;
+        Domains = "~.";
+      };
+    };
   };
-
-  # HID devices
-  services.udev.extraRules = ''
-    # Identified with lsusb from usbutils
-    # 352d:2383 Drunkdeer A75 Pro ANSI
-    KERNEL=="hidraw*", ATTRS{idVendor}=="352d", ATTRS{idProduct}=="2383", MODE="0660", GROUP="users", TAG+="uaccess"
-
-    # 3554:f5f7 Compx SCYROX V8 Dongle
-    KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f7", MODE="0660", GROUP="users", TAG+="uaccess"
-
-    # 3554:f5f6 Compx SCYROX V8
-    KERNEL=="hidraw*", ATTRS{idVendor}=="3554", ATTRS{idProduct}=="f5f6", MODE="0660", GROUP="users", TAG+="uaccess"
-  '';
 
   # Networking
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose"; # Fixes Throne TUN UDP traffic
-
-  services.resolved = {
-    enable = true;
-    settings.Resolve = {
-      DNS = "194.242.2.4#base.dns.mullvad.net";
-      DNSOverTLS = true;
-      Domains = "~.";
-    };
-  };
 
   system.stateVersion = "26.05";
 }
