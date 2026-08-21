@@ -24,10 +24,8 @@ in {
 
         hotkeys = {
           "markdown:add-metadata-property" = [];
-          "editor:toggle-italics" = [];
           "editor:toggle-comments" = [];
           "editor:toggle-checklist-status" = [];
-          "editor:toggle-bold" = [];
           "editor:open-search" = [];
           "editor:save-file" = [];
           "switcher:open" = [];
