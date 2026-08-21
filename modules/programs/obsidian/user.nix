@@ -12,16 +12,34 @@ in {
     programs.obsidian = {
       enable = true;
 
-      # vaults.repinek.settings = {
-      #   app = {
-      #     vimMode = true;
-      #   };
+      defaultSettings = {
+        app = {
+          vimMode = true; # :q!
+          showLineNumber = true;
+          alwaysUpdateLinks = true;
+          attachmentFolderPath = ".attachments";
+        };
 
-      #   hotkeys = {
-      #     "markdown:add-metadata-property" = [];
-      #     "workspace:close-window" = [];
-      #   };
-      # };
+        appearance.enabledCssSnippets = ["noctalia"];
+
+        hotkeys = {
+          "markdown:add-metadata-property" = [];
+          "editor:toggle-italics" = [];
+          "editor:toggle-comments" = [];
+          "editor:toggle-checklist-status" = [];
+          "editor:toggle-bold" = [];
+          "editor:open-search" = [];
+          "editor:save-file" = [];
+          "switcher:open" = [];
+          "editor:open-link-in-new-window" = [];
+          "app:open-help" = [];
+          "app:go-back" = [];
+          "app:go-forward" = [];
+          "editor:insert-link" = [];
+        };
+      };
+
+      vaults."Personal/Obsidian/repinek".settings = {};
     };
   };
 }
