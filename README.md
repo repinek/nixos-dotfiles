@@ -5,6 +5,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - [Screenshots](#screenshots)
 - [Features](#features-and-main-packages)
     - [Programs](#programs)
+- [Structure](#structure)
 - [Usage](#usage)
 - [TODO](#todo)
 - [License](#license)
@@ -23,7 +24,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - Useful [aliases](modules/shell/fish/fish-aliases.nix)
 - Ergonomic [keybindings](modules/desktop/hypr/hyprland/keybinds.nix) for Hyprland
 - Own [packages](pkgs/)
-- Daily incremental [Btrfs backups](modules/core/btrfs/system.nix) with seven-day retention and monthly integrity scrubs
+- Daily incremental [Btrfs backups](services/backup/) with seven-day retention and monthly integrity [scrubs](services/btrfs-scrub/system.nix)
 
 ### Programs
 - **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
@@ -54,10 +55,10 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
     - [Steam](https://store.steampowered.com/about/)*
-    - [Touhou wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper)
+    - [Touhou thcrap wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper) (uses [thcrap](https://github.com/thpatch/thcrap), [vpatch](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications#Vsync_Patches)* and [thprac](https://github.com/touhouworldcup/thprac))
 - **Other Utilities with GUI**:
     - [OBS Studio](https://github.com/obsproject/obs-studio)
-    - [Local Send](https://github.com/localsend/localsend)
+    - [LocalSend](https://github.com/localsend/localsend)
     - [LosslessCut](https://github.com/mifi/lossless-cut)
     - [Audacity](https://github.com/audacity/audacity)
     - [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility)
@@ -71,6 +72,12 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Other CLI Utilities**:
     - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, and SSH.
     See [core packages](modules/core/packages/), [CLI modules](modules/cli/), and [game modules](modules/games/).
+- **Services**: 
+    - [Syncthing](https://github.com/syncthing/syncthing) (for Obsidian sync)
+    - [GNOME Keyring](https://gitlab.gnome.org/GNOME/gnome-keyring)
+    - Daily [btrbk](https://github.com/digint/btrbk) and incremental rsync backups 
+    - Montly btrfs scrub
+    - Automatic Nix garbage collection, store optimisation and pruning of old generations
 
 \* - `unfree` or proprietary software  
 \** - open source but has proprietary pieces (e.g. anticheat in osu!lazer)
@@ -109,7 +116,6 @@ nixos-dotfiles
 │   │   ├── audio
 │   │   └── nvidia
 │   ├── programs
-│   ├── services
 │   └── shell
 │       └── fish
 ├── pkgs                    # Custom packages (Standalone flake)
@@ -118,10 +124,11 @@ nixos-dotfiles
 │   ├── ida-pro-mcp
 │   ├── flake.nix
 │   └── README.md
+├── services                # Reusable services
 ├── users                   # per-user configuration
 │   └── repinek
-│       ├── home.nix        # Home Manager options for this user (user.nix files only)
-│       └── system.nix      # NixOS options for this user
+│       ├── home.nix        # Home Manager options for this user (imports user.nix files only)
+│       └── system.nix      # NixOS options for this user (imports system.nix files only)
 └── flake.nix
 ```
 
