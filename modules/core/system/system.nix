@@ -11,12 +11,12 @@ in {
   config = mkIf cfg.enable {
     # Locales
     i18n = {
-      defaultLocale = "en_GB.UTF-8";
-      extraLocales = ["ru_RU.UTF-8/UTF-8"];
+      defaultLocale = "uk_UA.UTF-8";
+      extraLocales = ["ru_RU.UTF-8/UTF-8" "en_GB.UTF-8/UTF-8"];
       extraLocaleSettings = {
         LC_ADDRESS = "ru_RU.UTF-8";
         LC_MEASUREMENT = "ru_RU.UTF-8";
-        LC_MESSAGES = "en_GB.UTF-8";
+        LC_MESSAGES = "uk_UA.UTF-8";
         LC_MONETARY = "ru_RU.UTF-8";
         LC_NAME = "ru_RU.UTF-8";
         LC_NUMERIC = "ru_RU.UTF-8";

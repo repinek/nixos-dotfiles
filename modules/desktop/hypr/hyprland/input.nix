@@ -1,7 +1,7 @@
 _: {
   wayland.windowManager.hyprland.settings.input = {
     # Switch the US/RU layout with Shift + Alt
-    kb_layout = "us,ru";
+    kb_layout = "us,ru,ua";
     kb_options = "grp:alt_shift_toggle";
 
     follow_mouse = 1;
