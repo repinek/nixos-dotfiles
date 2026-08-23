@@ -67,6 +67,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [Filelight](https://github.com/kde/filelight)
     - [LibreOffice](https://github/LibreOffice/core)
     - [Obsidian](https://obsidian.md)*
+    - [Anki](https://github.com/ankitects/anki)
     - _TODO: filezilla_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
