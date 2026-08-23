@@ -81,6 +81,26 @@
         "type": "github"
       }
     },
+    "osu-lazer": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787497084,
+        "narHash": "sha256-ogOQFFCrmSExK65ThhW+F6l9QCFptDbTbDKzOpGAVHE=",
+        "owner": "repinek",
+        "repo": "osu-lazer-flake",
+        "rev": "33ca830a955abdb4ef19e67095c2436217829017",
+        "type": "github"
+      },
+      "original": {
+        "owner": "repinek",
+        "repo": "osu-lazer-flake",
+        "type": "github"
+      }
+    },
     "repinek-pkgs": {
       "inputs": {
         "nixpkgs": "nixpkgs_3"
@@ -100,6 +120,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "noctalia": "noctalia",
+        "osu-lazer": "osu-lazer",
         "repinek-pkgs": "repinek-pkgs",
         "waterfox-bin": "waterfox-bin"
       }

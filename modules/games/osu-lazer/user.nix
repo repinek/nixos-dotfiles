@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 with lib; let
@@ -10,16 +11,18 @@ in {
   options.modules.games.osu-lazer.user.enable = mkEnableOption "osu!lazer";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
+    home.packages = [
       # Play with Double Time
-      (gammastep.overrideAttrs (old: {
+      (pkgs.gammastep.overrideAttrs (old: {
         postInstall =
           (old.postInstall or "")
           + ''
             rm -f $out/share/applications/gammastep-indicator.desktop
           '';
       }))
-      osu-lazer-bin
+      (inputs.osu-lazer.packages.x86_64-linux.osu-lazer-tachyon-bin.override {
+        nativeWayland = true;
+      })
     ];
 
     # Audio buffer settings are defined in hardware/audio

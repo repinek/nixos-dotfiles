@@ -33,7 +33,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Terminal**: [Alacritty](https://github.com/alacritty/alacritty)  
 - **Shell**: [fish](https://github.com/fish-shell/fish-shell)
 - **Browsers**:
-    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _(third-party flake)_
+    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _([third-party flake](https://github.com/Hythera/nix-waterfox))_
     - [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
 - **Messengers**:  
     - [Telegram Desktop](https://github.com/telegramdesktop/tdesktop)
@@ -53,7 +53,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
     - _TODO: ilspycmd, reqable* or proxypin_
 - **Games**: 
-    - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep))_
+    - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep), using [osu-lazer-flake](https://github.com/repinek/osu-lazer-flake))_ 
     - [Steam](https://store.steampowered.com/about/)*
     - [Touhou thcrap wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper) (uses [thcrap](https://github.com/thpatch/thcrap), [vpatch](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications#Vsync_Patches)* and [thprac](https://github.com/touhouworldcup/thprac))
 - **Other Utilities with GUI**:

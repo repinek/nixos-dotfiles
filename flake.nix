@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Noctalia shell
+    # Programs
     noctalia = {
       url = "github:noctalia-dev/noctalia";
     };
@@ -20,6 +20,11 @@
     };
 
     repinek-pkgs.url = "path:./pkgs";
+
+    osu-lazer = {
+      url = "github:repinek/osu-lazer-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
