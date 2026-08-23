@@ -37,7 +37,7 @@ in {
         };
       };
 
-     vaults."Personal/Obsidian".settings = {};
+      vaults."Personal/Obsidian".settings = {};
     };
   };
 }
