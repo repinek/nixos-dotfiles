@@ -55,7 +55,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep), using [osu-lazer-flake](https://github.com/repinek/osu-lazer-flake))_ 
     - [Steam](https://store.steampowered.com/about/)*
-    - [Touhou thcrap wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper) (uses [thcrap](https://github.com/thpatch/thcrap), [vpatch](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications#Vsync_Patches)* and [thprac](https://github.com/touhouworldcup/thprac))
+    - [Touhou thcrap wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper) (uses [thcrap](https://github.com/thpatch/thcrap), [neopatch](https://github.com/astral4/neopatch) and [thprac](https://github.com/touhouworldcup/thprac))
 - **Other Utilities with GUI**:
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [LocalSend](https://github.com/localsend/localsend)
