@@ -15,10 +15,12 @@ in {
 
       inherit shellAliases;
 
-      # Run Fastfetch as the greeting
       functions = {
+        # Run Fastfetch as the greeting
         fish_greeting = "fastfetch";
       };
     };
+
+    xdg.configFile."fish/functions/tl.fish".source = ./functions/tl.fish;
   };
 }
