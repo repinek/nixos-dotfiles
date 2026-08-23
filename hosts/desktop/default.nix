@@ -31,6 +31,7 @@
     ../../services/backup/system.nix
     ../../services/btrfs-scrub/system.nix
     ../../services/gnome-keyring/system.nix
+    ../../services/libretranslate/system.nix
     ../../services/nix-gc/system.nix
     ../../services/syncthing/system.nix
   ];
@@ -88,6 +89,7 @@
     backup.system.enable = true;
     btrfs-scrub.system.enable = true;
     gnome-keyring.system.enable = true;
+    libretranslate.system.enable = true;
     nix-gc.system.enable = true;
     syncthing = {
       system.enable = true;

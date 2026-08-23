@@ -75,6 +75,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Services**: 
     - [Syncthing](https://github.com/syncthing/syncthing) (for Obsidian sync)
     - [GNOME Keyring](https://gitlab.gnome.org/GNOME/gnome-keyring)
+    - [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate)
     - Daily [btrbk](https://github.com/digint/btrbk) and incremental rsync backups 
     - Montly btrfs scrub
     - Automatic Nix garbage collection, store optimisation and pruning of old generations
