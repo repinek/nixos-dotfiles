@@ -43,9 +43,14 @@
   modules.desktop = {
     hypr.user = {
       enable = true;
-      hyprshot.enable = true;
-      hyprpicker.enable = true;
-      monitors = ["DP-3, 2560x1440@165.0, 0x0, 1"];
+      monitors = [
+        {
+          output = "DP-3";
+          mode = "2560x1440@165.0";
+          position = "0x0";
+          scale = 1;
+        }
+      ];
     };
 
     noctalia.user.enable = true;

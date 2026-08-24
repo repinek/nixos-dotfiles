@@ -1,0 +1,5 @@
+require("config.env")
+require("config.general")
+require("config.input")
+require("config.rules")
+require("config.keybinds")
