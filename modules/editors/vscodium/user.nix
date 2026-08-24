@@ -27,6 +27,7 @@ in {
           # Other
           esbenp.prettier-vscode
           jnoortheen.nix-ide
+          sumneko.lua
           usernamehw.errorlens
           dbaeumer.vscode-eslint
           vscodevim.vim
@@ -58,6 +59,7 @@ in {
           # File saving
           "files.autoSave" = "onFocusChange";
           "files.insertFinalNewline" = true;
+          "files.associations"."*.lua" = "lua";
 
           # Formatter
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -105,6 +107,13 @@ in {
           # Nix Extension
           "nix.enableLanguageServer" = true;
           "nix.formatterPath" = "alejandra";
+
+          # Lua Language Server
+          # Stubs for hyprland
+          "Lua.workspace.library" = [
+            "${config.wayland.windowManager.hyprland.finalPackage}/share/hypr/stubs"
+          ];
+          "Lua.diagnostics.globals" = ["hl"];
         };
       };
     };
