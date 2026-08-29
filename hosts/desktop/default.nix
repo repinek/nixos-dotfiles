@@ -23,6 +23,8 @@
     ../../modules/hardware/nvidia/system.nix
 
     ../../modules/programs/localsend/system.nix
+    ../../modules/programs/loupe/system.nix
+    ../../modules/programs/showtime/system.nix
     ../../modules/programs/throne/system.nix
 
     ../../modules/shell/fish/system.nix
@@ -77,6 +79,8 @@
 
   modules.programs = {
     localsend.system.enable = true;
+    loupe.system.enable = true;
+    showtime.system.enable = true;
     throne.system.enable = true;
   };
 

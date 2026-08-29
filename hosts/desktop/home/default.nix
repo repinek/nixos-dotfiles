@@ -28,6 +28,7 @@
     ../../../modules/programs/krita/user.nix
     ../../../modules/programs/libreoffice/user.nix
     ../../../modules/programs/losslesscut/user.nix
+    ../../../modules/programs/loupe/user.nix
     ../../../modules/programs/messengers/element-desktop/user.nix
     ../../../modules/programs/messengers/telegram-desktop/user.nix
     ../../../modules/programs/messengers/vesktop/user.nix
@@ -35,6 +36,7 @@
     ../../../modules/programs/obs-studio/user.nix
     ../../../modules/programs/obsidian/user.nix
     ../../../modules/programs/proton-authenticator/user.nix
+    ../../../modules/programs/showtime/user.nix
 
     ../../../services/gnome-keyring/user.nix
   ];
@@ -87,6 +89,7 @@
     krita.user.enable = true;
     libreoffice.user.enable = true;
     losslesscut.user.enable = true;
+    loupe.user.enable = true;
     messengers = {
       element-desktop.user.enable = true;
       telegram-desktop.user.enable = true;
@@ -96,6 +99,7 @@
     obs-studio.user.enable = true;
     obsidian.user.enable = true;
     proton-authenticator.user.enable = true;
+    showtime.user.enable = true;
   };
 
   services.gnome-keyring.user.enable = true;

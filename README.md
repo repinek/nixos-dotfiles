@@ -60,6 +60,8 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [OBS Studio](https://github.com/obsproject/obs-studio)
     - [LocalSend](https://github.com/localsend/localsend)
     - [LosslessCut](https://github.com/mifi/lossless-cut)
+    - [Loupe](https://gitlab.gnome.org/GNOME/loupe)
+    - [Showtime](https://gitlab.gnome.org/GNOME/showtime)
     - [Audacity](https://github.com/audacity/audacity)
     - [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility)
     - [Proton Authenticator](https://github.com/ProtonMail/WebClients/)
@@ -149,7 +151,6 @@ cd nixos-dotfiles
 ## TODO
 - [ ] refactor core folder a little
 - [ ] Try niri one day
-- [ ] Configure Media viewer (video, photos, audio, etc.)
 
 There are also several `FIXME` comments.
 
