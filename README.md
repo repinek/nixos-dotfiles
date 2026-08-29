@@ -112,6 +112,7 @@ nixos-dotfiles
 │   │   ├── hypr            # hypr ecosystem
 │   │   │   └── hyprland
 │   │   ├── ly
+│   │   ├── mime
 │   │   ├── noctalia
 │   │   └── theme
 │   ├── editors
