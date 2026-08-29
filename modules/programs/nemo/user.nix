@@ -20,11 +20,18 @@ in {
 
     # Nemo uses GTK bookmarks
     xdg.configFile."gtk-3.0/bookmarks".text = ''
+      file:///home/repinek/.config .config
+      file:///home/repinek/.local .local
       file:///home/repinek/Programming Programming
       file:///home/repinek/Personal Personal
       file:///home/repinek/Media Media
       file:///home/repinek/Games Games
       file:///mnt/Old Old
+    '';
+
+    home.file.".hidden".text = ''
+      Desktop
+      Pictures
     '';
 
     dconf.settings = {
