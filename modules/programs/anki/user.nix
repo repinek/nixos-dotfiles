@@ -3,8 +3,8 @@
   lib,
   pkgs,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.programs.anki.user;
 in {
   options.modules.programs.anki.user.enable = mkEnableOption "Anki";
