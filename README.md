@@ -149,7 +149,6 @@ cd nixos-dotfiles
 ## TODO
 - [ ] refactor core folder a little
 - [ ] Try niri one day
-- [ ] Configure MIME types
 - [ ] Configure Media viewer (video, photos, audio, etc.)
 
 There are also several `FIXME` comments.

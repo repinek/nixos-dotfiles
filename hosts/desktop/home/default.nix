@@ -3,6 +3,7 @@
     ../../../modules/cli/scrcpy/user.nix
 
     ../../../modules/desktop/hypr/user.nix
+    ../../../modules/desktop/mime/user.nix
     ../../../modules/desktop/noctalia/user.nix
     ../../../modules/desktop/theme/user.nix
 
@@ -53,6 +54,7 @@
       ];
     };
 
+    mime.user.enable = true;
     noctalia.user.enable = true;
     theme.user.enable = true;
   };
