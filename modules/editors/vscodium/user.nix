@@ -6,6 +6,23 @@
 }:
 with lib; let
   cfg = config.modules.editors.vscodium.user;
+
+  customExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    # NoctaliaTheme
+    {
+      publisher = "Noctalia";
+      name = "noctaliatheme";
+      version = "0.0.5";
+      hash = "sha256-aTSk3yYkBw5GrD0CbRL2wo3SlBffzBTDe1pZoZa1URQ=";
+    }
+    # Cherry Blossom Theme
+    {
+      publisher = "daitsuku";
+      name = "cherry-blossom-vscode-theme";
+      version = "1.2.1";
+      hash = "sha256-FiwNQtlcqU0vILnsHkePWBmHaCsXjA5A0xz8Lg+osl0=";
+    }
+  ];
 in {
   options.modules.editors.vscodium.user.enable = mkEnableOption "VSCodium";
 
@@ -16,22 +33,21 @@ in {
       mutableExtensionsDir = true;
 
       profiles.default = {
-        extensions = with pkgs.vscode-extensions; [
-          # Themes
-          catppuccin.catppuccin-vsc
-          mvllow.rose-pine
-          # FIXME: Unavailable in vscode-extensions
-          # noctalia.noctaliatheme # https://open-vsx.org/extension/Noctalia/noctaliatheme
-          # daitsuku.cherry-blossom-vscode-theme # https://open-vsx.org/extension/daitsuku/cherry-blossom-vscode-theme
+        extensions =
+          (with pkgs.vscode-extensions; [
+            # Themes
+            catppuccin.catppuccin-vsc # Catppuccin for VS Code
+            mvllow.rose-pine # Rose Pine
 
-          # Other
-          esbenp.prettier-vscode
-          jnoortheen.nix-ide
-          sumneko.lua
-          usernamehw.errorlens
-          dbaeumer.vscode-eslint
-          vscodevim.vim
-        ];
+            # Other
+            esbenp.prettier-vscode # Prettier - code formatter
+            jnoortheen.nix-ide # Nix IDE
+            sumneko.lua # Lua
+            usernamehw.errorlens # Error Lens
+            dbaeumer.vscode-eslint # ESLint
+            vscodevim.vim # Vim
+          ])
+          ++ customExtensions;
 
         userSettings = {
           "editor.fontSize" = 16;
@@ -42,6 +58,7 @@ in {
 
           "workbench.colorTheme" = "Catppuccin Mocha";
           "workbench.startupEditor" = "none";
+          "window.zoomLevel" = 2; # Approximately 144% (or two zoom-in steps)
 
           # Quality of life
           "editor.minimap.enabled" = false;
@@ -49,6 +66,8 @@ in {
           "editor.lineNumbers" = "relative"; # Since we are using VIM plugin
 
           # https://stackoverflow.com/questions/48044429/override-alt-to-toggle-menu-bar-on-vs-code
+          # Override Alt to toggle menu bar
+          # It conflicts with Shift + Alt for switching keyboard layouts
           "window.titleBarStyle" = "custom";
           "window.customMenuBarAltFocus" = false;
 
