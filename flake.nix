@@ -2,10 +2,16 @@
   description = "repinek's NixOS flake";
 
   inputs = {
+    # System
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -43,6 +49,7 @@
         alejandra # formatter
         statix # linter
         deadnix # dead code
+        sops # secret management
       ];
     };
 
@@ -53,8 +60,11 @@
       host = "desktop";
       username = "repinek";
       users = ["repinek"];
-      homeModules.repinek = [./hosts/desktop/home];
-      modules = [];
+      homeModules.repinek = [
+        inputs.sops-nix.homeManagerModules.sops
+        ./hosts/desktop/home
+      ];
+      modules = [inputs.sops-nix.nixosModules.sops];
       overlays = [inputs.repinek-pkgs.overlays.default];
     };
   };

@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ../../modules/core/packages/user.nix
+    ../../modules/core/sops/user.nix
 
     ../../modules/cli/fastfetch/user.nix
     ../../modules/cli/gh/user.nix
@@ -15,7 +16,10 @@
     ../../modules/shell/fish/user.nix
   ];
 
-  modules.core.packages.user.enable = true;
+  modules.core = {
+    packages.user.enable = true;
+    sops.user.enable = true;
+  };
 
   modules.cli = {
     fastfetch.user.enable = true;

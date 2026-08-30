@@ -1,0 +1,7 @@
+keys:
+  - &repinek age1adn4g4sz45wz85jsz88uhqew0ht87lfl48r3m80nrqmdn3nzxa5qg58kt3
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+    - age:
+      - *repinek
