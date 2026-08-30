@@ -11,6 +11,7 @@
     ../../modules/core/nix/system.nix
     ../../modules/core/packages/system.nix
     ../../modules/core/security/system.nix
+    ../../modules/core/sops/system.nix
     ../../modules/core/system/system.nix
 
     ../../modules/desktop/hypr/system.nix
@@ -53,6 +54,7 @@
     nix.system.enable = true;
     packages.system.enable = true;
     security.system.enable = true;
+    sops.system.enable = true;
     system.enable = true;
   };
 
