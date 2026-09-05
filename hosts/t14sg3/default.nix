@@ -95,6 +95,15 @@
     };
   };
 
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+    settings = {
+      PasswordAuthentication = true;
+      PermitRootLogin = "no";
+    };
+  };
+
   # Networking
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
