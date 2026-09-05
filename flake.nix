@@ -15,6 +15,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Programs
     noctalia = {
       url = "github:noctalia-dev/noctalia";
@@ -65,6 +70,21 @@
         ./hosts/desktop/home
       ];
       modules = [inputs.sops-nix.nixosModules.sops];
+      overlays = [inputs.repinek-pkgs.overlays.default];
+    };
+
+    nixosConfigurations.t14sg3 = mkNixos {
+      host = "t14sg3";
+      username = "repinek";
+      users = ["repinek"];
+      homeModules.repinek = [
+        inputs.sops-nix.homeManagerModules.sops
+        ./hosts/t14sg3/home
+      ];
+      modules = [
+        inputs.sops-nix.nixosModules.sops
+        inputs.disko.nixosModules.disko
+      ];
       overlays = [inputs.repinek-pkgs.overlays.default];
     };
   };
