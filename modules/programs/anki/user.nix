@@ -10,9 +10,6 @@ in {
   options.modules.programs.anki.user.enable = mkEnableOption "Anki";
 
   config = mkIf cfg.enable {
-    sops.secrets."repinek/anki/username" = {};
-    sops.secrets."repinek/anki/key" = {};
-
     programs.anki = {
       enable = true;
 
@@ -24,16 +21,6 @@ in {
       addons = [
         pkgs.ankiAddons.review-heatmap
       ];
-
-      profiles."repinek" = {
-        default = true;
-
-        sync = {
-          autoSync = true;
-          usernameFile = config.sops.secrets."repinek/anki/username".path;
-          keyFile = config.sops.secrets."repinek/anki/key".path;
-        };
-      };
     };
   };
 }

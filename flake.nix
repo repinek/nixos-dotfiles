@@ -62,7 +62,7 @@
       users = ["repinek"];
       homeModules.repinek = [
         inputs.sops-nix.homeManagerModules.sops
-        ./hosts/desktop/home
+        ./hosts/desktop/home.nix
       ];
       modules = [inputs.sops-nix.nixosModules.sops];
       overlays = [inputs.repinek-pkgs.overlays.default];

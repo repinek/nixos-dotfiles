@@ -1,0 +1,112 @@
+{...}: {
+  imports = [
+    ./settings/nemo/user.nix
+
+    ../../modules/cli/scrcpy/user.nix
+    ../../modules/cli/git/user.nix
+
+    ../../modules/desktop/hypr/user.nix
+    ../../modules/desktop/mime/user.nix
+    ../../modules/desktop/noctalia/user.nix
+    ../../modules/desktop/theme/user.nix
+
+    ../../modules/editors/detect-it-easy/user.nix
+    ../../modules/editors/ida-pro/user.nix
+    ../../modules/editors/jadx/user.nix
+    ../../modules/editors/rider/user.nix
+    ../../modules/editors/vscodium/user.nix
+    ../../modules/editors/zed/user.nix
+
+    ../../modules/games/osu-lazer/user.nix
+    ../../modules/games/steamguard-cli/user.nix
+    ../../modules/games/touhou/user.nix
+
+    ../../modules/programs/alacritty/user.nix
+    ../../modules/programs/anki/user.nix
+    ../../modules/programs/audacity/user.nix
+    ../../modules/programs/browsers/ungoogled-chromium/user.nix
+    ../../modules/programs/browsers/waterfox/user.nix
+    ../../modules/programs/filelight/user.nix
+    ../../modules/programs/gnome-disk-utility/user.nix
+    ../../modules/programs/krita/user.nix
+    ../../modules/programs/libreoffice/user.nix
+    ../../modules/programs/losslesscut/user.nix
+    ../../modules/programs/loupe/user.nix
+    ../../modules/programs/messengers/element-desktop/user.nix
+    ../../modules/programs/messengers/telegram-desktop/user.nix
+    ../../modules/programs/messengers/vesktop/user.nix
+    ../../modules/programs/nemo/user.nix
+    ../../modules/programs/obs-studio/user.nix
+    ../../modules/programs/obsidian/user.nix
+    ../../modules/programs/proton-authenticator/user.nix
+    ../../modules/programs/showtime/user.nix
+
+    ../../services/gnome-keyring/user.nix
+  ];
+
+  modules.cli = {
+    git.user.enable = true;
+    scrcpy.user.enable = true;
+  };
+
+  modules.desktop = {
+    hypr.user = {
+      enable = true;
+      monitors = [
+        {
+          output = "DP-3";
+          mode = "2560x1440@165.0";
+          position = "0x0";
+          scale = 1;
+        }
+      ];
+    };
+
+    mime.user.enable = true;
+    noctalia.user.enable = true;
+    theme.user.enable = true;
+  };
+
+  modules.editors = {
+    detect-it-easy.user.enable = true;
+    ida-pro.user.enable = true;
+    jadx.user.enable = true;
+    rider.user.enable = true;
+    vscodium.user.enable = true;
+    zed.user.enable = true;
+  };
+
+  modules.games = {
+    osu-lazer.user.enable = true;
+    steamguard-cli.user.enable = true;
+    touhou.user.enable = true;
+  };
+
+  modules.programs = {
+    alacritty.user.enable = true;
+    anki.user.enable = true;
+    audacity.user.enable = true;
+    browsers = {
+      ungoogled-chromium.user.enable = true;
+      waterfox.user.enable = true;
+    };
+    filelight.user.enable = true;
+    gnome-disk-utility.user.enable = true;
+    krita.user.enable = true;
+    libreoffice.user.enable = true;
+    losslesscut.user.enable = true;
+    loupe.user.enable = true;
+    messengers = {
+      element-desktop.user.enable = true;
+      telegram-desktop.user.enable = true;
+      vesktop.user.enable = true;
+    };
+    nemo.user.enable = true;
+    obs-studio.user.enable = true;
+    obsidian.user.enable = true;
+    proton-authenticator.user.enable = true;
+    showtime.user.enable = true;
+  };
+
+  services.gnome-keyring.user.enable = true;
+}

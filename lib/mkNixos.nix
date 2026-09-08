@@ -31,7 +31,7 @@ inputs.nixpkgs.lib.nixosSystem {
       }
 
       # Import host
-      ../hosts/${host}
+      ../hosts/${host}/system.nix
     ]
     # For every user create home-manager with imports
     # Auto import user home.nix and system.nix

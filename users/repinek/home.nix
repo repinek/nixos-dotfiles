@@ -1,11 +1,18 @@
 {...}: {
   imports = [
+    # These modules contain user-specific settings
+    # For example, Git signing and identity
+    # If the corresponding module is not enabled, no settings are generated
+    # This is similar to lazy initialization
+    ./settings/anki/user.nix
+    ./settings/git/user.nix
+    ./settings/obsidian/user.nix
+    ./settings/sops/user.nix # sops has no corresponding module, so its settings are always generated
+
     ../../modules/core/packages/user.nix
-    ../../modules/core/sops/user.nix
 
     ../../modules/cli/fastfetch/user.nix
     ../../modules/cli/gh/user.nix
-    ../../modules/cli/git/user.nix
     ../../modules/cli/ssh/user.nix
     ../../modules/shell/starship/user.nix
 
@@ -18,24 +25,11 @@
 
   modules.core = {
     packages.user.enable = true;
-    sops.user.enable = true;
   };
 
   modules.cli = {
     fastfetch.user.enable = true;
     gh.user.enable = true;
-    git.user = {
-      enable = true;
-      signing = {
-        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF/HPg31ljATQIHzqtBIvsStdENH57A3CxgstnWnUlxg repinek";
-        format = "ssh";
-        signByDefault = true;
-      };
-      user = {
-        name = "repinek";
-        email = "137826826+repinek@users.noreply.github.com";
-      };
-    };
     ssh.user.enable = true;
   };
 

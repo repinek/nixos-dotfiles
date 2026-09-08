@@ -11,7 +11,6 @@
     ../../modules/core/nix/system.nix
     ../../modules/core/packages/system.nix
     ../../modules/core/security/system.nix
-    ../../modules/core/sops/system.nix
     ../../modules/core/system/system.nix
 
     ../../modules/desktop/hypr/system.nix
@@ -32,7 +31,6 @@
     ../../modules/shell/starship/system.nix
 
     ../../services/backup/system.nix
-    ../../services/btrfs-scrub/system.nix
     ../../services/gnome-keyring/system.nix
     ../../services/libretranslate/system.nix
     ../../services/nix-gc/system.nix
@@ -54,7 +52,6 @@
     nix.system.enable = true;
     packages.system.enable = true;
     security.system.enable = true;
-    sops.system.enable = true;
     system.enable = true;
   };
 
@@ -93,10 +90,15 @@
 
   services = {
     backup.system.enable = true;
-    btrfs-scrub.system.enable = true;
+    btrfs-scrub = {
+      enable = true;
+      interval = "montly";
+      fileSystems = ["/" "/mnt/Old"];
+    };
     gnome-keyring.system.enable = true;
     libretranslate.system.enable = true;
     nix-gc.system.enable = true;
+
     syncthing = {
       system.enable = true;
       overrideDevices = true;
@@ -154,9 +156,11 @@
   };
 
   # Networking
-  networking.hostName = hostname;
-  networking.networkmanager.enable = true;
-  networking.firewall.checkReversePath = "loose"; # Fixes Throne TUN UDP traffic
+  networking = {
+    hostName = hostname;
+    networkmanager.enable = true;
+    firewall.checkReversePath = "loose"; # Fixes Throne TUN UDP traffic
+  };
 
   system.stateVersion = "26.05";
 }

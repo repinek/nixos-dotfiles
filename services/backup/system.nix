@@ -9,6 +9,8 @@ with lib; let
 in {
   options.services.backup.system.enable = mkEnableOption "Btrfs and imperative backups";
 
+  # FIXME: this is very sensitive to host
+  # For now I have one host, so idc, but in the future idk
   config = mkIf cfg.enable {
     systemd.tmpfiles.rules = [
       "d /btrfs/.snapshots 0755 root root -"

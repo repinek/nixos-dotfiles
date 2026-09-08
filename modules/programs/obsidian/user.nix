@@ -36,8 +36,6 @@ in {
           "editor:insert-link" = [];
         };
       };
-
-      vaults."Personal/Obsidian".settings = {};
     };
   };
 }

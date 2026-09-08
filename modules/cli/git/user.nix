@@ -8,45 +8,13 @@ with lib; let
 in {
   options.modules.cli.git.user = {
     enable = mkEnableOption "Git";
-
-    # https://github.com/nix-community/home-manager/blob/165228b0efefc3e635e5174020c40ea64271dc25/modules/programs/git.nix
-    signing = {
-      key = mkOption {
-        type = types.nullOr types.str;
-        default = null;
-      };
-      format = mkOption {
-        type = types.nullOr types.str;
-        default = null;
-      }; # In original there's enum instead str
-      signByDefault = mkOption {
-        type = types.nullOr types.bool;
-        default = null;
-      };
-    };
-
-    user = {
-      name = mkOption {type = types.str;};
-      email = mkOption {type = types.str;};
-    };
   };
 
   config = mkIf cfg.enable {
     programs.git = {
       enable = true;
 
-      signing = {
-        key = cfg.signing.key;
-        format = cfg.signing.format;
-        signByDefault = cfg.signing.signByDefault;
-      };
-
       settings = {
-        user = {
-          name = cfg.user.name;
-          email = cfg.user.email;
-        };
-
         init.defaultBranch = "main";
 
         push = {
