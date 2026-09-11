@@ -6,11 +6,14 @@
   users.users.repinek = {
     isNormalUser = true;
     # adbusers is required by platform-tools
-    extraGroups = ["docker" "wheel" "adbusers" "networkmanager"];
+    extraGroups = ["wheel" "adbusers" "networkmanager"];
     shell = pkgs.fish;
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
 
   virtualisation.vmVariant = {
     users.users.repinek.password = "123";
