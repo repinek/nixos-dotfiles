@@ -90,9 +90,9 @@
 
   services = {
     backup.system.enable = true;
-    btrfs-scrub = {
+    btrfs.autoScrub = {
       enable = true;
-      interval = "montly";
+      interval = "monthly";
       fileSystems = ["/" "/mnt/Old"];
     };
     gnome-keyring.system.enable = true;
