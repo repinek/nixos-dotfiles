@@ -17,14 +17,15 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 <img src="assets/screenshots/screenshot_2.png" width="700" alt="Creamy Forest Theme, Noctalia Shell, Hyprland, Nemo and Media">
 
 ## Features and Main Packages
-- Flake-based with fully modular system
+- Flake-based, mostly modular system
 - Supports multiple hosts and users
 - Fully configured desktop experience with Hyprland and Noctalia Shell
 - Theme management with Noctalia Shell for wallpapers, GTK, Qt5/6, btop, Alacritty, Fastfetch, Hyprland, and VSCodium
 - Useful [aliases](modules/shell/fish/fish-aliases.nix)
 - Ergonomic [keybindings](modules/desktop/hypr/hyprland/keybinds.nix) for Hyprland
 - Own [packages](pkgs/)
-- Daily incremental [Btrfs backups](services/backup/) with seven-day retention and monthly integrity [scrubs](services/btrfs-scrub/system.nix)
+- Daily incremental [Btrfs backups](services/backup/) with seven-day retention
+- Secret management with [sops-nix](https://github.com/Mic92/sops-nix)
 
 ### Programs
 - **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
@@ -46,12 +47,10 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [Zed](https://github.com/zed-industries/zed) _(not configured yet)_
     - [Codex](https://github.com/openai/codex)
     - [OpenCode](https://github.com/anomalyco/opencode/)
-    - _TODO: Neovim (nvf or nixvim idk)_
 - **Reverse Engineering**:
     - [IDA Pro](https://hex-rays.com/ida-pro)* with [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp)
     - [JADX](https://github.com/skylot/jadx)
     - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
-    - _TODO: ilspycmd, reqable* or proxypin_
 - **Games**: 
     - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep), using [osu-lazer-flake](https://github.com/repinek/osu-lazer-flake))_ 
     - [Steam](https://store.steampowered.com/about/)*
@@ -70,7 +69,6 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [LibreOffice](https://github/LibreOffice/core)
     - [Obsidian](https://obsidian.md)*
     - [Anki](https://github.com/ankitects/anki)
-    - _TODO: filezilla_
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
     - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, and SSH.
@@ -80,7 +78,6 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [GNOME Keyring](https://gitlab.gnome.org/GNOME/gnome-keyring)
     - [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate)
     - Daily [btrbk](https://github.com/digint/btrbk) and incremental rsync backups 
-    - Montly btrfs scrub
     - Automatic Nix garbage collection, store optimisation and pruning of old generations
 
 \* - `unfree` or proprietary software  
@@ -93,10 +90,11 @@ nixos-dotfiles
 ├── assets                  # Static assets: screenshots, wallpapers, etc.
 ├── hosts                   # per-host configuration
 │   └── desktop
-│       ├── home            # Home Manager options for this host (user.nix files only)
-│       ├── default.nix     # NixOS options for this host (system.nix files only)
+│       ├── settings        # Host-specific settings
+│       ├── home.nix        # Home Manager configuration for this host
+│       ├── system.nix      # NixOS configuration for this host
 │       └── hardware-configuration.nix
-├── lib                     # Nix build helpers
+├── lib                     # Helpers
 │   └── mkNixos.nix
 ├── modules                 # Reusable system and user modules
 │   ├── cli
@@ -132,8 +130,9 @@ nixos-dotfiles
 ├── services                # Reusable services
 ├── users                   # per-user configuration
 │   └── repinek
-│       ├── home.nix        # Home Manager options for this user (imports user.nix files only)
-│       └── system.nix      # NixOS options for this user (imports system.nix files only)
+│       ├── settings        # User-specific settings
+│       ├── home.nix        # Home Manager configuration for this user
+│       └── system.nix      # NixOS configuration for this user
 └── flake.nix
 ```
 
@@ -150,8 +149,14 @@ cd nixos-dotfiles
 ```
 
 ## TODO
-- [ ] refactor core folder a little
-- [ ] Try niri one day
+
+Not needed right now, just ideas for when I have free time
+
+- [ ] Refactor core folder a little
+- [ ] Try Niri one day
+- [ ] Add Filezilla
+- [ ] Try Neovim
+- [ ] proxypin, httptoolkit* or reqable*
 
 There are also several `FIXME` comments.
 
