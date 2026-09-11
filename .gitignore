@@ -6,6 +6,6 @@ result*
 .direnv
 
 # AI
-AGENTS.md
+/AGENTS.md
 docs
 

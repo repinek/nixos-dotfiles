@@ -11,5 +11,7 @@ in {
   config = mkIf cfg.enable {
     # Keep config.toml mutable for directory approvals and local settings
     programs.codex.enable = true;
+    
+    # AGENTS.md file located in user settings
   };
 }
