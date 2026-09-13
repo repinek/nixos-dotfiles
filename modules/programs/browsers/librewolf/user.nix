@@ -172,6 +172,28 @@ in {
               definedAliases = ["@nh"];
             };
 
+            github = {
+              name = "GitHub repos search";
+              urls = [
+                {
+                  template = "https://github.com/search";
+                  params = [
+                    {
+                      name = "q";
+                      value = "{searchTerms}";
+                    }
+                    {
+                      name = "type";
+                      value = "repositories";
+                    }
+                  ];
+                }
+              ];
+
+              icon = "https://github.githubassets.com/favicons/favicon.svg";
+              definedAliases = ["@gh"];
+            };
+
             # Hide mojeek and startpage
             mojeek.metaData.hidden = true;
             startpage.metaData.hidden = true;
