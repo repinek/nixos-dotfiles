@@ -13,6 +13,9 @@ in {
   config = mkIf cfg.enable {
     # This theme a little bit weird in some places
     # But overall it's good
+    # upd: vertical tabs are awful
+    # I have no idea how to fix this, maybe check something other
+    # like Firefox UI Fix (Lepton)
     home.file.".librewolf/repinek/chrome".source = pkgs.zaps-cool-photon-theme;
 
     programs.librewolf = {
@@ -62,12 +65,12 @@ in {
           # TODO: add uiCustomization, imperative for now
 
           "layout.css.devPixelsPerPx" = 1.2;
-          "layout.css.prefers-color-scheme.content-override" = 0; # Dark theme
+          # "layout.css.prefers-color-scheme.content-override" = 0; # Dark theme # RFP should be disabled for this
 
-          "privacy.resistFingerprinting" = false;
+          "privacy.resistFingerprinting" = true;
           "privacy.sanitize.sanitizeOnShutdown" = false;
 
-          "sidebar.verticalTabs" = true;
+          # "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
 
           # required by photon theme
