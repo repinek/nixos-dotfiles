@@ -34,8 +34,9 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Terminal**: [Alacritty](https://github.com/alacritty/alacritty)  
 - **Shell**: [fish](https://github.com/fish-shell/fish-shell)
 - **Browsers**:
-    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _([third-party flake](https://github.com/Hythera/nix-waterfox))_
+    - [LibreWolf](https://codeberg.org/librewolf/source)
     - [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _([third-party flake](https://github.com/Hythera/nix-waterfox) upd: archived)_
 - **Messengers**:  
     - [Telegram Desktop](https://github.com/telegramdesktop/tdesktop)
     - [Vesktop](https://github.com/Vencord/Vesktop)
