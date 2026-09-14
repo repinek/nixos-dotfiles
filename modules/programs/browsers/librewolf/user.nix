@@ -112,6 +112,9 @@ in {
           "privacy.resistFingerprinting" = true;
           "privacy.sanitize.sanitizeOnShutdown" = false;
 
+          "identity.fxaccounts.enabled" = true;
+          "services.sync.declinedEngines" = "addons,prefs,addresses,creditcards,passwords"; # Sync only bookmarks, open tabs and History
+
           "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
 
