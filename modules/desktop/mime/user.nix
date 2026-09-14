@@ -14,13 +14,13 @@ in {
 
       defaultApplications = {
         # Web and browsing
-        "text/html" = ["waterfox.desktop"];
-        "application/xhtml+xml" = ["waterfox.desktop"];
-        "x-scheme-handler/http" = ["waterfox.desktop"];
-        "x-scheme-handler/https" = ["waterfox.desktop"];
-        "x-scheme-handler/chrome" = ["waterfox.desktop"];
-        "x-scheme-handler/about" = ["waterfox.desktop"];
-        "x-scheme-handler/unknown" = ["waterfox.desktop"];
+        "text/html" = ["librewolf.desktop"];
+        "application/xhtml+xml" = ["librewolf.desktop"];
+        "x-scheme-handler/http" = ["librewolf.desktop"];
+        "x-scheme-handler/https" = ["librewolf.desktop"];
+        "x-scheme-handler/chrome" = ["librewolf.desktop"];
+        "x-scheme-handler/about" = ["librewolf.desktop"];
+        "x-scheme-handler/unknown" = ["librewolf.desktop"];
 
         # Files
         "inode/directory" = ["nemo.desktop"];
@@ -55,7 +55,7 @@ in {
         "image/jxl" = ["org.gnome.Loupe.desktop"];
         "image/svg+xml" = ["org.gnome.Loupe.desktop"];
 
-        # Video
+        # Videos
         "video/mp4" = ["org.gnome.Showtime.desktop"];
         "video/mpeg" = ["org.gnome.Showtime.desktop"];
         "video/ogg" = ["org.gnome.Showtime.desktop"];
