@@ -99,7 +99,12 @@ in {
           "browser.toolbars.bookmarks.visibility" = "never"; # TODO: for now
           "browser.compactmode.show" = true;
           "browser.uidensity" = 1;
-          # TODO: add uiCustomization, imperative for now
+          "browser.uiCustomization.navBarWhenVerticalTabs" = ''
+            ["reset-pbm-toolbar-button","back-button","forward-button","vertical-spacer","customizableui-special-spring4","customizableui-special-spring5","customizableui-special-spring6","urlbar-container","customizableui-special-spring9","customizableui-special-spring8","customizableui-special-spring7","downloads-button","unified-extensions-button"]
+          '';
+          "browser.uiCustomization.state" = ''
+            {"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","ublock0_raymondhill_net-browser-action","pywalfox_frewacom_org-browser-action","78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action","_a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad_-browser-action","addon_darkreader_org-browser-action"],"nav-bar":["ai-window-toggle","reset-pbm-toolbar-button","back-button","forward-button","vertical-spacer","customizableui-special-spring4","customizableui-special-spring5","customizableui-special-spring6","urlbar-container","customizableui-special-spring9","customizableui-special-spring8","customizableui-special-spring7","downloads-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":[],"vertical-tabs":["tabbrowser-tabs"],"PersonalToolbar":["personal-bookmarks"]},"seen":["reset-pbm-toolbar-button","pywalfox_frewacom_org-browser-action","78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action","_a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad_-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","addon_darkreader_org-browser-action","ublock0_raymondhill_net-browser-action","developer-button","screenshot-button"],"dirtyAreaCache":["unified-extensions-area","nav-bar","TabsToolbar","vertical-tabs","toolbar-menubar","PersonalToolbar"],"currentVersion":25,"newElementCount":10}
+          '';
 
           "layout.css.devPixelsPerPx" = 1.2;
           # "layout.css.prefers-color-scheme.content-override" = 0; # Dark theme # RFP should be disabled for this
@@ -107,7 +112,7 @@ in {
           "privacy.resistFingerprinting" = true;
           "privacy.sanitize.sanitizeOnShutdown" = false;
 
-          # "sidebar.verticalTabs" = true;
+          "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
 
           # required by photon theme
