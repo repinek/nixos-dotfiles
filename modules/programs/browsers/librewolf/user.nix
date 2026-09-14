@@ -16,7 +16,7 @@ in {
     # upd: vertical tabs are awful
     # I have no idea how to fix this, maybe check something other
     # like Firefox UI Fix (Lepton)
-    home.file.".librewolf/repinek/chrome".source = pkgs.zaps-cool-photon-theme;
+    # home.file.".librewolf/repinek/chrome".source = pkgs.zaps-cool-photon-theme;
 
     programs.librewolf = {
       enable = true;
@@ -31,6 +31,45 @@ in {
         id = 0;
         name = "repinek";
         isDefault = true;
+
+        userChrome = ''
+          #urlbar,
+          #searchbar,
+          #searchbar-new {
+            --urlbar-inner-border-radius: 4px !important;
+          }
+
+          .urlbar-input-container {
+            border-radius: 4px !important;
+          }
+
+          #urlbar-background,
+          .urlbar-background,
+          #searchbar {
+            border-radius: 4px !important;
+          }
+
+          #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab .tab-background {
+            border-radius: 4px !important;
+          }
+
+          #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[pinned] .tab-content {
+            border-radius: 4px !important;
+          }
+        '';
+
+        userContent = ''
+          @-moz-document url("about:newtab"), url("about:home") {
+            .search-handoff-button,
+            #newtab-search-text {
+              border-radius: 4px !important;
+            }
+
+            .personalizeButtonWrapper {
+              display: none !important;
+            }
+          }
+        '';
 
         # TODO: make some extensions settings declarative
         extensions.packages = with inputs.firefox-addons.packages.x86_64-linux; [
@@ -62,6 +101,8 @@ in {
           "browser.sessionstore.newTabOnRestore" = true; # Also open a new tab
           "browser.settings-redesign.promo.dismissed" = true;
           "browser.toolbars.bookmarks.visibility" = "never"; # TODO: for now
+          "browser.compactmode.show" = true;
+          "browser.uidensity" = 1;
           # TODO: add uiCustomization, imperative for now
 
           "layout.css.devPixelsPerPx" = 1.2;
