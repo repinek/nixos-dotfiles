@@ -39,22 +39,18 @@ in {
             --urlbar-inner-border-radius: 4px !important;
           }
 
-          .urlbar-input-container {
-            border-radius: 4px !important;
-          }
-
           #urlbar-background,
           .urlbar-background,
-          #searchbar {
-            border-radius: 4px !important;
-          }
-
-          #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab .tab-background {
-            border-radius: 4px !important;
-          }
-
+          .urlbar-input-container,
+          #searchbar,
+          #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab .tab-background,
           #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[pinned] .tab-content {
             border-radius: 4px !important;
+          }
+
+          #sidebar-main .buttons-wrapper,
+          #sidebar-tools-and-extensions-splitter {
+            display: none !important;
           }
         '';
 
