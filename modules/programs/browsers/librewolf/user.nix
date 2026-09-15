@@ -34,6 +34,27 @@ in {
         isDefault = true;
 
         userChrome = ''
+          /* Themed (pywalfox) right-click menu */
+          .menupopup-arrowscrollbox {
+            background: var(--lwt-accent-color) !important;
+            color: var(--lwt-text-color) !important;
+          }
+
+          menupopup menu,
+          menupopup menuitem {
+            color: var(--lwt-text-color) !important;
+            border-radius: 4px !important;
+          }
+
+          menupopup menu[_moz-menuactive="true"]:not([disabled="true"]),
+          menupopup menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+            background: color-mix(
+              in srgb,
+              var(--lwt-accent-color) 82%,
+              var(--lwt-text-color)
+            ) !important;
+          }
+
           /* Url Bar */
           #urlbar,
           #searchbar,
@@ -100,8 +121,13 @@ in {
           darkreader
           proton-pass
           refined-github
+          # You can't use pywalfox css, because it's readonly
+          # But what you can do instead, since we are using noctalia + pywalfox-beta4
+          # pywalfoxUserChrome = builtins.readFile "${inputs.noctalia.outPath}/assets/firefox_theme/css/userChrome.css";
+          # but tbh, this css is gore, so I prefer to not use it
           pywalfox
           clearurls
+
           # TODO:
           # oii (osu improvement indicator)
           # yomitan
