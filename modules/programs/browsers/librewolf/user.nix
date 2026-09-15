@@ -53,6 +53,11 @@ in {
             border-radius: 4px !important;
           }
 
+          /* Vertical tab group */
+          #tabbrowser-tabs[orient="vertical"] .tab-group-label {
+            border-radius: 4px !important;
+          }
+
           /* Bookmarks */
           #PlacesToolbarItems > toolbarbutton.bookmark-item,
           #PersonalToolbar toolbarbutton.bookmark-item,
@@ -95,6 +100,7 @@ in {
           proton-pass
           refined-github
           pywalfox
+          clearurls
           # TODO:
           # oii (osu improvement indicator)
           # yomitan
@@ -126,6 +132,8 @@ in {
             {"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","ublock0_raymondhill_net-browser-action","pywalfox_frewacom_org-browser-action","78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action","_a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad_-browser-action","addon_darkreader_org-browser-action"],"nav-bar":["ai-window-toggle","reset-pbm-toolbar-button","back-button","forward-button","vertical-spacer","customizableui-special-spring4","customizableui-special-spring5","customizableui-special-spring6","urlbar-container","customizableui-special-spring9","customizableui-special-spring8","customizableui-special-spring7","downloads-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":[],"vertical-tabs":["tabbrowser-tabs"],"PersonalToolbar":["personal-bookmarks"]},"seen":["reset-pbm-toolbar-button","pywalfox_frewacom_org-browser-action","78272b6fa58f4a1abaac99321d503a20_proton_me-browser-action","_a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad_-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","addon_darkreader_org-browser-action","ublock0_raymondhill_net-browser-action","developer-button","screenshot-button"],"dirtyAreaCache":["unified-extensions-area","nav-bar","TabsToolbar","vertical-tabs","toolbar-menubar","PersonalToolbar"],"currentVersion":25,"newElementCount":10}
           '';
           "browser.translations.automaticallyPopup" = false;
+
+          "media.videocontrols.picture-in-picture.video-toggle.enabled" = false; # Never used it
 
           "layout.css.devPixelsPerPx" = 1.2;
           # "layout.css.prefers-color-scheme.content-override" = 0; # Dark theme # RFP should be disabled for this
