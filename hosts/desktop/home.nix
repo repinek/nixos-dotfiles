@@ -24,6 +24,7 @@
     ../../modules/programs/alacritty/user.nix
     ../../modules/programs/anki/user.nix
     ../../modules/programs/audacity/user.nix
+    ../../modules/programs/browsers/librewolf/user.nix
     ../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../modules/programs/browsers/waterfox/user.nix
     ../../modules/programs/filelight/user.nix
@@ -87,6 +88,7 @@
     anki.user.enable = true;
     audacity.user.enable = true;
     browsers = {
+      librewolf.user.enable = true;
       ungoogled-chromium.user.enable = true;
       waterfox.user.enable = true;
     };

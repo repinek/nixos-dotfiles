@@ -5,6 +5,7 @@
     # If the corresponding module is not enabled, no settings are generated
     # This is similar to lazy initialization
     ./settings/anki/user.nix
+    ./settings/codex/user.nix
     ./settings/git/user.nix
     ./settings/obsidian/user.nix
     ./settings/sops/user.nix # sops has no corresponding module, so its settings are always generated

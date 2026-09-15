@@ -1,6 +1,6 @@
 hl.window_rule({ match = { class = "osu!" }, immediate = true }) -- Allow tearing
 
-hl.window_rule({ match = { class = "waterfox" }, workspace = "1 silent" })
+hl.window_rule({ match = { class = "librewolf" }, workspace = "1 silent" })
 
 hl.window_rule({ match = { class = "org.telegram.desktop" }, workspace = "2 silent" })
 hl.window_rule({ match = { class = "vesktop"}, workspace = "2 silent" })
