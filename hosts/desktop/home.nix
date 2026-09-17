@@ -27,6 +27,7 @@
     ../../modules/programs/browsers/librewolf/user.nix
     ../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../modules/programs/browsers/waterfox/user.nix
+    ../../modules/programs/feather/user.nix
     ../../modules/programs/filelight/user.nix
     ../../modules/programs/gnome-disk-utility/user.nix
     ../../modules/programs/krita/user.nix
@@ -92,6 +93,7 @@
       ungoogled-chromium.user.enable = true;
       waterfox.user.enable = true;
     };
+    feather.user.enable = true;
     filelight.user.enable = true;
     gnome-disk-utility.user.enable = true;
     krita.user.enable = true;

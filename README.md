@@ -70,6 +70,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [LibreOffice](https://github/LibreOffice/core)
     - [Obsidian](https://obsidian.md)*
     - [Anki](https://github.com/ankitects/anki)
+    - [Feather](https://github.com/feather-wallet/feather)
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
     - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, and SSH.
