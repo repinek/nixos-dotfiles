@@ -168,6 +168,7 @@ in {
           # "layout.css.prefers-color-scheme.content-override" = 0; # Dark theme # RFP should be disabled for this
 
           "privacy.resistFingerprinting" = true;
+          "privacy.resistFingerprinting.letterboxing" = true;
           "privacy.sanitize.sanitizeOnShutdown" = false;
 
           "identity.fxaccounts.enabled" = true;
