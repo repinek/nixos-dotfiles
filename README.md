@@ -71,9 +71,10 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [Obsidian](https://obsidian.md)*
     - [Anki](https://github.com/ankitects/anki)
     - [Feather](https://github.com/feather-wallet/feather)
+    - [KeePassXC](https://keepassxreboot/keepassxc)
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
-    - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, and SSH.
+    - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, gpg, and SSH.
     See [core packages](modules/core/packages/), [CLI modules](modules/cli/), and [game modules](modules/games/).
 - **Services**: 
     - [Syncthing](https://github.com/syncthing/syncthing) (for Obsidian sync)

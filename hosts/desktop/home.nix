@@ -4,6 +4,7 @@
 
     ../../modules/cli/scrcpy/user.nix
     ../../modules/cli/git/user.nix
+    ../../modules/cli/gpg/user.nix
 
     ../../modules/desktop/hypr/user.nix
     ../../modules/desktop/mime/user.nix
@@ -30,6 +31,7 @@
     ../../modules/programs/feather/user.nix
     ../../modules/programs/filelight/user.nix
     ../../modules/programs/gnome-disk-utility/user.nix
+    ../../modules/programs/keepassxc/user.nix
     ../../modules/programs/krita/user.nix
     ../../modules/programs/libreoffice/user.nix
     ../../modules/programs/losslesscut/user.nix
@@ -49,6 +51,7 @@
   modules.cli = {
     git.user.enable = true;
     scrcpy.user.enable = true;
+    gpg.user.enable = true;
   };
 
   modules.desktop = {
@@ -96,6 +99,7 @@
     feather.user.enable = true;
     filelight.user.enable = true;
     gnome-disk-utility.user.enable = true;
+    keepassxc.user.enable = true;
     krita.user.enable = true;
     libreoffice.user.enable = true;
     losslesscut.user.enable = true;
