@@ -10,6 +10,6 @@ in {
   options.modules.programs.libreoffice.user.enable = mkEnableOption "LibreOffice";
 
   config = mkIf cfg.enable {
-    home.packages = [pkgs.libreoffice-qt6-fresh];
+    home.packages = [pkgs.libreoffice-qt-stable];
   };
 }

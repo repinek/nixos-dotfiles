@@ -94,7 +94,7 @@
     browsers = {
       librewolf.user.enable = true;
       ungoogled-chromium.user.enable = true;
-      waterfox.user.enable = true;
+      # waterfox.user.enable = true;
     };
     feather.user.enable = true;
     filelight.user.enable = true;
