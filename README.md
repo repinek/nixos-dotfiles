@@ -28,63 +28,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - Secret management with [sops-nix](https://github.com/Mic92/sops-nix)
 
 ### Programs
-- **WM**: [Hyprland](https://github.com/hyprwm/Hyprland)  
-- **Desktop Shell**: [Noctalia Shell](https://github.com/noctalia-dev/noctalia)  
-- **File Manager**: [Nemo with extensions](https://github.com/linuxmint/nemo)
-- **Terminal**: [Alacritty](https://github.com/alacritty/alacritty)  
-- **Shell**: [fish](https://github.com/fish-shell/fish-shell)
-- **Browsers**:
-    - [LibreWolf](https://codeberg.org/librewolf/source)
-    - [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
-- **Messengers**:  
-    - [Telegram Desktop](https://github.com/telegramdesktop/tdesktop)
-    - [Vesktop](https://github.com/Vencord/Vesktop)
-    - [Element](https://github.com/element-hq/element-web)
-- **Development**:  
-    - [VSCodium](https://github.com/VSCodium/vscodium)  
-    - [Rider](https://www.jetbrains.com/rider/)* _(not configured yet)_
-    - [Vim](https://github.com/vim/vim)
-    - [Zed](https://github.com/zed-industries/zed) _(not configured yet)_
-    - [Codex](https://github.com/openai/codex)
-    - [OpenCode](https://github.com/anomalyco/opencode/)
-- **Reverse Engineering**:
-    - [IDA Pro](https://hex-rays.com/ida-pro)* with [ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp)
-    - [JADX](https://github.com/skylot/jadx)
-    - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
-- **Games**: 
-    - [osu!lazer](https://github.com/ppy/osu)* _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep), using [osu-lazer-flake](https://github.com/repinek/osu-lazer-flake))_ 
-    - [Steam](https://store.steampowered.com/about/)*
-    - [Touhou thcrap wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper) (uses [thcrap](https://github.com/thpatch/thcrap), [neopatch](https://github.com/astral4/neopatch) and [thprac](https://github.com/touhouworldcup/thprac))
-- **Other Utilities with GUI**:
-    - [OBS Studio](https://github.com/obsproject/obs-studio)
-    - [LocalSend](https://github.com/localsend/localsend)
-    - [LosslessCut](https://github.com/mifi/lossless-cut)
-    - [Loupe](https://gitlab.gnome.org/GNOME/loupe)
-    - [Showtime](https://gitlab.gnome.org/GNOME/showtime)
-    - [Audacity](https://github.com/audacity/audacity)
-    - [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility)
-    - [Proton Authenticator](https://github.com/ProtonMail/WebClients/)
-    - [Krita](https://github.com/kde/krita)
-    - [Filelight](https://github.com/kde/filelight)
-    - [LibreOffice](https://github/LibreOffice/core)
-    - [Obsidian](https://obsidian.md)*
-    - [Anki](https://github.com/ankitects/anki)
-    - [Feather](https://github.com/feather-wallet/feather)
-    - [KeePassXC](https://github.com/keepassxreboot/keepassxc)
-    - [qBittorrent](https://github/qbittorrent/qBittorrent)
-- **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
-- **Other CLI Utilities**:
-    - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, gpg, and SSH.
-    See [core packages](modules/core/packages/), [CLI modules](modules/cli/), and [game modules](modules/games/).
-- **Services**: 
-    - [Syncthing](https://github.com/syncthing/syncthing) (for Obsidian sync)
-    - [GNOME Keyring](https://gitlab.gnome.org/GNOME/gnome-keyring)
-    - [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate)
-    - Daily [btrbk](https://github.com/digint/btrbk) and incremental rsync backups 
-    - Automatic Nix garbage collection, store optimisation and pruning of old generations
-
-> \* - `unfree`, `unfreeRedisitrbutable` or just proprietary software 
-> It may as just non-redistrubable license or open-source software, but has proprietary pieces (e.g. anti-cheat in osu-lazer-bin) 
+See the full list with descriptions and configuration links in [docs/PROGRAMS.md](docs/PROGRAMS.md).
 
 ## Structure
 
