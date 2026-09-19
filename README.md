@@ -36,7 +36,6 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - **Browsers**:
     - [LibreWolf](https://codeberg.org/librewolf/source)
     - [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
-    - [Waterfox](https://github.com/BrowserWorks/Waterfox) _([third-party flake](https://github.com/Hythera/nix-waterfox) upd: archived)_
 - **Messengers**:  
     - [Telegram Desktop](https://github.com/telegramdesktop/tdesktop)
     - [Vesktop](https://github.com/Vencord/Vesktop)
@@ -53,7 +52,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [JADX](https://github.com/skylot/jadx)
     - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
 - **Games**: 
-    - [osu!lazer](https://github.com/ppy/osu)** _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep), using [osu-lazer-flake](https://github.com/repinek/osu-lazer-flake))_ 
+    - [osu!lazer](https://github.com/ppy/osu)* _(w/ [gammastep](https://gitlab.com/chinstrap/gammastep), using [osu-lazer-flake](https://github.com/repinek/osu-lazer-flake))_ 
     - [Steam](https://store.steampowered.com/about/)*
     - [Touhou thcrap wrapper](https://github.com/nerusuki/thcrap-steam-proton-wrapper) (uses [thcrap](https://github.com/thpatch/thcrap), [neopatch](https://github.com/astral4/neopatch) and [thprac](https://github.com/touhouworldcup/thprac))
 - **Other Utilities with GUI**:
@@ -71,7 +70,8 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - [Obsidian](https://obsidian.md)*
     - [Anki](https://github.com/ankitects/anki)
     - [Feather](https://github.com/feather-wallet/feather)
-    - [KeePassXC](https://keepassxreboot/keepassxc)
+    - [KeePassXC](https://github.com/keepassxreboot/keepassxc)
+    - [qBittorrent](https://github/qbittorrent/qBittorrent)
 - **VPN Client**: [Throne](https://github.com/throneproj/Throne) _(powered by [sing-box](https://github.com/SagerNet/sing-box))_
 - **Other CLI Utilities**:
     - scrcpy, platform-tools*, steamguard-cli, Starship, Btrfs utilities, GameMode, and common tools such as Git, rsync, curl, bat, eza, ripgrep, ffmpeg, Fastfetch, GitHub CLI, gpg, and SSH.
@@ -83,8 +83,8 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
     - Daily [btrbk](https://github.com/digint/btrbk) and incremental rsync backups 
     - Automatic Nix garbage collection, store optimisation and pruning of old generations
 
-\* - `unfree` or proprietary software  
-\** - open source but has proprietary pieces (e.g. anticheat in osu!lazer)
+> \* - `unfree`, `unfreeRedisitrbutable` or just proprietary software 
+> It may as just non-redistrubable license or open-source software, but has proprietary pieces (e.g. anti-cheat in osu-lazer-bin) 
 
 ## Structure
 

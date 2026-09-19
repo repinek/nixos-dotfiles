@@ -145,8 +145,7 @@
         "noctalia": "noctalia",
         "osu-lazer": "osu-lazer",
         "repinek-pkgs": "repinek-pkgs",
-        "sops-nix": "sops-nix",
-        "waterfox-bin": "waterfox-bin"
+        "sops-nix": "sops-nix"
       }
     },
     "sops-nix": {
@@ -166,26 +165,6 @@
       "original": {
         "owner": "Mic92",
         "repo": "sops-nix",
-        "type": "github"
-      }
-    },
-    "waterfox-bin": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1785937664,
-        "narHash": "sha256-zfrYkBidIS6KSItHT6DTJPens3VrfUVyGtD3iSYFtZI=",
-        "owner": "Hythera",
-        "repo": "nix-waterfox",
-        "rev": "fbdd3fe496d59d29247714ded4c4995cc541f8b1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Hythera",
-        "repo": "nix-waterfox",
         "type": "github"
       }
     }

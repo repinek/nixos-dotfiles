@@ -20,11 +20,6 @@
       url = "github:noctalia-dev/noctalia";
     };
 
-    waterfox-bin = {
-      url = "github:Hythera/nix-waterfox";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     repinek-pkgs.url = "path:./pkgs";
 
     osu-lazer = {
