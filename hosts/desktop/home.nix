@@ -43,6 +43,7 @@
     ../../modules/programs/obs-studio/user.nix
     ../../modules/programs/obsidian/user.nix
     ../../modules/programs/proton-authenticator/user.nix
+    ../../modules/programs/qbittorrent/user.nix
     ../../modules/programs/showtime/user.nix
 
     ../../services/gnome-keyring/user.nix
@@ -113,6 +114,7 @@
     obs-studio.user.enable = true;
     obsidian.user.enable = true;
     proton-authenticator.user.enable = true;
+    qbittorrent.user.enable = true;
     showtime.user.enable = true;
   };
 
