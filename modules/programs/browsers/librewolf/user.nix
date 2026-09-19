@@ -11,14 +11,6 @@ in {
   options.modules.programs.browsers.librewolf.user.enable = mkEnableOption "LibreWolf";
 
   config = mkIf cfg.enable {
-    # This theme a little bit weird in some places
-    # But overall it's good
-    # upd: vertical tabs are awful
-    # I have no idea how to fix this, maybe check something other
-    # like Firefox UI Fix (Lepton)
-    # upd 2: using default theme with userChrome and userContent override
-    # home.file.".librewolf/repinek/chrome".source = pkgs.zaps-cool-photon-theme;
-
     programs.librewolf = {
       enable = true;
 
