@@ -71,6 +71,7 @@ Note: Most descriptions were written by AI.
 - [qBittorrent](https://github.com/qbittorrent/qBittorrent) - [Configuration](../modules/programs/qbittorrent/user.nix)
 - [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility) - Disk management utility. [Configuration](../modules/programs/gnome-disk-utility/user.nix)
 - [Filelight](https://github.com/KDE/filelight) - Disk-usage visualizer. [Configuration](../modules/programs/filelight/user.nix)
+- [Fooyin](https://github.com/fooyin/fooyin) - Audio player. [Configuration](../modules/programs/fooyin/user.nix)
 
 ## Games
 

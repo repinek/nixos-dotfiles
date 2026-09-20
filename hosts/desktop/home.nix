@@ -29,6 +29,7 @@
     ../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../modules/programs/feather/user.nix
     ../../modules/programs/filelight/user.nix
+    ../../modules/programs/fooyin/user.nix
     ../../modules/programs/gnome-disk-utility/user.nix
     ../../modules/programs/keepassxc/user.nix
     ../../modules/programs/krita/user.nix
@@ -97,6 +98,7 @@
     };
     feather.user.enable = true;
     filelight.user.enable = true;
+    fooyin.user.enable = true;
     gnome-disk-utility.user.enable = true;
     keepassxc.user.enable = true;
     krita.user.enable = true;
