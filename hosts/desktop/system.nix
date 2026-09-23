@@ -128,6 +128,15 @@
             ".trash"
           ];
         };
+
+        folders.music = {
+          id = "music";
+          label = "Music";
+          path = "~/Media/Music";
+          type = "sendreceive";
+          devices = ["android"];
+          ignorePerms = true;
+        };
       };
     };
 
