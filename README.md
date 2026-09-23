@@ -27,8 +27,8 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - Daily incremental [Btrfs backups](services/backup/) with seven-day retention
 - Secret management with [sops-nix](https://github.com/Mic92/sops-nix)
 
-### Programs
-See the full list with descriptions and configuration links in [docs/PROGRAMS.md](docs/PROGRAMS.md).
+### Software 
+See the full list with descriptions and configuration links in [docs/SOFTWARE.md](docs/SOFTWARE.md).
 
 ## Structure
 

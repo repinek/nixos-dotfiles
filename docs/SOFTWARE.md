@@ -1,4 +1,4 @@
-# Programs
+# Software 
 
 Note: Most descriptions were written by AI.
 
