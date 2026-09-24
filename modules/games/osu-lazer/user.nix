@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  inputs,
   ...
 }:
 with lib; let
@@ -19,16 +18,22 @@ in {
           + ''
             rm -f $out/share/applications/gammastep-indicator.desktop
           '';
-      }))
-      (inputs.osu-lazer.packages.x86_64-linux.osu-lazer-tachyon-bin.override {
-        nativeWayland = true;
-      })
-    ];
+    }))];
 
-    # Audio buffer settings are defined in hardware/audio
-    home.sessionVariables = {
-      OSU_SDL3 = "1";
-      SDL_VIDEO_DOUBLE_BUFFER = "1";
+    programs.osu-lazer = {
+      enable = true;
+
+      nativeWayland = true;
+      extraShellArgs = [ 
+        "--set" "OSU_SDL3" "1"
+        "--set" "SDL_VIDEO_DOUBLE_BUFFER" "1"
+      ];
+      channel = "tachyon";
+
+      storagePath = "/home/repinek/Games/osu!";
+
+      # files."Games/osu!" = {
+      # };
     };
   };
 }

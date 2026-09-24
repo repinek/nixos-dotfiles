@@ -110,11 +110,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787827176,
-        "narHash": "sha256-wcJt4gq8Q4Os2EdUVhlcOjBLZX4j+DHfTgzZtsRog54=",
+        "lastModified": 1790270755,
+        "narHash": "sha256-J8Jk4eGj0U/TZOt9F3MQpoCoyjfR7tx14kJjYObhNG4=",
         "owner": "repinek",
         "repo": "osu-lazer-flake",
-        "rev": "fde37c10b381cacc43b42a08ab0e63aea6a019db",
+        "rev": "0f2c39253a02832f84fbd5ff615d1257ac4911d3",
         "type": "github"
       },
       "original": {

@@ -62,6 +62,7 @@
       users = ["repinek"];
       homeModules.repinek = [
         inputs.sops-nix.homeManagerModules.sops
+        inputs.osu-lazer.homeManagerModules.osu-lazer
         ./hosts/desktop/home.nix
       ];
       modules = [inputs.sops-nix.nixosModules.sops];
