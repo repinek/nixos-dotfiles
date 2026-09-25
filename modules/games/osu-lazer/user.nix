@@ -32,8 +32,69 @@ in {
 
       storagePath = "/home/repinek/Games/osu!";
 
-      # files."Games/osu!" = {
-      # };
+      files."/home/repinek/Games/osu!" = {
+        gameSettings = {
+          # General
+          Prefer24HourTime = true;
+          ReleaseStream = "Tachyon";
+
+          # Input
+          MouseDisableButtons = true;
+          MouseDisableWheel = true;
+
+          # User Interface
+          UIHoldActivationDelay = 0.0;
+          IntroSequence = "Random";
+          SeasonalBackgroundMode = "Always";
+          ShowConvertedBeatmaps = false;
+          ModSelectHotkeyStyle = "Classic";
+          ModSelectTextSearchStartsActive = false;
+          SongSelectBackgroundBlur = true;
+
+          # Gameplay
+          HitLighting = false;
+          StarFountains = false; 
+          DimLevel = 1.0;
+          FadePlayfieldWhenHealthLow = false; 
+          BeatmapSkins = false;
+          BeatmapColours = false;
+          BeatmapHitsounds = false;
+          ShowStoryboard = false;
+          KeyOverlay = true;
+          GameplayLeaderboard = false;          
+          AutoCursorSize = false;
+          # Scroll speed mania 26.5
+
+          # Graphics
+          UIScale = 0.95;
+
+          # Online
+          PreferNoVideo = true;
+          ShowOnlineExplicitContent = true;
+          NotifyOnFriendPresenceChange = true; 
+
+          # Not in settings
+          # Song Select
+          BeatmapDetailTab = "Local";
+
+          # Beatmap listing
+          BeatmapListingFeaturedArtistFilter = false; 
+
+          # Profile
+          ProfileCoverExpanded = false;
+
+          # Editor
+          EditorDim = 1.0;
+
+          # Multiplayer
+          MultiplayerRoomFilter = "Public";
+        };
+
+        frameworkSettings = {
+          FrameSync = "Unlimited";
+          Locale = "ua";
+        };
+      };
     };
   };
 }
