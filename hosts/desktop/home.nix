@@ -2,6 +2,7 @@
   imports = [
     ./settings/nemo/user.nix
 
+    ../../modules/cli/beets/user.nix
     ../../modules/cli/scrcpy/user.nix
     ../../modules/cli/git/user.nix
     ../../modules/cli/gpg/user.nix
@@ -32,6 +33,7 @@
     ../../modules/programs/fooyin/user.nix
     ../../modules/programs/gnome-disk-utility/user.nix
     ../../modules/programs/keepassxc/user.nix
+    ../../modules/programs/kid3/user.nix
     ../../modules/programs/krita/user.nix
     ../../modules/programs/libreoffice/user.nix
     ../../modules/programs/losslesscut/user.nix
@@ -50,6 +52,7 @@
   ];
 
   modules.cli = {
+    beets.user.enable = true;
     git.user.enable = true;
     scrcpy.user.enable = true;
     gpg.user.enable = true;
@@ -101,6 +104,7 @@
     fooyin.user.enable = true;
     gnome-disk-utility.user.enable = true;
     keepassxc.user.enable = true;
+    kid3.user.enable = true;
     krita.user.enable = true;
     libreoffice.user.enable = true;
     losslesscut.user.enable = true;
