@@ -62,7 +62,7 @@ in {
           ShowStoryboard = false;
           KeyOverlay = true;
           GameplayLeaderboard = false;          
-          AutoCursorSize = false;
+          AutoCursorSize = true;
           # Scroll speed mania 26.5
 
           # Graphics
