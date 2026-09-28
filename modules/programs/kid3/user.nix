@@ -1,7 +1,8 @@
 {
   pkgs,
   lib,
-  config
+  config,
+  ...
 }: with lib;
 let 
   cfg = config.modules.programs.kid3.user;
