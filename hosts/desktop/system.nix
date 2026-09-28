@@ -111,7 +111,7 @@
         };
 
         folders.obsidian = {
-          id = "nejof-v2ivg";
+          id = "obsidian";
           label = "Obsidian Vault";
           path = "~/Personal/Obsidian";
           type = "sendreceive";
@@ -133,7 +133,7 @@
           id = "music";
           label = "Music";
           path = "~/Media/Music";
-          type = "sendreceive";
+          type = "sendonly";
           devices = ["android"];
           ignorePerms = true;
         };

@@ -32,17 +32,6 @@ in {
           singleton = "$artist/$year - $title/$track - $title"; # for random songs
           comp = "Compilations/$year - $album%aunique{}/$track - $artist - $title";
         };
-
-        replace = {
-          "[\\\\/]" = "_";
-          "^\\." = "_";
-          "[\\x00-\\x1f]" = "_";
-          "[<>:\"*|]" = "_";
-          "\\.$" = "_";
-          "\\s+$" = "";
-          "^\\s+" = "";
-          "^-" = "_";
-        };
       };
     };
   };
