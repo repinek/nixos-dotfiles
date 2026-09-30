@@ -46,6 +46,7 @@ in {
             usernamehw.errorlens # Error Lens
             dbaeumer.vscode-eslint # ESLint
             vscodevim.vim # Vim
+            wakatime.vscode-wakatime # WakaTime
           ])
           ++ customExtensions;
 

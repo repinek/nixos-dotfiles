@@ -6,6 +6,7 @@
     ../../modules/cli/scrcpy/user.nix
     ../../modules/cli/git/user.nix
     ../../modules/cli/gpg/user.nix
+    ../../modules/cli/wakatime/user.nix
 
     ../../modules/desktop/hypr/user.nix
     ../../modules/desktop/mime/user.nix
@@ -56,6 +57,7 @@
     git.user.enable = true;
     scrcpy.user.enable = true;
     gpg.user.enable = true;
+    wakatime.user.enable = true;
   };
 
   modules.desktop = {
