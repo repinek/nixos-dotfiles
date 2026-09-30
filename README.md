@@ -18,7 +18,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 
 ## Features and Main Packages
 - Flake-based, mostly modular system
-- Supports multiple hosts and users
+- Supports multiple hosts and users (not sure if I need multiple users for now tho)
 - Fully configured desktop experience with Hyprland and Noctalia Shell
 - Theme management with Noctalia Shell for wallpapers, GTK, Qt5/6, btop, Alacritty, Fastfetch, Hyprland, and VSCodium
 - Useful [aliases](modules/shell/fish/fish-aliases.nix)
