@@ -21,6 +21,8 @@
       open_near_click_session = true;
     };
 
+    launcher.pinned = ["org.telegram.desktop"];
+
     # L - Lock; R - Reboot; S - Shutdown
     session.actions = [
       {
