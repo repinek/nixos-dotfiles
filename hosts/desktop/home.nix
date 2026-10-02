@@ -101,7 +101,7 @@
       librewolf.user.enable = true;
       ungoogled-chromium.user.enable = true;
     };
-    feather.user.enable = true;
+    feather.user.enable = false; # broken
     filelight.user.enable = true;
     fooyin.user.enable = true;
     gnome-disk-utility.user.enable = true;

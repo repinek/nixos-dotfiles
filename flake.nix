@@ -16,10 +16,6 @@
     };
 
     # Programs
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-    };
-
     repinek-pkgs.url = "path:./pkgs";
 
     osu-lazer = {
@@ -31,11 +27,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
-
-  nixConfig = {
-    extra-substituters = ["https://noctalia.cachix.org"];
-    extra-trusted-public-keys = ["noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="];
   };
 
   outputs = {nixpkgs, ...} @ inputs: let

@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   config,
   ...
@@ -10,7 +9,6 @@ in {
   options.modules.desktop.noctalia.user.enable = mkEnableOption "Noctalia";
 
   imports = [
-    inputs.noctalia.homeModules.default
     ./bar.nix
     ./control-center.nix
     ./idle.nix
