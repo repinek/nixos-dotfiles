@@ -23,17 +23,24 @@ in {
         appearance.enabledCssSnippets = ["noctalia"];
 
         hotkeys = {
-          "markdown:add-metadata-property" = [];
-          "editor:toggle-comments" = [];
-          "editor:toggle-checklist-status" = [];
-          "editor:open-search" = [];
-          "editor:save-file" = [];
-          "switcher:open" = [];
-          "editor:open-link-in-new-window" = [];
-          "app:open-help" = [];
-          "app:go-back" = [];
-          "app:go-forward" = [];
-          "editor:insert-link" = [];
+          # Comments shows what is default
+          "markdown:add-metadata-property" = []; # Ctrl + ;
+          "editor:toggle-comments" = []; # Ctrl + /
+          "editor:toggle-checklist-status" = []; # Ctrl + L
+          "editor:open-search-replace" = []; # Ctrl + H 
+          "editor:save-file" = []; # Ctrl + S
+          "editor:insert-link" = []; # Ctrl + K
+          "editor:delete-paragraph" = []; # Ctrl + D
+          "editor:open-link-in-new-window" = []; # Ctrl + Alt + Shift + Enter (hello?)
+          "insert-template" = [ 
+            { 
+            modifiers = [ "Mod" ]; # Mod is Ctrl
+            key = "R";
+            }
+          ];
+          "app:open-help" = []; # F1
+          "app:go-back" = []; # Ctrl + Alt + <-
+          "app:go-forward" = []; # Ctrl + Alt + ->
         };
       };
     };
