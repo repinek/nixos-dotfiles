@@ -1,6 +1,6 @@
 local home = assert(os.getenv("HOME"), "HOME is not set")
 
-local screenshot_dir = home .. "/Media/Screenshots/$(date +%Y-%m)"
+local screenshot_dir = home .. "/Media/Screenshots/$(date +%Y/%m)"
 local screenshot_name = "Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png"
 local mkdir_screenshot = "mkdir -p " .. screenshot_dir
 

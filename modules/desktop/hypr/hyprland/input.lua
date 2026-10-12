@@ -1,7 +1,7 @@
 hl.config({
     input = {
-        -- Switch the US/RU/UA layout with Shift + Alt
-        kb_layout = "us,ru,ua",
+        -- Switch the US/RU layout with Shift + Alt
+        kb_layout = "us,ru",
         kb_options = "grp:alt_shift_toggle",
 
         follow_mouse = 1,

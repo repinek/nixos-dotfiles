@@ -4,9 +4,9 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.programs.obsidian.user;
+  cfg = config.modules.editors.obsidian.user;
 in {
-  options.modules.programs.obsidian.user.enable = mkEnableOption "Obsidian";
+  options.modules.editors.obsidian.user.enable = mkEnableOption "Obsidian";
 
   config = mkIf cfg.enable {
     programs.obsidian = {
@@ -17,7 +17,7 @@ in {
           vimMode = true; # :q!
           showLineNumber = true;
           alwaysUpdateLinks = true;
-          attachmentFolderPath = ".attachments";
+          attachmentFolderPath = "attachments";
         };
 
         appearance.enabledCssSnippets = ["noctalia"];

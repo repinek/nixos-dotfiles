@@ -16,6 +16,7 @@
     ../../modules/editors/detect-it-easy/user.nix
     ../../modules/editors/ida-pro/user.nix
     ../../modules/editors/jadx/user.nix
+    ../../modules/editors/obsidian/user.nix
     ../../modules/editors/rider/user.nix
     ../../modules/editors/vscodium/user.nix
     ../../modules/editors/zed/user.nix
@@ -44,7 +45,6 @@
     ../../modules/programs/messengers/vesktop/user.nix
     ../../modules/programs/nemo/user.nix
     ../../modules/programs/obs-studio/user.nix
-    ../../modules/programs/obsidian/user.nix
     ../../modules/programs/proton-authenticator/user.nix
     ../../modules/programs/qbittorrent/user.nix
     ../../modules/programs/showtime/user.nix
@@ -82,6 +82,7 @@
     detect-it-easy.user.enable = true;
     ida-pro.user.enable = true;
     jadx.user.enable = true;
+    obsidian.user.enable = true;
     rider.user.enable = true;
     vscodium.user.enable = true;
     zed.user.enable = true;
@@ -118,7 +119,6 @@
     };
     nemo.user.enable = true;
     obs-studio.user.enable = true;
-    obsidian.user.enable = true;
     proton-authenticator.user.enable = true;
     qbittorrent.user.enable = true;
     showtime.user.enable = true;

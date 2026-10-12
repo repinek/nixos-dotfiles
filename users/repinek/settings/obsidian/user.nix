@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf config.modules.programs.obsidian.user.enable {
+  config = lib.mkIf config.modules.editors.obsidian.user.enable {
     programs.obsidian.vaults."Personal/Obsidian".settings = {};
   };
 }
