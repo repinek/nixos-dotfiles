@@ -4,7 +4,6 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 ##### Contents
 - [Screenshots](#screenshots)
 - [Features](#features-and-main-packages)
-    - [Programs](#programs)
 - [Structure](#structure)
 - [Usage](#usage)
 - [TODO](#todo)
@@ -16,7 +15,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 <img src="assets/screenshots/screenshot_1.png" width="700" alt="Rose Pine Theme, Noctalia Shell, Hyprland, Alacritty and Control Center">
 <img src="assets/screenshots/screenshot_2.png" width="700" alt="Creamy Forest Theme, Noctalia Shell, Hyprland, Nemo and Media">
 
-## Features and Main Packages
+## Features 
 - Flake-based, mostly modular system
 - Supports multiple hosts and users (not sure if I need multiple users for now tho)
 - Fully configured desktop experience with Hyprland and Noctalia Shell
@@ -26,9 +25,6 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for perso
 - Own [packages](pkgs/)
 - Daily incremental [Btrfs backups](services/backup/) with seven-day retention
 - Secret management with [sops-nix](https://github.com/Mic92/sops-nix)
-
-### Software 
-See the full list with descriptions and configuration links in [docs/SOFTWARE.md](docs/SOFTWARE.md).
 
 ## Structure
 
