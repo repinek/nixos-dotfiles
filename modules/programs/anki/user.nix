@@ -31,6 +31,18 @@ in {
           };
           sourceRoot = "${finalAttrs.src.name}";
         }))
+
+        (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
+          pname = "More_Decks_Stats_and_Time_Left";
+          version = "2.9";
+          src = pkgs.fetchFromGitHub {
+            owner = "cjdduarte";
+            repo = "MDS_Time_Left";
+            rev = "4964216a1eaf03ec299ec2a3df1379108a9f9116";
+            hash = "sha256-6Mi+JdbaabW2brxK8TEs7V+QU7h6EyNCixUcUbM4BOM=";
+          };
+          sourceRoot = "${finalAttrs.src.name}";
+        }))
       ];
     };
   };
