@@ -7,6 +7,7 @@
     xdg.configFile."gtk-3.0/bookmarks".text = ''
       file://${config.home.homeDirectory}/.config .config
       file://${config.home.homeDirectory}/.local .local
+      file://${config.home.homeDirectory}/Downloads Downloads
       file://${config.home.homeDirectory}/Programming Programming
       file://${config.home.homeDirectory}/Personal Personal
       file://${config.home.homeDirectory}/Media Media
