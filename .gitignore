@@ -1,9 +1,12 @@
 result*
 
 # Testing build-vm
-.vm
+/.vm
 
 .direnv
 
 # AI
 /AGENTS.md
+
+# Folder for binaries and everything that shouldn't be in git repo 
+/gitignored
