@@ -2,8 +2,8 @@
   lib,
   config,
   ...
-}: with lib;
-let
+}:
+with lib; let
   cfg = config.modules.cli.beets.user;
 in {
   options.modules.cli.beets.user.enable = mkEnableOption "";
@@ -22,7 +22,7 @@ in {
           timid = true; # Ask
           resume = "ask";
           log = "~/Media/Music/.beets/beets.log";
-          languages = [ "ru" "en" "ja" ];
+          languages = ["ru" "en" "ja"];
         };
 
         paths = {

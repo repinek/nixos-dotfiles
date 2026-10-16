@@ -2,8 +2,8 @@
   lib,
   config,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.programs.keepassxc.user;
 in {
   options.modules.programs.keepassxc.user.enable = mkEnableOption "KeePassXC";

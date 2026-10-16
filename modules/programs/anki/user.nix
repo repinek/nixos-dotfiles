@@ -20,7 +20,7 @@ in {
 
       addons = [
         pkgs.ankiAddons.review-heatmap
-        
+
         (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
           pname = "CrowdAnki";
           version = "0.9.6";

@@ -3,8 +3,8 @@
   lib,
   config,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.programs.qbittorrent.user;
 in {
   options.modules.programs.qbittorrent.user.enable = mkEnableOption "qBittorrent";

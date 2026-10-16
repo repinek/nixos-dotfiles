@@ -18,15 +18,20 @@ in {
           + ''
             rm -f $out/share/applications/gammastep-indicator.desktop
           '';
-    }))];
+      }))
+    ];
 
     programs.osu-lazer = {
       enable = true;
 
       nativeWayland = true;
-      extraShellArgs = [ 
-        "--set" "OSU_SDL3" "1"
-        "--set" "SDL_VIDEO_DOUBLE_BUFFER" "1"
+      extraShellArgs = [
+        "--set"
+        "OSU_SDL3"
+        "1"
+        "--set"
+        "SDL_VIDEO_DOUBLE_BUFFER"
+        "1"
       ];
       channel = "tachyon";
 
@@ -53,15 +58,15 @@ in {
 
           # Gameplay
           HitLighting = false;
-          StarFountains = false; 
+          StarFountains = false;
           DimLevel = 1.0;
-          FadePlayfieldWhenHealthLow = false; 
+          FadePlayfieldWhenHealthLow = false;
           BeatmapSkins = false;
           BeatmapColours = false;
           BeatmapHitsounds = false;
           ShowStoryboard = false;
           KeyOverlay = true;
-          GameplayLeaderboard = false;          
+          GameplayLeaderboard = false;
           AutoCursorSize = true;
           # Scroll speed mania 26.5
 
@@ -71,14 +76,14 @@ in {
           # Online
           PreferNoVideo = true;
           ShowOnlineExplicitContent = true;
-          NotifyOnFriendPresenceChange = true; 
+          NotifyOnFriendPresenceChange = true;
 
           # Not in settings
           # Song Select
           BeatmapDetailTab = "Local";
 
           # Beatmap listing
-          BeatmapListingFeaturedArtistFilter = false; 
+          BeatmapListingFeaturedArtistFilter = false;
 
           # Profile
           ProfileCoverExpanded = false;

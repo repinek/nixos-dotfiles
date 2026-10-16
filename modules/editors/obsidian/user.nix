@@ -27,15 +27,15 @@ in {
           "markdown:add-metadata-property" = []; # Ctrl + ;
           "editor:toggle-comments" = []; # Ctrl + /
           "editor:toggle-checklist-status" = []; # Ctrl + L
-          "editor:open-search-replace" = []; # Ctrl + H 
+          "editor:open-search-replace" = []; # Ctrl + H
           "editor:save-file" = []; # Ctrl + S
           "editor:insert-link" = []; # Ctrl + K
           "editor:delete-paragraph" = []; # Ctrl + D
           "editor:open-link-in-new-window" = []; # Ctrl + Alt + Shift + Enter (hello?)
-          "insert-template" = [ 
-            { 
-            modifiers = [ "Mod" ]; # Mod is Ctrl
-            key = "R";
+          "insert-template" = [
+            {
+              modifiers = ["Mod"]; # Mod is Ctrl
+              key = "R";
             }
           ];
           "app:open-help" = []; # F1

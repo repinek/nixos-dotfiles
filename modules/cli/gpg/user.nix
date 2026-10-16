@@ -3,8 +3,8 @@
   config,
   pkgs,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.cli.gpg.user;
 in {
   options.modules.cli.gpg.user.enable = mkEnableOption "Gnu Privacy Guard";

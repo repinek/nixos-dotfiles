@@ -3,8 +3,8 @@
   lib,
   config,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.programs.kid3.user;
 in {
   options.modules.programs.kid3.user.enable = mkEnableOption "kid3";

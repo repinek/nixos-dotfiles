@@ -2,11 +2,11 @@
   config,
   lib,
   ...
-}: with lib;
-let 
+}:
+with lib; let
   cfg = config.modules.cli.wakatime.user;
 in {
-  options.modules.cli.wakatime.user.enable = mkEnableOption "wakatime home-manager"; 
+  options.modules.cli.wakatime.user.enable = mkEnableOption "wakatime home-manager";
 
   config = mkIf cfg.enable {
     sops.secrets."repinek/wakatime/wakatime" = {
