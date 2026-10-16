@@ -42,6 +42,9 @@ in {
             rm -f $out/share/applications/gvim.desktop
           '';
       }))
+
+      python3 # For basic scripts and agents
+      python3Packages.pip
     ];
   };
 }
