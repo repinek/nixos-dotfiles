@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./settings/nemo/user.nix
 
@@ -15,6 +15,7 @@
 
     ../../modules/editors/detect-it-easy/user.nix
     ../../modules/editors/ida-pro/user.nix
+    ../../modules/editors/il2cpp-inspector-redux/user.nix
     ../../modules/editors/jadx/user.nix
     ../../modules/editors/obsidian/user.nix
     ../../modules/editors/rider/user.nix
@@ -81,6 +82,7 @@
   modules.editors = {
     detect-it-easy.user.enable = true;
     ida-pro.user.enable = true;
+    il2cpp-inspector-redux.user.enable = true;
     jadx.user.enable = true;
     obsidian.user.enable = true;
     rider.user.enable = true;
@@ -125,4 +127,6 @@
   };
 
   services.gnome-keyring.user.enable = true;
+
+  home.packages = [pkgs.il2cpp-inspector-redux];
 }

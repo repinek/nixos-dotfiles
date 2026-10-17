@@ -19,3 +19,5 @@ Name: `ida-pro` | Version: `9.2` | 🌐 [Homepage](https://hex-rays.com/ida-pro/
 - **ida-pro-mcp** - AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.  
 Name: `ida-pro-mcp` | Version: `0-unstable-2026-07-30` | 🌐 [Homepage](https://github.com/mrexodia/ida-pro-mcp) | 📦 [Source](./ida-pro-mcp/default.nix) | License: `MIT`  
 
+- **il2cpp-inspector-redux** - Continuation of Il2CppInspector - A powerful automated tool for reverse engineering Unity IL2CPP binaries.  
+Name: `il2cpp-inspector-redux` | Version: `2026.02` | 🌐 [Homepage](https://github.com/LukeFZ/Il2CppInspectorRedux) | 📦 [Source](./il2cpp-inspector-redux/default.nix) | License: `AGPLv3`  
