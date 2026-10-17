@@ -28,7 +28,6 @@ in {
         key_switchTextDirection = {};
         key_findAgain2 = {};
         key_findPrevious2 = {};
-        "ext-key-id-_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action" = {}; # Sidebery
         key_gotoHistory = {};
         viewBookmarksSidebarKb = {};
         viewGenaiChatSidebarKb = {};
