@@ -17,7 +17,8 @@ in {
 
       settings = mkMerge [
         {
-          hide_version_string = true;
+          # hide_version_string = true;
+          corner_bottom_left = "";
           clock = "%d/%m %H:%M:%S";
 
           full_color = true;
