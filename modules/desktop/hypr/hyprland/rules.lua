@@ -7,6 +7,7 @@ hl.window_rule({ match = { class = "vesktop"}, workspace = "2 silent" })
 
 hl.window_rule({ match = { class = "osu!" }, workspace = "3 silent" })
 hl.window_rule({ match = { class = "codium" }, workspace = "3 silent" })
+hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = "3 silent" })
 
 -- Run OBS Studio silently on the magic workspace; float, size, and center it
 hl.window_rule({ match = { class = "com.obsproject.Studio" }, workspace = "special:magic silent" })
