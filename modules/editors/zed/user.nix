@@ -16,6 +16,7 @@ in {
 
       extensions = [
         "nix" # Nix support
+        "lua" # Lua support
         "catppuccin" # Catppuccin Theme
         "catppuccin-black-theme" # Catppuccin Black Theme
         "everforest" # Everforest Theme
@@ -66,11 +67,21 @@ in {
         # TODO add
 
         # Languages & Tools
-        languages.Nix.language_servers = [ "nixd" "wakatime" "!nil" ]; # Only use Nixd
+        languages.Nix.language_servers = [ "nixd" "!nil" ]; # Only use Nixd
 
         lsp = {
-          nixd.initialization_options.formatting.command = ["alejandra" "--quiet" "--"];
+          # Use alejandra as default formatter
+          nixd.settings.formatting.command = ["alejandra" "--quiet" "--"];
+          # Hyprland stubs
+          lua-language-server.settings.Lua = {
+            workspace.library = [
+              "${config.wayland.windowManager.hyprland.finalPackage}/share/hypr/stubs"
+            ];
+            diagnostics.global = [ "hl" ];
+          };
         };
+
+        diagnostics.inline.enabled = true;
 
         # Window & Layout
         search.button = false;
