@@ -1,11 +1,10 @@
-{hostname, ...}: {
+{pkgs, hostname, ...}: {
   imports = [
     ./hardware-configuration.nix
 
     ../../modules/cli/platform-tools/system.nix
     ../../modules/cli/ssh/system.nix
 
-    ../../modules/core/boot/system.nix
     ../../modules/core/btrfs/system.nix
     ../../modules/core/fonts/system.nix
     ../../modules/core/nix/system.nix
@@ -32,7 +31,6 @@
 
     ../../services/backup/system.nix
     ../../services/gnome-keyring/system.nix
-    ../../services/libretranslate/system.nix
     ../../services/nix-gc/system.nix
     ../../services/syncthing/system.nix
   ];
@@ -43,10 +41,6 @@
   };
 
   modules.core = {
-    boot.system = {
-      enable = true;
-      grub.enable = true;
-    };
     btrfs.system.enable = true;
     fonts.system.enable = true;
     nix.system.enable = true;
@@ -96,7 +90,6 @@
       fileSystems = ["/" "/mnt/Old"];
     };
     gnome-keyring.system.enable = true;
-    libretranslate.system.enable = true;
     nix-gc.system.enable = true;
 
     syncthing = {
@@ -160,6 +153,27 @@
         DNS = "194.242.2.4#base.dns.mullvad.net";
         DNSOverTLS = true;
         Domains = "~.";
+      };
+    };
+  };
+
+  # Boot
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    tmp.cleanOnBoot = true; # clear /tmp on every boot
+
+    loader = {
+      efi = {
+        efiSysMountPoint = "/boot";
+        canTouchEfiVariables = true; # manage efi boot entries automatically
+      };
+
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+        useOSProber = true; # detect other operating systems
+        configurationLimit = 10;
       };
     };
   };

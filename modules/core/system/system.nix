@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.modules.core.system;
 in {
-  options.modules.core.system.enable = mkEnableOption "System locale and default settings";
+  options.modules.core.system.enable = mkEnableOption "System locale and some default settings";
 
   config = mkIf cfg.enable {
     # Locales
