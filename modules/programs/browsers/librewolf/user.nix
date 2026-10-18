@@ -218,6 +218,7 @@ in {
           "browser.translations.automaticallyPopup" = false;
           "browser.search.suggest.enabled" = true;
           "browser.urlbar.suggest.searches" = true;
+          "browser.nova.enabled" = false; # New firefox redesign. About pages looks better, but other things are very bad tbh (e.g. search bar)
 
           "findbar.highlightAll" = true; # Highlight all Ctrl+F
 
