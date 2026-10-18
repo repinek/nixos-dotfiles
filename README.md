@@ -1,4 +1,5 @@
 # repinek's NixOS dotfiles
+
 Declarative [NixOS](https://nixos.org) configuration with Home Manager for daily personal use.
 
 > Some NixOS dotfiles I've come across seem to be missing basic things you'd expect from a **daily-use computer**.  
@@ -7,10 +8,10 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for daily
 >
 > Everyday convenience matters to me: opening files in the right applications, previewing them in the file manager, taking and annotating screenshots, sharing files between devices, etc.  
 > I mostly use **open-source software**, though.  
-> I use Nix to keep my setup _reproducible_, but I still configure some applications / features imperatively. Those manual settings are documented alongside the configuration.  
-
+> I use Nix to keep my setup _reproducible_, but I still configure some applications / features imperatively. Those manual settings are documented alongside the configuration.
 
 ##### Contents
+
 - [Screenshots](#screenshots)
 - [Features](#features)
 - [Structure](#structure)
@@ -24,7 +25,8 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for daily
 <img src="assets/screenshots/screenshot_1.png" width="700" alt="Rose Pine Theme, Noctalia Shell, Hyprland, Alacritty and Control Center">
 <img src="assets/screenshots/screenshot_2.png" width="700" alt="Creamy Forest Theme, Noctalia Shell, Hyprland, Nemo and Media">
 
-## Features 
+## Features
+
 - Everyday applications for files, documents, media, creative work and communication
 - Fully configured desktop experience with Hyprland and Noctalia Shell
 - Theme management with Noctalia Shell for wallpapers, GTK, Qt5/6, KColorScheme, btop, Alacritty, Fastfetch, Hyprland, VSCodium, Obsidian, Vesktop, LibreWolf, and OBS Studio
@@ -34,6 +36,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for daily
 - Daily incremental [Btrfs backups](services/backup/) with seven-day retention
 
 #### Architecture things
+
 - Flake-based, mostly modular system
 - Supports multiple hosts and users (not sure if I need multiple users for now tho)
 - Secret management with [sops-nix](https://github.com/Mic92/sops-nix)
@@ -93,12 +96,14 @@ nixos-dotfiles
 ```
 
 ## Usage
+
 > [!WARNING]  
 > This is my personal configuration, created only for me, for my personal hardware and workflow.  
 > **DO NOT COPY & PASTE IT BLINDLY**  
-> Use it only as a **reference** to build and configure your own config.  
+> Use it only as a **reference** to build and configure your own config.
 
 If you know what you are doing and just want to look around:
+
 ```bash
 git clone https://github.com/repinek/nixos-dotfiles.git
 cd nixos-dotfiles
@@ -110,16 +115,16 @@ Not needed right now, just ideas for when I have free time
 
 - [ ] Refactor the core folder a little
 - [ ] Try Niri one day
-- [ ] Add FileZilla
-- [ ] Try Neovim
-- [ ] proxypin, httptoolkit* or reqable*
+- [ ] proxypin, httptoolkit, reqable* (or anything else for traffic capturing)
 
 There are also several `FIXME` and `TODO` comments.
 
 ## License
+
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for details.
 
 ## Credits
+
 - [datsfilipe dotfiles](https://github.com/datsfilipe/dotfiles) - The architecture is heavily inspired by these dotfiles
 - [Ruject nixos-infra](https://git.ruject.fun/RuJect/nixos-infra) - Some modules and architectural ideas were adapted from this project
