@@ -30,7 +30,7 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for daily
 - Theme management with Noctalia Shell for wallpapers, GTK, Qt5/6, KColorScheme, btop, Alacritty, Fastfetch, Hyprland, VSCodium, Obsidian, Vesktop, LibreWolf, and OBS Studio
 - Useful [aliases](modules/shell/fish/fish-aliases.nix) in the shell
 - Ergonomic [keybindings](modules/desktop/hypr/hyprland/keybinds.nix) in Hyprland
-- Declarative configs for a lot of apps, including [LibreWolf](modules/programs/browsers/librewolf/user.nix), [VSCodium](modules/editors/vscodium/user.nix), [Obsidian](modules/editors/obsidian/user.nix), Anki, Nemo, etc.
+- Declarative configs for a lot of apps, including [LibreWolf](modules/programs/browsers/librewolf/user.nix), [VSCodium](modules/editors/vscodium/user.nix), [Obsidian](modules/editors/obsidian/user.nix), [Zed](modules/editors/zed/user.nix), Anki, Nemo, etc.
 - Daily incremental [Btrfs backups](services/backup/) with seven-day retention
 
 #### Architecture things
