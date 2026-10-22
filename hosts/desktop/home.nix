@@ -99,7 +99,7 @@
   modules.programs = {
     alacritty.user.enable = true;
     anki.user.enable = true;
-    audacity.user.enable = true;
+    audacity.user.enable = false;
     browsers = {
       librewolf.user.enable = true;
       ungoogled-chromium.user.enable = true;
