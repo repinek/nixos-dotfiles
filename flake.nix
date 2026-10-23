@@ -16,7 +16,10 @@
     };
 
     # Programs
-    repinek-pkgs.url = "path:./pkgs";
+    repinek-pkgs = {
+      url = "path:./pkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     osu-lazer = {
       url = "github:repinek/osu-lazer-flake";

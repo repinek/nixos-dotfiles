@@ -34,6 +34,7 @@ in {
         "1"
       ];
       channel = "tachyon";
+      useGamemode = false;
 
       storagePath = "/home/repinek/Games/osu!";
 

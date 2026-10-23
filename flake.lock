@@ -56,22 +56,6 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1792502884,
-        "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "osu-lazer": {
       "inputs": {
         "nixpkgs": [
@@ -79,11 +63,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792569505,
-        "narHash": "sha256-FSPJosSaxQVrwQM2ZjWrzYldT8OC8cPIx7uXxU24OnY=",
+        "lastModified": 1792765899,
+        "narHash": "sha256-dPMSVqJUkcuydGV+uO6odNJ5olulitJ1fAJsp3zun4k=",
         "owner": "repinek",
         "repo": "osu-lazer-flake",
-        "rev": "cf7998fd10d621d78cc6587ddd195e6b7e048ac4",
+        "rev": "4701fcc83c264d87d4f30fdb9919883ba0d74992",
         "type": "github"
       },
       "original": {
@@ -94,7 +78,9 @@
     },
     "repinek-pkgs": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "path": "./pkgs",
