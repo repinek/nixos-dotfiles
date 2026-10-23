@@ -67,13 +67,16 @@ in {
         # TODO add
 
         # Languages & Tools
-        languages.Nix.language_servers = [ "nixd" "!nil" ]; # Only use Nixd
+        languages = {
+          Nix.language_servers = [ "nixd" "!nil" ]; # Only use Nixd
+          TypeScript.tab_size = 4;
+          JavaScript.tab_size = 4;
+        };
 
         lsp = {
           vtsls.settings = {
             typescript.updateImportsOnFileMove.enabled = "always";
             javascript.updateImportsOnFileMove.enabled = "always";
-            # enable_lsp_tasks: true
           };
           # Use alejandra as default formatter
           nixd.settings.formatting.command = ["alejandra" "--quiet" "--"];
