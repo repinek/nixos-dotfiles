@@ -6,7 +6,7 @@
   users.users.repinek = {
     isNormalUser = true;
     # adbusers is required by platform-tools
-    extraGroups = ["wheel" "adbusers" "networkmanager"];
+    extraGroups = ["wheel" "adbusers" "networkmanager" "gamemode"];
     shell = pkgs.fish;
   };
 
