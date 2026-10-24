@@ -16,7 +16,6 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      strace # Sys calls tracer
       lsof # List open files
       pciutils # Inspect and manipulate PCI devices (e.g. lspci)
       psmisc # Utilities that use the proc fs (killall, pstree, fuser)
@@ -27,11 +26,11 @@ in {
 
       git
       wget
-      curl
+      curl # Default in NixOS
       zip
       unzip
       p7zip
-      rsync
+      rsync # Default in NixOS
       ffmpeg
 
       vim

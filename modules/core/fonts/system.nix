@@ -12,20 +12,16 @@ in {
   config = mkIf cfg.enable {
     fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
-      # iosevka
+      iosevka
 
       inter
       roboto
       plus-jakarta-sans
-      liberation_ttf
-      dejavu_fonts
       google-sans # From custom packages
 
       corefonts # Microsoft Core Fonts (unfree)
 
       noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
 
       source-serif-pro
     ];

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+_: {
   # Was removed (unused modules)
   # Rider, DiE, jADX
   imports = [
@@ -123,7 +123,4 @@
   };
 
   services.gnome-keyring.user.enable = true;
-
-  # No reason to make module
-  home.packages = [pkgs.il2cpp-inspector-redux];
 }
