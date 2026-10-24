@@ -68,7 +68,22 @@ in {
 
         # Languages & Tools
         languages = {
-          Nix.language_servers = [ "nixd" "!nil" ]; # Only use Nixd
+          Nix = {
+            language_servers = ["nixd" "!nil"]; # Use Nixd
+            formatter.external = {
+              command = "alejandra";
+              arguments = ["--quiet" "--"];
+            };
+          };
+          Python = {
+            language_servers = ["ty" "!basedpyright"]; # Use ty
+            # Use Ruff
+            # Omg, it's not working
+            # Incorrect type. Expected "boolean".
+            # https://zed.dev/docs/languages/python#configuring-formatting
+            # code_actions_on_format."source.organizeImports.ruff" = true;
+            formatter.language_server.name = "ruff";
+          };
           TypeScript.tab_size = 4;
           JavaScript.tab_size = 4;
         };
@@ -78,14 +93,12 @@ in {
             typescript.updateImportsOnFileMove.enabled = "always";
             javascript.updateImportsOnFileMove.enabled = "always";
           };
-          # Use alejandra as default formatter
-          nixd.settings.formatting.command = ["alejandra" "--quiet" "--"];
           # Hyprland stubs
           lua-language-server.settings.Lua = {
             workspace.library = [
               "${config.wayland.windowManager.hyprland.finalPackage}/share/hypr/stubs"
             ];
-            diagnostics.global = [ "hl" ];
+            diagnostics.global = ["hl"];
           };
         };
 
