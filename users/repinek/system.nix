@@ -1,8 +1,7 @@
 {pkgs, ...}: {
   users.users.repinek = {
     isNormalUser = true;
-    # adbusers is required by platform-tools
-    extraGroups = ["wheel" "adbusers" "networkmanager" "gamemode"];
+    extraGroups = ["wheel" "networkmanager" "gamemode"];
     shell = pkgs.fish;
   };
 

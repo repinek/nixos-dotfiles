@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }:
 with lib; let
@@ -11,9 +10,6 @@ in {
 
   config = mkIf cfg.enable {
     programs.hyprland.enable = true;
-    xdg.portal = {
-      enable = true;
-      configPackages = with pkgs; [xdg-desktop-portal-hyprland xdg-desktop-portal-gtk];
-    };
+    # xdg-portal enabled by default
   };
 }

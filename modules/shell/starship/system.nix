@@ -12,7 +12,6 @@ in {
     # NixOS options also apply to root
     programs.starship = {
       enable = true;
-      interactiveOnly = true;
       presets = ["plain-text-symbols"];
     };
   };

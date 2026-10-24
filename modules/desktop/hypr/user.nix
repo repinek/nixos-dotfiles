@@ -43,7 +43,7 @@ in {
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      xwayland.enable = true;
+      xwayland.enable = true; # Default value
       configType = "lua";
 
       settings.monitor = cfg.monitors;

@@ -29,8 +29,9 @@ in {
     time.timeZone = mkDefault "Asia/Yekaterinburg";
 
     services = {
-      gvfs.enable = true; # File pickers, trash, mount in file manager
-      udisks2.enable = true; # Storage daemon for udiskie
+      # File pickers, trash, mount in file manager
+      # Also enables udisks2, which is storage daemon for udiskie
+      gvfs.enable = true;
     };
 
     programs = {

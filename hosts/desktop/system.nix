@@ -69,7 +69,7 @@
   modules.hardware = {
     audio.system = {
       enable = true;
-      audio_buffer = 256;
+      audio_buffer = 512;
     };
     nvidia.system.enable = true;
   };
@@ -90,7 +90,7 @@
     backup.system.enable = true;
     btrfs.autoScrub = {
       enable = true;
-      interval = "monthly";
+      interval = "monthly"; # Default value
       fileSystems = ["/" "/mnt/Old"];
     };
     gnome-keyring.system.enable = true;
@@ -168,7 +168,7 @@
 
     loader = {
       efi = {
-        efiSysMountPoint = "/boot";
+        efiSysMountPoint = "/boot"; # Default value
         canTouchEfiVariables = true; # manage efi boot entries automatically
       };
 
