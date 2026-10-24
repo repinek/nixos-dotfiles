@@ -15,7 +15,6 @@
     ../../modules/cli/fastfetch/user.nix
     ../../modules/cli/gh/user.nix
     ../../modules/cli/ssh/user.nix
-    ../../modules/shell/starship/user.nix
 
     ../../modules/editors/codex/user.nix
     ../../modules/editors/opencode/user.nix
@@ -42,7 +41,6 @@
 
   modules.shell = {
     fish.user.enable = true;
-    starship.user.enable = true;
   };
 
   home.stateVersion = "26.05";
