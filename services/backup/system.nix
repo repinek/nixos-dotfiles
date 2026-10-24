@@ -50,7 +50,7 @@ in {
         Type = "oneshot";
         ExecStart = "${pkgs.bash}/bin/bash ${./imperative-backup.sh}";
       };
-      path = [pkgs.coreutils pkgs.rsync];
+      path = [pkgs.coreutils pkgs.rsync pkgs.util-linux];
     };
 
     systemd.timers.imperative-backup = {
