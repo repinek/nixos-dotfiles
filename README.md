@@ -9,6 +9,8 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for daily
 > Everyday convenience matters to me: opening files in the right applications, previewing them in the file manager, taking and annotating screenshots, sharing files between devices, etc.  
 > I mostly use **open-source software**, though.  
 > I use Nix to keep my setup _reproducible_, but I still configure some applications / features imperatively. Those manual settings are documented alongside the configuration.
+>
+> I use AI mainly for questions and guidance while working on these dotfiles. If a file is vibecoded, I will explicitly note it in the comments.
 
 ##### Contents
 
