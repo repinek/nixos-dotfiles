@@ -43,7 +43,7 @@ in {
 
     systemd = {
       services.networkManager-wait-online.enable = false;
-      settings.Manager.DefaultTimeoutStopSec = "4s";
+      settings.Manager.DefaultTimeoutStopSec = "10s";
     };
   };
 }
