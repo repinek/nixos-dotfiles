@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  # Was removed (unused modules)
+  # Rider, DiE, jADX
   imports = [
     ./settings/nemo/user.nix
 
@@ -13,12 +15,9 @@
     ../../modules/desktop/noctalia/user.nix
     ../../modules/desktop/theme/user.nix
 
-    ../../modules/editors/detect-it-easy/user.nix
     ../../modules/editors/ida-pro/user.nix
     ../../modules/editors/il2cpp-inspector-redux/user.nix
-    ../../modules/editors/jadx/user.nix
     ../../modules/editors/obsidian/user.nix
-    ../../modules/editors/rider/user.nix
     ../../modules/editors/vscodium/user.nix
     ../../modules/editors/zed/user.nix
 
@@ -80,12 +79,9 @@
   };
 
   modules.editors = {
-    detect-it-easy.user.enable = true;
     ida-pro.user.enable = true;
     il2cpp-inspector-redux.user.enable = true;
-    jadx.user.enable = true;
     obsidian.user.enable = true;
-    rider.user.enable = true;
     vscodium.user.enable = true;
     zed.user.enable = true;
   };
@@ -128,5 +124,6 @@
 
   services.gnome-keyring.user.enable = true;
 
+  # No reason to make module
   home.packages = [pkgs.il2cpp-inspector-redux];
 }

@@ -3,6 +3,8 @@
   hostname,
   ...
 }: {
+  # Was removed (unused modules)
+  # LibreTranslate
   imports = [
     ./hardware-configuration.nix
 
