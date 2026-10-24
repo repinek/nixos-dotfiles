@@ -7,20 +7,9 @@
 with lib; let
   cfg = config.modules.hardware.nvidia.system;
 in {
-  options.modules.hardware.nvidia.system = {
-    enable = mkEnableOption "NVIDIA";
-    powerManagement.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.modules.hardware.nvidia.system.enable = mkEnableOption "NVIDIA";
 
   config = mkIf cfg.enable {
-    boot.kernelParams = [
-      "nvidia_drm.fbdev=1"
-      "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
-    ];
-
     services.xserver.videoDrivers = ["nvidia"];
 
     hardware = {
@@ -36,7 +25,7 @@ in {
       nvidia = {
         modesetting.enable = true;
         nvidiaSettings = false; # We don't need them since we on wayland
-        powerManagement.enable = cfg.powerManagement.enable;
+        powerManagement.enable = true;
         open = true;
         package = config.boot.kernelPackages.nvidiaPackages.stable;
       };
