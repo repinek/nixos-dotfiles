@@ -31,25 +31,22 @@ in {
     # Configure Qt
     qt = {
       enable = true;
-      platformTheme = {
-        name = "qtct";
-        package = [
-          (pkgs.libsForQt5.qt5ct.overrideAttrs (old: {
-            postInstall =
-              (old.postInstall or "")
-              + ''
-                rm -f $out/share/applications/qt5ct.desktop
-              '';
-          }))
-          (pkgs.qt6Packages.qt6ct.overrideAttrs (old: {
-            postInstall =
-              (old.postInstall or "")
-              + ''
-                rm -f $out/share/applications/qt6ct.desktop
-              '';
-          }))
-        ];
-      };
+      platformTheme.name = "qtct";
+    };
+
+    xdg.dataFile = {
+      "applications/qt5ct.desktop".text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=Qt5 Settings
+        Hidden=true
+      '';
+      "applications/qt6ct.desktop".text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=Qt6 Settings
+        Hidden=true
+      '';
     };
 
     # Use the Noctalia color scheme

@@ -34,14 +34,7 @@ in {
       rsync
       ffmpeg
 
-      # vim: Remove the gvim .desktop entry
-      (vim.overrideAttrs (old: {
-        postInstall =
-          (old.postInstall or "")
-          + ''
-            rm -f $out/share/applications/gvim.desktop
-          '';
-      }))
+      vim
 
       python3 # For basic scripts and agents
       python3Packages.pip

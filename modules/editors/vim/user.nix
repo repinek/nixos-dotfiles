@@ -13,14 +13,7 @@ in {
     programs.vim = {
       enable = true;
       # The GUI is not needed
-      # Use vim instead of vim-full and remove the gvim .desktop entry
-      packageConfigurable = pkgs.vim.overrideAttrs (old: {
-        postInstall =
-          (old.postInstall or "")
-          + ''
-            rm -f $out/share/applications/gvim.desktop
-          '';
-      });
+      packageConfigurable = pkgs.vim;
 
       defaultEditor = true;
 
@@ -42,5 +35,12 @@ in {
         imap jj <Esc>
       '';
     };
+
+    xdg.dataFile."applications/gvim.desktop".text = ''
+      [Desktop Entry]
+      Type=Application
+      Name=GVim
+      Hidden=true
+    '';
   };
 }

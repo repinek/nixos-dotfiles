@@ -10,16 +10,22 @@ in {
   options.modules.cli.scrcpy.user.enable = mkEnableOption "scrcpy display and control Android devices";
 
   config = mkIf cfg.enable {
-    home.packages = [
-      # Desktop entries are not needed for this package
-      (pkgs.scrcpy.overrideAttrs (old: {
-        postInstall =
-          (old.postInstall or "")
-          + ''
-            rm -f $out/share/applications/scrcpy.desktop
-            rm -f $out/share/applications/scrcpy-console.desktop
-          '';
-      }))
-    ];
+    home.packages = [pkgs.scrcpy];
+
+    # Desktop entries are not needed for this package
+    xdg.dataFile = {
+      "applications/scrcpy.desktop".text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=scrcpy
+        Hidden=true
+      '';
+      "applications/scrcpy-console.desktop".text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=scrcpy console
+        Hidden=true
+      '';
+    };
   };
 }

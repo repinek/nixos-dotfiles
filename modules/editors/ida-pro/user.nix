@@ -12,6 +12,13 @@ in {
   config = mkIf cfg.enable {
     home.packages = [pkgs.ida-pro];
 
+    xdg.dataFile."applications/com.hex_rays.HVUI.pro._9_2.desktop".text = ''
+      [Desktop Entry]
+      Type=Application
+      Name=IDA Pro 9.2 HVUI
+      Hidden=true
+    '';
+
     # ida-pro-mcp plugin
     home.file.".idapro/plugins/ida_mcp.py".source = "${pkgs.ida-pro-mcp}/lib/ida-pro-mcp/ida_mcp.py";
     home.file.".idapro/plugins/ida_mcp".source = "${pkgs.ida-pro-mcp}/lib/ida-pro-mcp/ida_mcp";

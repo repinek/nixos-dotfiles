@@ -12,14 +12,15 @@ in {
   config = mkIf cfg.enable {
     home.packages = [
       # Play with Double Time
-      (pkgs.gammastep.overrideAttrs (old: {
-        postInstall =
-          (old.postInstall or "")
-          + ''
-            rm -f $out/share/applications/gammastep-indicator.desktop
-          '';
-      }))
+      pkgs.gammastep
     ];
+
+    xdg.dataFile."applications/gammastep-indicator.desktop".text = ''
+      [Desktop Entry]
+      Type=Application
+      Name=Gammastep Indicator
+      Hidden=true
+    '';
 
     programs.osu-lazer = {
       enable = true;
