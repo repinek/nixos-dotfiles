@@ -177,7 +177,6 @@
         device = "nodev";
         efiSupport = true;
         useOSProber = true; # detect other operating systems
-        configurationLimit = 10;
       };
     };
   };
