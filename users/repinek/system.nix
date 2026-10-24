@@ -1,8 +1,4 @@
 {pkgs, ...}: {
-  imports = [
-    ./settings/sops/system.nix
-  ];
-
   users.users.repinek = {
     isNormalUser = true;
     # adbusers is required by platform-tools
