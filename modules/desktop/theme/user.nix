@@ -14,7 +14,6 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       adw-gtk3
-      qt6Packages.qt6ct
     ];
 
     # Configure GTK 3 and GTK 4
@@ -32,15 +31,32 @@ in {
     # Configure Qt
     qt = {
       enable = true;
-      platformTheme.name = "qtct";
+      platformTheme = {
+        name = "qtct";
+        package = [
+          (pkgs.libsForQt5.qt5ct.overrideAttrs (old: {
+            postInstall =
+              (old.postInstall or "")
+              + ''
+                rm -f $out/share/applications/qt5ct.desktop
+              '';
+          }))
+          (pkgs.qt6Packages.qt6ct.overrideAttrs (old: {
+            postInstall =
+              (old.postInstall or "")
+              + ''
+                rm -f $out/share/applications/qt6ct.desktop
+              '';
+          }))
+        ];
+      };
     };
 
     # Use the Noctalia color scheme
     xdg.configFile = {
-      # FIXME: Broken
       "qt5ct/qt5ct.conf".text = ''
         [Appearance]
-        color_palette=true
+        custom_palette=true
         color_scheme_path=${config.home.homeDirectory}/.config/qt5ct/colors/noctalia.conf
       '';
 
