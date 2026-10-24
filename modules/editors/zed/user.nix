@@ -78,10 +78,7 @@ in {
           Python = {
             language_servers = ["ty" "!basedpyright"]; # Use ty
             # Use Ruff
-            # Omg, it's not working
-            # Incorrect type. Expected "boolean".
-            # https://zed.dev/docs/languages/python#configuring-formatting
-            # code_actions_on_format."source.organizeImports.ruff" = true;
+            code_actions_on_format."source.organizeImports.ruff" = true;
             formatter.language_server.name = "ruff";
           };
           TypeScript.tab_size = 4;
