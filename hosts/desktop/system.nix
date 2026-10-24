@@ -9,7 +9,6 @@
     ./hardware-configuration.nix
 
     ../../modules/cli/platform-tools/system.nix
-    ../../modules/cli/ssh/system.nix
 
     ../../modules/core/btrfs/system.nix
     ../../modules/core/fonts/system.nix
@@ -43,7 +42,6 @@
 
   modules.cli = {
     platform-tools.system.enable = true;
-    ssh.system.enable = true;
   };
 
   modules.core = {
