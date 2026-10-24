@@ -25,6 +25,6 @@ in {
 
     # Keep Bash available
     environment.shells = mkDefault [pkgs.bashInteractive pkgs.fish];
-    users.defaultUserShell = mkForce pkgs.fish;
+    users.defaultUserShell = pkgs.fish;
   };
 }
