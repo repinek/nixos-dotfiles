@@ -20,17 +20,7 @@ in {
 
       addons = [
         pkgs.ankiAddons.review-heatmap
-
-        (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
-          pname = "CrowdAnki";
-          version = "0.9.6";
-          src = pkgs.fetchzip {
-            url = "https://github.com/Stvad/CrowdAnki/releases/download/v${finalAttrs.version}/crowd_anki_20260918.zip";
-            hash = "sha256-sL55PAa3qSzNsRoupIFTcqe7y/APlCW4G0SzPJFUR4U=";
-            stripRoot = false;
-          };
-          sourceRoot = "${finalAttrs.src.name}";
-        }))
+        pkgs.ankiAddons.crowdanki
 
         (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
           pname = "More_Decks_Stats_and_Time_Left";
