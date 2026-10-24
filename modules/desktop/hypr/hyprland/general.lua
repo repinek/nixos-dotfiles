@@ -41,6 +41,10 @@ hl.config({
         vrr = 0, -- 0 off, 1 on, 2 fullscreen only, 3 fullscreen video or game
     },
 
+    render = {
+        direct_scanout = 1, -- 0 off, 1 on, 2 fullscreen games only
+    },
+
     ecosystem = {
         no_update_news = true,
     },

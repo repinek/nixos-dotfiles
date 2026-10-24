@@ -12,9 +12,12 @@ in {
   config = mkIf cfg.enable {
     programs.gamemode = {
       enable = true;
-      settings.custom = {
-        start = "${pkgs.libnotify}/bin/notify-send 'GameMode started'";
-        end = "${pkgs.libnotify}/bin/notify-send 'GameMode ended'";
+      settings = {
+        general.renice = 5;
+        custom = {
+          start = "${pkgs.libnotify}/bin/notify-send 'GameMode started'";
+          end = "${pkgs.libnotify}/bin/notify-send 'GameMode ended'";
+        };
       };
     };
 
