@@ -29,7 +29,7 @@
     "/" = {
       device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
       fsType = "btrfs";
-      options = ["subvol=@" "x-gvfs-hide"];
+      options = ["subvol=@" "compress=zstd" "x-gvfs-hide"];
     };
 
     "/home" = {
@@ -59,25 +59,25 @@
     "/home/repinek/Media" = {
       device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
       fsType = "btrfs";
-      options = ["subvol=@home/repinek/Media" "noatime" "compress=zstd" "x-gvfs-hide"];
+      options = ["subvol=@home/repinek/Media" "noatime" "x-gvfs-hide"];
     };
 
     "/home/repinek/Programming" = {
       device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
       fsType = "btrfs";
-      options = ["subvol=@home/repinek/Programming" "noatime" "compress=zstd" "x-gvfs-hide"];
+      options = ["subvol=@home/repinek/Programming" "noatime" "x-gvfs-hide"];
     };
 
     "/home/repinek/Personal" = {
       device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
       fsType = "btrfs";
-      options = ["subvol=@home/repinek/Personal" "noatime" "compress=zstd" "x-gvfs-hide"];
+      options = ["subvol=@home/repinek/Personal" "noatime" "x-gvfs-hide"];
     };
 
     "/home/repinek/Games" = {
       device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
       fsType = "btrfs";
-      options = ["subvol=@home/repinek/Games" "noatime" "compress=zstd" "x-gvfs-hide"];
+      options = ["subvol=@home/repinek/Games" "noatime" "x-gvfs-hide"];
     };
 
     # Secondary backup drive
@@ -91,7 +91,7 @@
     "/btrfs" = {
       device = "/dev/disk/by-uuid/096a158b-7ba7-42e1-905e-a3c09b510f4e";
       fsType = "btrfs";
-      options = ["subvolid=5" "noatime" "compress=zstd" "x-gvfs-hide"];
+      options = ["subvolid=5" "noatime" "x-gvfs-hide"];
     };
   };
 
