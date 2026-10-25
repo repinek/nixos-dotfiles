@@ -115,9 +115,11 @@ cd nixos-dotfiles
 
 Not needed right now, just ideas for when I have free time
 
-- [ ] Refactor the core folder a little
+- [ ] Make more square corners (Noctalia and hyprland)
+- [ ] Try quickshell 
+- [ ] Do something with Obsidian (I don't like it after native apps, maybe switch it to something like NeoVim with plugins or Zed)
 - [ ] Try Niri one day
-- [ ] proxypin, httptoolkit, reqable* (or anything else for traffic capturing)
+- [ ] proxypin, httptoolkit, reqable* (or anything else for traffic capturing, not needed rn)
 
 There are also several `FIXME` and `TODO` comments.
 
