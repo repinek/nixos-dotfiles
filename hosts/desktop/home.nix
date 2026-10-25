@@ -1,6 +1,6 @@
 _: {
   # Was removed (unused modules)
-  # Rider, DiE, jADX
+  # Rider, DiE, jADX, VSCodium
   imports = [
     ./settings/nemo/user.nix
 
@@ -18,7 +18,6 @@ _: {
     ../../modules/editors/ida-pro/user.nix
     ../../modules/editors/il2cpp-inspector-redux/user.nix
     ../../modules/editors/obsidian/user.nix
-    ../../modules/editors/vscodium/user.nix
     ../../modules/editors/zed/user.nix
 
     ../../modules/games/osu-lazer/user.nix
@@ -82,7 +81,6 @@ _: {
     ida-pro.user.enable = true;
     il2cpp-inspector-redux.user.enable = true;
     obsidian.user.enable = true;
-    vscodium.user.enable = true;
     zed.user.enable = true;
   };
 
