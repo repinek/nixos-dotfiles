@@ -32,5 +32,12 @@ in {
       # Run as a systemd service
       systemd.enable = true;
     };
+
+    xdg.dataFile."applications/dev.noctalia.Noctalia.desktop".text = ''
+      [Desktop Entry]
+      Type=Application
+      Name=Noctalia
+      Hidden=true
+    '';
   };
 }
