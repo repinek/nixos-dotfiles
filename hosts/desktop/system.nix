@@ -154,8 +154,9 @@
     resolved = {
       enable = true;
       settings.Resolve = {
-        DNS = "194.242.2.4#base.dns.mullvad.net";
-        DNSOverTLS = true;
+        DNS = "9.9.9.9 149.112.112.112";
+        FallbackDNS = "";
+        DNSOverTLS = false;
         Domains = "~.";
       };
     };
