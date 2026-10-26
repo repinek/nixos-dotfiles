@@ -3,16 +3,16 @@ _: {
     Top = {
       font_family = "JetBrainsMono Nerd Font Mono";
 
-      # Same as Hyprland windows
-      margin_edge = 10;
-      margin_ends = 10;
+      margin_edge = 0;
+      margin_ends = 0;
       padding = 10;
-      radius = 10;
+      radius = 0;
 
-      border = "primary";
-      background_opacity = 0.6;
+      background_opacity = 0.6; # not sure, maybe set to 1
       scale = 1;
       thickness = 32;
+
+      shadow = false;
 
       start = ["clock" "workspaces" "privacy"];
       center = ["active_window"];
@@ -25,7 +25,7 @@ _: {
           members = ["network" "volume"];
           opacity = 0.5;
           padding = 10;
-          radius = 8;
+          radius = 0;
         }
       ];
     };

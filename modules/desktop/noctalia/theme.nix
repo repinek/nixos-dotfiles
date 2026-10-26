@@ -12,7 +12,7 @@ _: {
     # See the templates directory as well
     templates = {
       builtin_ids = ["alacritty" "btop" "hyprland" "gtk3" "gtk4" "kcolorscheme" "qt"];
-      community_ids = ["pywalfox-beta4" "discord" "obsidian" "vscode" "obs"];
+      community_ids = ["pywalfox-beta4" "discord" "obsidian" "vscode" "obs" "zed" "codex" "ungoogled-chromium"];
     };
   };
 }
