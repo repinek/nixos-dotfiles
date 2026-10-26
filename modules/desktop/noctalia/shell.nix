@@ -21,6 +21,8 @@
 
       shadow.direction = "center";
 
+      corner_radius_scale = 0;
+
       panel = {
         open_near_click_control_center = true;
         open_near_click_session = true;

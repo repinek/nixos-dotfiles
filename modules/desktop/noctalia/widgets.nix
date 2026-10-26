@@ -7,7 +7,7 @@ _: {
       capsule = true;
       capsule_opacity = 0.5;
       capsule_padding = 10;
-      capsule_radius = 8;
+      capsule_radius = 0;
     };
 
     workspaces = {

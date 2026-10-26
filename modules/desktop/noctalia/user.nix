@@ -9,6 +9,7 @@ in {
   options.modules.desktop.noctalia.user.enable = mkEnableOption "Noctalia";
 
   imports = [
+    ./audio.nix
     ./bar.nix
     ./control-center.nix
     ./idle.nix
