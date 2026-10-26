@@ -71,7 +71,10 @@
       enable = true;
       audio_buffer = 256;
     };
-    nvidia.system.enable = true;
+    nvidia.system = {
+      enable = true;
+      lact.enable = true;
+    };
   };
 
   modules.programs = {

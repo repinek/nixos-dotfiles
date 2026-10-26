@@ -7,10 +7,14 @@
 with lib; let
   cfg = config.modules.hardware.nvidia.system;
 in {
-  options.modules.hardware.nvidia.system.enable = mkEnableOption "NVIDIA";
+  options.modules.hardware.nvidia.system = {
+    enable = mkEnableOption "NVIDIA";
+    lact.enable = mkEnableOption "LACT";
+  };
 
   config = mkIf cfg.enable {
     services.xserver.videoDrivers = ["nvidia"];
+    services.lact.enable = cfg.lact.enable;
 
     hardware = {
       graphics = {
