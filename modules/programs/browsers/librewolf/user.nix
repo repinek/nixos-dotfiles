@@ -61,6 +61,12 @@ in {
         # Some elements taken from https://git.symlinx.net/daccfiles/tree/.config/browser_stuff/
         # and https://github.com/mbnuqw/sidebery#how-to-hide-native-tabs
         userChrome = ''
+          /* Fix bookmarks tab color after Nova redesign */
+          :root[customtitlebar] #navigator-toolbox[tabs-hidden] > #PersonalToolbar {
+            background-color: transparent !important;
+            color: inherit !important;
+          }
+
           /* Themed (pywalfox) right-click menu */
           .menupopup-arrowscrollbox {
             background: var(--lwt-accent-color) !important;
@@ -170,6 +176,8 @@ in {
         If not present = default
 
             Vimium
+        // TODO: exclude some useless keys for me
+        // is kinda hard to use all of them since we have also browser keybinds (But I can re-bind it, sooo)
         IgnoreKeyboardLayout = true
         NewTabDestination = browserNewTabPage
 
@@ -178,6 +186,15 @@ in {
         Custom accent Color = true
         Block remote fonts = true
         Disable JavaScript = true
+        // Extra filter lists
+        // Actually just enable everything except Experimental and all regional filters
+        // For me it's perfectly fine, never had any big issues with that
+        Privacy (4/4)
+        Multipurpose (2/2)
+        Cookie notices (4/4)
+        Social widgets (3/3)
+        Annoyances (10/10)
+        Regional filters
 
             Pywalfox
         Fetch colors on startup = true
@@ -196,12 +213,16 @@ in {
 
         # Bookmarks synced using firefox account
 
-        # TODO: containers with sidebery
-
         settings = {
           "intl.locale.requested" = "uk-UA,en-GB"; # Use fallback (second) language if localization is incomplete on first
 
           "extensions.autoDisableScopes" = 0; # Automatically enable extensions (from example)
+
+          "sidebar.revamp" = true;
+          "sidebar.verticalTabs" = true;
+          "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
+
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # Enable userChrome.css and userContent.css
 
           "browser.startup.page" = 3; # Open previous windows and tabs
           "browser.sessionstore.newTabOnRestore" = true; # Also open a new tab
@@ -231,14 +252,15 @@ in {
           "privacy.resistFingerprinting.letterboxing" = true;
           "privacy.sanitize.sanitizeOnShutdown" = false;
 
+          # Trusted Recursive Resolver - DNS Over HTTPS
+          # 0 - default, 2 - try DOH, fallback to system dns if failed
+          # 3 - Require DOH for ordinary lookups, fail if it's unavailable
+          # 5 - Disable DOH and use system DNS
+          "network.trr.mode" = 5;
+
           "identity.fxaccounts.enabled" = true;
           "services.sync.declinedEngines" = "addons,prefs,addresses,creditcards,passwords"; # Sync only bookmarks, open tabs and History
 
-          "sidebar.revamp" = true;
-          "sidebar.verticalTabs" = true;
-          "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
-
-          "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # Enable userChrome.css and userContent.css
         };
 
         search = {
