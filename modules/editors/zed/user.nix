@@ -58,7 +58,7 @@ in {
         soft_wrap = "editor_width";
 
         # Editor
-        autosave = "on_focus_change";
+        autosave.after_delay.milliseconds = 3000;
 
         which_key = {
           enabled = true;
