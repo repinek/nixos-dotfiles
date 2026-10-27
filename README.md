@@ -62,7 +62,6 @@ nixos-dotfiles
 ├── modules                 # Reusable system and user modules
 │   ├── cli
 │   ├── core
-│   │   ├── boot
 │   │   ├── btrfs
 │   │   ├── fonts
 │   │   ├── nix
@@ -82,12 +81,16 @@ nixos-dotfiles
 │   │   ├── audio
 │   │   └── nvidia
 │   ├── programs
+│   │   ├── browsers 
+│   │   ├── media 
+│   │   └── messengers 
 │   └── shell
 │       └── fish
 ├── pkgs                    # Custom packages (Standalone flake)
 │   ├── google-sans
 │   ├── ida-pro
 │   ├── ida-pro-mcp
+│   ├── il2cpp-inspector-redux
 │   ├── flake.nix
 │   └── README.md
 ├── services                # Reusable services
@@ -120,7 +123,7 @@ Not needed right now, just ideas for when I have free time
 - [ ] Try quickshell
 - [ ] Do something with Obsidian (I don't like it after native apps, maybe switch it to something like NeoVim with plugins or Zed)
 - [ ] Try Niri one day
-- [ ] proxypin, httptoolkit, reqable* (or anything else for traffic capturing, not needed rn)
+- [ ] proxypin, httptoolkit, reqable* (or anything else for traffic capturing)
 
 There are also several `FIXME` and `TODO` comments.
 
