@@ -15,11 +15,17 @@ in {
       mutableUserSettings = true; # Just for changing themes
 
       extensions = [
+        # Languages
         "nix" # Nix support
         "lua" # Lua support
+
+        # Themes
         "catppuccin" # Catppuccin Theme
         "catppuccin-black-theme" # Catppuccin Black Theme
         "everforest" # Everforest Theme
+        "rose-pine-theme" # Rose Pine
+
+        # Etc
         "wakatime" # WakaTime support
       ];
 
