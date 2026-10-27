@@ -24,8 +24,10 @@ Declarative [NixOS](https://nixos.org) configuration with Home Manager for daily
 
 ## Screenshots
 
-<img src="assets/screenshots/screenshot_1.png" width="700" alt="Rose Pine Theme, Noctalia Shell, Hyprland, Alacritty and Control Center">
-<img src="assets/screenshots/screenshot_2.png" width="700" alt="Creamy Forest Theme, Noctalia Shell, Hyprland, Nemo and Media">
+<img src="assets/screenshots/screenshot_1.png" width="700" alt="Rose Pine theme, Noctalia Shell + Control Center, Hyprland, Alacritty terminal with fastfetch">
+<img src="assets/screenshots/screenshot_2.png" width="700" alt="Rose Pine theme, Noctalia Shell, Hyprland, Zed">
+<img src="assets/screenshots/screenshot_3.png" width="700" alt="Creamy Forest Theme, Noctalia Shell, Hyprland, LibreWolf browser">
+<img src="assets/screenshots/screenshot_4.png" width="700" alt="Rosey AMOLED Theme, Noctalia Shell, Hyprland, Nemo file manager">
 
 ## Features
 
@@ -115,8 +117,7 @@ cd nixos-dotfiles
 
 Not needed right now, just ideas for when I have free time
 
-- [ ] Make more square corners (Noctalia and hyprland)
-- [ ] Try quickshell 
+- [ ] Try quickshell
 - [ ] Do something with Obsidian (I don't like it after native apps, maybe switch it to something like NeoVim with plugins or Zed)
 - [ ] Try Niri one day
 - [ ] proxypin, httptoolkit, reqable* (or anything else for traffic capturing, not needed rn)
