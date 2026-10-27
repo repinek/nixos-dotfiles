@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.editors.detect-it-easy.user;
+  cfg = config.modules.editors.re.detect-it-easy.user;
 in {
-  options.modules.editors.detect-it-easy.user.enable = mkEnableOption "Detect It Easy file type analysis";
+  options.modules.editors.re.detect-it-easy.user.enable = mkEnableOption "Detect It Easy file type analysis";
 
   # Set Options -> Scan -> Change paths to
   # `/etc/profiles/per-user/$USER/lib/die`

@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.programs.krita.user;
+  cfg = config.modules.programs.media.krita.user;
 in {
-  options.modules.programs.krita.user.enable = mkEnableOption "Krita";
+  options.modules.programs.media.krita.user.enable = mkEnableOption "Krita";
 
   config = mkIf cfg.enable {
     home.packages = [

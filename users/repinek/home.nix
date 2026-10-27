@@ -16,8 +16,7 @@
     ../../modules/cli/gh/user.nix
     ../../modules/cli/ssh/user.nix
 
-    ../../modules/editors/codex/user.nix
-    ../../modules/editors/opencode/user.nix
+    ../../modules/editors/agents/codex/user.nix
     ../../modules/editors/vim/user.nix
 
     ../../modules/shell/fish/user.nix
@@ -34,8 +33,9 @@
   };
 
   modules.editors = {
-    codex.user.enable = true;
-    opencode.user.enable = true;
+    agents = {
+      codex.user.enable = true;
+    };
     vim.user.enable = true;
   };
 

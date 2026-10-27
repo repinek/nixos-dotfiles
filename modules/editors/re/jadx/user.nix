@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.editors.jadx.user;
+  cfg = config.modules.editors.re.jadx.user;
 in {
-  options.modules.editors.jadx.user.enable = mkEnableOption "JADX Dex-to-Java decompiler";
+  options.modules.editors.re.jadx.user.enable = mkEnableOption "JADX Dex-to-Java decompiler";
 
   config = mkIf cfg.enable {
     home.packages = [

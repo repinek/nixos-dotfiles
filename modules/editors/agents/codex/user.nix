@@ -4,9 +4,9 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.editors.codex.user;
+  cfg = config.modules.editors.agents.codex.user;
 in {
-  options.modules.editors.codex.user.enable = mkEnableOption "Codex coding agent";
+  options.modules.editors.agents.codex.user.enable = mkEnableOption "Codex coding agent";
 
   config = mkIf cfg.enable {
     # Keep config.toml mutable for directory approvals and local settings

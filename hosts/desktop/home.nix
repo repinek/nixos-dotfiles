@@ -15,9 +15,9 @@ _: {
     ../../modules/desktop/noctalia/user.nix
     ../../modules/desktop/theme/user.nix
 
-    ../../modules/editors/ida-pro/user.nix
-    ../../modules/editors/il2cpp-inspector-redux/user.nix
     ../../modules/editors/obsidian/user.nix
+    ../../modules/editors/re/ida-pro/user.nix
+    ../../modules/editors/re/il2cpp-inspector-redux/user.nix
     ../../modules/editors/zed/user.nix
 
     ../../modules/games/osu-lazer/user.nix
@@ -26,27 +26,26 @@ _: {
 
     ../../modules/programs/alacritty/user.nix
     ../../modules/programs/anki/user.nix
-    ../../modules/programs/audacity/user.nix
     ../../modules/programs/browsers/librewolf/user.nix
     ../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../modules/programs/feather/user.nix
     ../../modules/programs/filelight/user.nix
-    ../../modules/programs/fooyin/user.nix
     ../../modules/programs/gnome-disk-utility/user.nix
     ../../modules/programs/keepassxc/user.nix
-    ../../modules/programs/kid3/user.nix
-    ../../modules/programs/krita/user.nix
     ../../modules/programs/libreoffice/user.nix
-    ../../modules/programs/losslesscut/user.nix
-    ../../modules/programs/loupe/user.nix
+    ../../modules/programs/media/audacity/user.nix
+    ../../modules/programs/media/fooyin/user.nix
+    ../../modules/programs/media/krita/user.nix
+    ../../modules/programs/media/losslesscut/user.nix
+    ../../modules/programs/media/loupe/user.nix
+    ../../modules/programs/media/obs-studio/user.nix
+    ../../modules/programs/media/showtime/user.nix
     ../../modules/programs/messengers/element-desktop/user.nix
     ../../modules/programs/messengers/telegram-desktop/user.nix
     ../../modules/programs/messengers/vesktop/user.nix
     ../../modules/programs/nemo/user.nix
-    ../../modules/programs/obs-studio/user.nix
     ../../modules/programs/proton-authenticator/user.nix
     ../../modules/programs/qbittorrent/user.nix
-    ../../modules/programs/showtime/user.nix
 
     ../../services/gnome-keyring/user.nix
   ];
@@ -78,9 +77,11 @@ _: {
   };
 
   modules.editors = {
-    ida-pro.user.enable = true;
-    il2cpp-inspector-redux.user.enable = true;
     obsidian.user.enable = true;
+    re = {
+      ida-pro.user.enable = true;
+      il2cpp-inspector-redux.user.enable = true;
+    };
     zed.user.enable = true;
   };
 
@@ -93,31 +94,32 @@ _: {
   modules.programs = {
     alacritty.user.enable = true;
     anki.user.enable = true;
-    audacity.user.enable = false;
     browsers = {
       librewolf.user.enable = true;
       ungoogled-chromium.user.enable = true;
     };
     feather.user.enable = false; # broken
     filelight.user.enable = true;
-    fooyin.user.enable = true;
     gnome-disk-utility.user.enable = true;
     keepassxc.user.enable = true;
-    kid3.user.enable = true;
-    krita.user.enable = true;
     libreoffice.user.enable = true;
-    losslesscut.user.enable = true;
-    loupe.user.enable = true;
+    media = {
+      audacity.user.enable = false;
+      fooyin.user.enable = true;
+      krita.user.enable = true;
+      losslesscut.user.enable = true;
+      loupe.user.enable = true;
+      obs-studio.user.enable = true;
+      showtime.user.enable = true;
+    };
     messengers = {
       element-desktop.user.enable = true;
       telegram-desktop.user.enable = true;
       vesktop.user.enable = true;
     };
     nemo.user.enable = true;
-    obs-studio.user.enable = true;
     proton-authenticator.user.enable = true;
     qbittorrent.user.enable = true;
-    showtime.user.enable = true;
   };
 
   services.gnome-keyring.user.enable = true;
