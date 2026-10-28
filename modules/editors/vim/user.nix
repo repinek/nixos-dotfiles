@@ -36,11 +36,19 @@ in {
       '';
     };
 
-    xdg.dataFile."applications/gvim.desktop".text = ''
-      [Desktop Entry]
-      Type=Application
-      Name=GVim
-      Hidden=true
-    '';
+    xdg.dataFile = {
+      "applications/vim.desktop".text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=Vim
+        Hidden=true
+      '';
+      "applications/gvim.desktop".text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=GVim
+        Hidden=true
+      '';
+    };
   };
 }
