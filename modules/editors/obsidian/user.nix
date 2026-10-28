@@ -14,7 +14,7 @@ in {
 
       defaultSettings = {
         app = {
-          vimMode = true; # :q!
+          vimMode = false; # :q!, it's so broken and working so bad, I don't like it
           showLineNumber = true;
           alwaysUpdateLinks = true;
           attachmentFolderPath = "attachments";
