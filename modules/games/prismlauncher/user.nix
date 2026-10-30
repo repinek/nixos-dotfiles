@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  ...
 }:
 with lib; let
   cfg = config.modules.games.prismlauncher.user;
