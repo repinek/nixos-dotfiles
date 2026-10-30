@@ -21,6 +21,7 @@ _: {
     ../../modules/editors/zed/user.nix
 
     ../../modules/games/osu-lazer/user.nix
+    ../../modules/games/prismlauncher/user.nix
     ../../modules/games/steamguard-cli/user.nix
     ../../modules/games/touhou/user.nix
 
@@ -87,6 +88,7 @@ _: {
 
   modules.games = {
     osu-lazer.user.enable = true;
+    prismlauncher.user.enable = true;
     steamguard-cli.user.enable = true;
     touhou.user.enable = true;
   };
