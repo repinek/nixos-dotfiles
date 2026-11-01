@@ -12,7 +12,6 @@ hl.config({
 
     decoration = {
         rounding = 0,
-        rounding_power = 0,
 
         shadow = {
             enabled = true,
@@ -31,7 +30,6 @@ hl.config({
 
     dwindle = {
         preserve_split = true,
-        special_scale_factor = 0.9, -- On scratchpad
     },
 
     misc = {
