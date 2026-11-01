@@ -40,7 +40,7 @@ hl.config({
     },
 
     render = {
-        direct_scanout = 1, -- 0 off, 1 on, 2 fullscreen games only
+        direct_scanout = 0, -- 0 off, 1 on, 2 fullscreen games only
     },
 
     ecosystem = {
