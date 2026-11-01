@@ -27,6 +27,7 @@ in {
       };
 
       nvidia = {
+        package = config.boot.kernelPackages.nvidiaPackages.latest;
         nvidiaSettings = false; # We don't need them since we on wayland
         powerManagement.enable = true;
         open = true;
