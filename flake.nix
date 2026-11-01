@@ -16,6 +16,12 @@
     };
 
     # Programs
+    # Pin obsidian for older version
+    nixpkgs-obsidian = {
+      url = "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1097682.02c087f3fe67/nixexprs.tar.zst";
+      flake = false;
+    };
+
     repinek-pkgs = {
       url = "path:./pkgs";
       inputs.nixpkgs.follows = "nixpkgs";
