@@ -9,6 +9,7 @@
     ../../modules/cli/git/user.nix
     ../../modules/cli/gpg/user.nix
     ../../modules/cli/wakatime/user.nix
+    ../../modules/cli/zellij/user.nix
 
     ../../modules/desktop/hypr/user.nix
     ../../modules/desktop/mime/user.nix
@@ -57,6 +58,7 @@
     scrcpy.user.enable = true;
     gpg.user.enable = true;
     wakatime.user.enable = true;
+    zellij.user.enable = true;
   };
 
   modules.desktop = {
