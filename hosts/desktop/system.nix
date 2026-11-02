@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   hostname,
   ...
@@ -7,6 +8,9 @@
   # LibreTranslate
   imports = [
     ./hardware-configuration.nix
+
+    # Random user
+    ../../users/random/system.nix
 
     ../../modules/cli/platform-tools/system.nix
 
@@ -187,11 +191,25 @@
     };
   };
 
+  sops = {
+    age.keyFile = "${config.users.users.repinek.home}/.config/sops/age/keys.txt";
+    secrets."repinek/wireguard/repinek.conf" = {
+      sopsFile = ../../secrets/repinek/wireguard/repinek.conf;
+      format = "binary";
+    };
+  };
+
   # Networking
   networking = {
     hostName = hostname;
     networkmanager.enable = true;
     firewall.checkReversePath = "loose"; # Fixes Throne TUN UDP traffic
+
+    firewall.interfaces.meowrelay.allowedTCPPorts = [10267];
+    wg-quick.interfaces.meowrelay = {
+      configFile = config.sops.secrets."repinek/wireguard/repinek.conf".path;
+      autostart = false;
+    };
   };
 
   system.stateVersion = "26.05";

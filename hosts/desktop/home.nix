@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   # Was removed (unused modules)
   # Rider, DiE, jADX, VSCodium
   imports = [
@@ -125,4 +125,33 @@ _: {
   };
 
   services.gnome-keyring.user.enable = true;
+
+  systemd.user.services.mute-fifine = {
+    Unit = {
+      Description = "Mute the FIFINE microphone at session startup";
+      After = ["pipewire-pulse.service" "wireplumber.service"];
+      Wants = ["pipewire-pulse.service" "wireplumber.service"];
+    };
+
+    Service = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      TimeoutStartSec = 35;
+      ExecStart = pkgs.writeShellScript "mute-fifine" ''
+        source_name=alsa_input.usb-3142_fifine_Microphone-00.analog-stereo
+
+        for ((attempt = 0; attempt < 30; attempt++)); do
+          if ${pkgs.pulseaudio}/bin/pactl set-source-mute "$source_name" 1; then
+            exit 0
+          fi
+          ${pkgs.coreutils}/bin/sleep 1
+        done
+
+        echo "Could not mute the FIFINE microphone within 30 seconds" >&2
+        exit 1
+      '';
+    };
+
+    Install.WantedBy = ["default.target"];
+  };
 }

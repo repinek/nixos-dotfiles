@@ -60,6 +60,7 @@
       host = "desktop";
       username = "repinek";
       users = ["repinek"];
+      modules = [inputs.sops-nix.nixosModules.sops];
       homeModules.repinek = [
         inputs.sops-nix.homeManagerModules.sops
         inputs.osu-lazer.homeManagerModules.osu-lazer
