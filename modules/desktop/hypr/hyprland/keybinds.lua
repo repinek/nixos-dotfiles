@@ -14,14 +14,14 @@ hl.bind(main_mod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(main_mod .. " + Y", hl.dsp.window.pin())
 hl.bind(main_mod .. " + P", hl.dsp.window.pseudo())
 hl.bind(main_mod .. " + V", helpers.toggle_float(1200, 700))
-hl.bind(main_mod .. " + J", hl.dsp.layout("togglesplit"))
+hl.bind(main_mod .. " + U", hl.dsp.layout("togglesplit")) -- J already claimed by hjkl, so U
 
--- Quit Hyprland with mainMod + M
-hl.bind(main_mod .. " + M", hl.dsp.exit())
+-- Quit Hyprland with mainMod + Shift + M
+hl.bind(main_mod .. " + SHIFT + M", hl.dsp.exit())
 
 -- Noctalia IPC with mainMod + key
 hl.bind(main_mod .. " + R", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
-hl.bind(main_mod .. " + L", hl.dsp.exec_cmd("noctalia msg session lock"))
+hl.bind(main_mod .. " + I", hl.dsp.exec_cmd("noctalia msg session lock")) -- L already claimed by hjkl, so I
 hl.bind(main_mod .. " + SHIFT + V", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
 hl.bind(main_mod .. " + SHIFT + P", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 
@@ -41,22 +41,18 @@ for workspace = 1, 9 do
     }))
 end
 
--- Scroll through existing workspaces with mainMod + scroll wheel [up/down]
-hl.bind(main_mod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(main_mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-
 local directions = {
-    { key = "left", direction = "l" },
-    { key = "right", direction = "r" },
-    { key = "up", direction = "u" },
-    { key = "down", direction = "d" },
+    { key = "H", direction = "l" }, -- left
+    { key = "J", direction = "d" }, -- down
+    { key = "K", direction = "u" }, -- up
+    { key = "L", direction = "r" }, -- right
 }
 
 for _, direction in ipairs(directions) do
-    -- Move focus with mainMod + arrow keys
+    -- Move focus with mainMod + hjkl
     hl.bind(main_mod .. " + " .. direction.key, hl.dsp.focus({ direction = direction.direction }))
 
-    -- Move windows with mainMod + Shift + arrow keys
+    -- Move windows with mainMod + Shift + hjkl
     hl.bind(main_mod .. " + SHIFT + " .. direction.key, hl.dsp.window.move({
         direction = direction.direction,
     }))
