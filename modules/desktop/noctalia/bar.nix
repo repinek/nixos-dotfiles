@@ -20,7 +20,7 @@ _: {
 
       capsule_group = [
         {
-          fill = "surface_variant";
+          fill = "surface_container";
           id = "g1";
           members = ["network" "volume"];
           opacity = 0.5;

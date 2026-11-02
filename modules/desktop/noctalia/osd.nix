@@ -1,6 +1,10 @@
 _: {
   programs.noctalia.settings.osd = {
-    osd.background_opacity = 0.6; # Same as bar
-    kinds.nightlight = false; # Don't show OSD for nightlight
+    background_opacity = 0.6; # Same as bar
+    kinds = {
+      # Don't show OSD for
+      lock_keys = false; # Caps Lock, Num Lock, Scroll Lock
+      nightlight = false;
+    };
   };
 }
