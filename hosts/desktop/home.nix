@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   # Was removed (unused modules)
-  # Rider, DiE, jADX, VSCodium
+  # DiE, jADX, VSCodium, Audacity
   imports = [
     ./settings/nemo/user.nix
 
@@ -31,11 +31,9 @@
     ../../modules/programs/browsers/librewolf/user.nix
     ../../modules/programs/browsers/ungoogled-chromium/user.nix
     ../../modules/programs/feather/user.nix
-    ../../modules/programs/filelight/user.nix
     ../../modules/programs/gnome-disk-utility/user.nix
     ../../modules/programs/keepassxc/user.nix
     ../../modules/programs/libreoffice/user.nix
-    ../../modules/programs/media/audacity/user.nix
     ../../modules/programs/media/fooyin/user.nix
     ../../modules/programs/media/krita/user.nix
     ../../modules/programs/media/losslesscut/user.nix
@@ -103,12 +101,10 @@
       ungoogled-chromium.user.enable = true;
     };
     feather.user.enable = false; # broken
-    filelight.user.enable = true;
     gnome-disk-utility.user.enable = true;
     keepassxc.user.enable = true;
     libreoffice.user.enable = true;
     media = {
-      audacity.user.enable = false;
       fooyin.user.enable = true;
       krita.user.enable = true;
       losslesscut.user.enable = true;
