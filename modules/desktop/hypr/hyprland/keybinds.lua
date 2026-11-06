@@ -12,7 +12,6 @@ hl.bind(main_mod .. " + B", hl.dsp.exec_cmd(vars.browser))
 hl.bind(main_mod .. " + C", hl.dsp.window.close())
 hl.bind(main_mod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(main_mod .. " + Y", hl.dsp.window.pin())
-hl.bind(main_mod .. " + P", hl.dsp.window.pseudo())
 hl.bind(main_mod .. " + V", helpers.toggle_float(1200, 700))
 hl.bind(main_mod .. " + U", hl.dsp.layout("togglesplit")) -- J already claimed by hjkl, so U
 
