@@ -24,7 +24,6 @@
     "break",
     { "type": "os",      "key": "os    ",       "keyColor": "{{colors.primary.default.hex}}" },
     { "type": "kernel",  "key": "kernel",       "keyColor": "{{colors.primary.default.hex}}" },
-    { "type": "wm",      "key": "wm    ",       "keyColor": "{{colors.primary.default.hex}}" },
     { "type": "uptime",  "format": "{2}h {3}m", "key": "uptime", "keyColor": "{{colors.primary.default.hex}}" },
     "break",
     { "type": "display", "key": "disp  ",       "keyColor": "{{colors.primary.default.hex}}" },
