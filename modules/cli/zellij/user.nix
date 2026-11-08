@@ -2,8 +2,8 @@
   config,
   lib,
   ...
-}: with lib;
-let
+}:
+with lib; let
   cfg = config.modules.cli.zellij.user;
 in {
   options.modules.cli.zellij.user.enable = mkEnableOption "Zellij";
