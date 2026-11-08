@@ -8,11 +8,6 @@ in {
   nixos-test = "sudo nixos-rebuild test --flake ${dotfilesPath}#desktop";
   nixos-vm = "sudo nixos-rebuild build-vm --flake ${dotfilesPath}#desktop";
 
-  # Nix
-  nix-update = "nix flake update";
-  nix-search = "nix search nixpkgs";
-  nix-gc = "sudo nix-store --gc";
-
   # Replace ls and tree with eza (a = all, l = long)
   ls = "eza -al --color=always --group-directories-first --icons=always";
   la = "eza -a  --color=always --group-directories-first --icons=always";
@@ -53,4 +48,6 @@ in {
   myip = "curl api.ipify.org";
   please = "sudo";
   disks = "df -BG --output=target,size,used,pcent / /mnt/Old";
+
+  z = "zellij";
 }
