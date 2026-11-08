@@ -18,6 +18,7 @@ in {
         # Languages
         "nix" # Nix support
         "lua" # Lua support
+        "markdown-oxide" # PKM Markdown Language Server
 
         # Themes
         "catppuccin" # Catppuccin Theme
@@ -39,7 +40,7 @@ in {
         };
 
         # Appearance
-        theme = "Catppuccin Mocha";
+        # theme = "Catppuccin Mocha"; # Commented because it's resevery nixos-switch
         icon_theme = "Zed (Default)";
 
         buffer_font_family = "JetBrainsMono Nerd Font Mono";
@@ -143,6 +144,48 @@ in {
         # AI
         disable_ai = true;
       };
+
+      userKeymaps = [
+        # Tab for cycle in normal mode
+        {
+          context = "Editor && vim_mode == normal && !menu";
+          bindings = {
+            tab = "pane::ActivateNextItem";
+            shift-tab = "pane::ActivatePreviousItem";
+          };
+        }
+
+        # JK for move line in visual mode
+        {
+          context = "Editor && vim_mode == visual && !menu";
+          bindings = {
+            shift-j = "editor::MoveLineDown";
+            shift-k = "editor::MoveLineUp";
+          };
+        }
+
+        # Split pane with hjkl instead arrow keys
+        {
+          context = "Pane";
+          bindings = {
+            "ctrl-k h" = "pane::SplitLeft";
+            "ctrl-k j" = "pane::SplitDown";
+            "ctrl-k k" = "pane::SplitUp";
+            "ctrl-k l" = "pane::SplitRight";
+          };
+        }
+
+        # Disable arrow keys in normal and insert vim mode
+        {
+          context = "Editor && (vim_mode == normal || vim_mode == insert)";
+          bindings = {
+            up = null;
+            down = null;
+            left = null;
+            right = null;
+          };
+        }
+      ];
     };
   };
 }
