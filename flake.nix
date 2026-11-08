@@ -36,6 +36,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -64,6 +68,7 @@
       homeModules.repinek = [
         inputs.sops-nix.homeManagerModules.sops
         inputs.osu-lazer.homeManagerModules.osu-lazer
+        inputs.nixvim.homeModules.nixvim
         ./hosts/desktop/home.nix
       ];
       overlays = [inputs.repinek-pkgs.overlays.default];
