@@ -10,6 +10,10 @@ hl.config({
         allow_tearing = true,
     },
 
+    animations = {
+        enabled = false,
+    },
+
     decoration = {
         rounding = 0,
 
