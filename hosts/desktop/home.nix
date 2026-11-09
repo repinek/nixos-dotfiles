@@ -16,6 +16,7 @@
     ../../modules/desktop/noctalia/user.nix
     ../../modules/desktop/theme/user.nix
 
+    ../../modules/editors/nixvim/user.nix
     ../../modules/editors/obsidian/user.nix
     ../../modules/editors/re/ida-pro/user.nix
     ../../modules/editors/re/il2cpp-inspector-redux/user.nix
@@ -78,6 +79,7 @@
   };
 
   modules.editors = {
+    nixvim.user.enable = true;
     obsidian.user.enable = true;
     re = {
       ida-pro.user.enable = true;
