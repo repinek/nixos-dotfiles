@@ -47,7 +47,7 @@ in {
   wget = "wget -c";
   myip = "curl api.ipify.org";
   please = "sudo";
-  disks = "df -BG --output=target,size,used,pcent / /mnt/Old";
+  disks = "df -BG --output=target,size,used,avail,pcent / /mnt/Old";
 
   z = "zellij";
 }
