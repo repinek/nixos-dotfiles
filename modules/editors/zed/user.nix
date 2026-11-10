@@ -183,6 +183,10 @@ in {
             down = null;
             left = null;
             right = null;
+            ctrl-up = null;
+            ctrl-down = null;
+            ctrl-left = null;
+            ctrl-right = null;
           };
         }
       ];
