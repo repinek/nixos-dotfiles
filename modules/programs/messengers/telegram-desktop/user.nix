@@ -9,6 +9,12 @@ with lib; let
 in {
   options.modules.programs.messengers.telegram-desktop.user.enable = mkEnableOption "Telegram Desktop";
 
+  # Since there's no home-manager for telegram
+  #
+  # Notification and Sounds -> Disable all global settings
+  # Chat Settings -> Turn off "Adaptive layout for wide screens"
+  # Advanced -> Change Download Path, Turn off Show unread count, Use monochrome icon
+  # Battery and Animations -> Disable Animations in Chats, in Calls, Interface animations
   config = mkIf cfg.enable {
     home.packages = [
       (pkgs.symlinkJoin {
