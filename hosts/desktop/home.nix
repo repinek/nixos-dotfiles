@@ -90,7 +90,7 @@
 
   modules.games = {
     osu-lazer.user.enable = true;
-    prismlauncher.user.enable = true;
+    prismlauncher.user.enable = false;
     steamguard-cli.user.enable = true;
     touhou.user.enable = true;
   };
