@@ -9,6 +9,8 @@ with lib; let
 in {
   options.modules.programs.anki.user.enable = mkEnableOption "Anki";
 
+  # https://www.youtube.com/watch?v=VqJn058GWQg
+  # very good video, good setup
   config = mkIf cfg.enable {
     programs.anki = {
       enable = true;
@@ -16,7 +18,7 @@ in {
       language = "en_GB";
 
       reduceMotion = true;
-      uiScale = 1.4;
+      style = "native";
 
       addons = [
         pkgs.ankiAddons.review-heatmap
@@ -33,6 +35,25 @@ in {
           };
           sourceRoot = "${finalAttrs.src.name}";
         }))
+
+        # Buttons confirmation is very useful
+        ((pkgs.anki-utils.buildAnkiAddon (finalAttrs: {
+          pname = "Anki-Advanced-Review-Bottombar";
+          version = "3.6.1";
+          src = pkgs.fetchFromGitHub {
+            owner = "noobj2";
+            repo = "Anki-Advanced-Review-Bottombar";
+            rev = "7fd5c16090b5b7c0e2f26d040a6552680d29684c";
+            hash = "sha256-ah51DWf1DbULF580hMj360R5qPh3fHnYM6KGBtJrgh8=";
+          };
+          sourceRoot = "${finalAttrs.src.name}";
+        })).withConfig {
+          config = {
+            # This is real keys btw
+            "Button_   Info Button" = false;
+            "Button_   Skip Button" = false;
+          };
+        })
       ];
     };
   };
