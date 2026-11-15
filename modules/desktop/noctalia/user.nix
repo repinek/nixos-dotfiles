@@ -30,6 +30,8 @@ in {
     programs.noctalia = {
       enable = true;
 
+      settings.dock.colorize_icons = true;
+
       # Run as a systemd service
       systemd.enable = true;
     };

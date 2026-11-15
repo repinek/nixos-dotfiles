@@ -1,5 +1,6 @@
 _: {
   programs.noctalia.settings.audio = {
+    colorize_icons = true;
     enable_notification_sounds = false;
     enable_power_sounds = false;
     enable_screenshot_sounds = false;

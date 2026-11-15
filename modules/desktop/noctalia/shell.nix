@@ -15,7 +15,9 @@
 
       screen_time_enabled = true; # I was used niri-screen-time before (vibecoded as I know, btw)
       settings_show_advanced = true;
-      app_icon_colorize = true; # This is looks cool
+      screen_time_colorize_icons = true;
+      polkit_colorize_icons = true;
+      window_switcher.colorize_icons = true;
       external_ip_enabled = true; # Show external IP in the control center network tab
       time_format = "{:%H:%M:%S}";
 
@@ -29,6 +31,7 @@
       };
 
       launcher = {
+        colorize_icons = true;
         layout = "simple";
         categories = false;
         pinned = ["org.telegram.desktop"];

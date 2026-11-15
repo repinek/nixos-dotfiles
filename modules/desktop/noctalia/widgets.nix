@@ -11,6 +11,7 @@ _: {
     };
 
     workspaces = {
+      colorize_icons = true;
       empty_color = "shadow";
       occupied_color = "shadow";
     };
@@ -19,11 +20,14 @@ _: {
 
     # Center section
     active_window = {
+      colorize_icons = true;
       title_scroll = "on_hover";
       max_length = 600;
     };
 
     # End section
+    tray.colorize_icons = true;
+    taskbar.colorize_icons = true;
     media = {
       hide_when_no_media = true;
       max_length = 500;
