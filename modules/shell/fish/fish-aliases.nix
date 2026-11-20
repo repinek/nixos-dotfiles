@@ -48,6 +48,7 @@ in {
   myip = "curl api.ipify.org";
   please = "sudo";
   disks = "df -BG --output=target,size,used,avail,pcent / /mnt/Old";
+  gamma = "gammastep -O 6500 -g 1.2";
 
   z = "zellij";
 }
