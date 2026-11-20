@@ -9,9 +9,6 @@
   imports = [
     ./hardware-configuration.nix
 
-    # Random user
-    ../../users/random/system.nix
-
     ../../modules/cli/platform-tools/system.nix
 
     ../../modules/core/btrfs/system.nix

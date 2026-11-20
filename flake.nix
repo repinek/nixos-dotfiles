@@ -63,7 +63,7 @@
     nixosConfigurations.desktop = mkNixos {
       host = "desktop";
       username = "repinek";
-      users = ["repinek"];
+      users = ["repinek" "random"];
       modules = [inputs.sops-nix.nixosModules.sops];
       homeModules.repinek = [
         inputs.sops-nix.homeManagerModules.sops
