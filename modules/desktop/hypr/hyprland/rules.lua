@@ -11,7 +11,7 @@ hl.window_rule({ match = { class = "vesktop" }, workspace = "2 silent" })
 
 -- 3 Workspace for games and code editors
 hl.window_rule({ match = { class = "osu!" }, workspace = "3 silent" })
-hl.window_rule({ match = { class = "osu!" }, immediate = true }) -- Allow tearing
+-- hl.window_rule({ match = { class = "osu!" }, immediate = true }) -- Allow tearing
 hl.window_rule({ match = { class = "com.mojang.minecraft" }, workspace = "3 silent" })
 
 hl.window_rule({ match = { class = "codium" }, workspace = "3 silent" }) -- I don't use vscode anymore but ok

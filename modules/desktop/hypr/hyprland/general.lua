@@ -40,7 +40,7 @@ hl.config({
         disable_hyprland_logo = true,
         force_default_wallpaper = 0,
         focus_on_activate = true,
-        vrr = 0, -- 0 off, 1 on, 2 fullscreen only, 3 fullscreen video or game
+        vrr = 2, -- 0 off, 1 on, 2 fullscreen only, 3 fullscreen video or game
     },
 
     render = {
