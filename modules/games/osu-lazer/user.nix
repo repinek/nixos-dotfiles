@@ -74,6 +74,7 @@ in {
 
           # Graphics
           UIScale = 0.95;
+          ShowFpsDisplay = false;
 
           # Online
           PreferNoVideo = true;
@@ -98,7 +99,7 @@ in {
         };
 
         frameworkSettings = {
-          FrameSync = "Unlimited";
+          FrameSync = "VSyncVRR";
           Locale = "ua";
         };
       };
