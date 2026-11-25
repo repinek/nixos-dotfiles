@@ -9,6 +9,10 @@ in {
   options.modules.editors.zed.user.enable = mkEnableOption "Zed editor";
 
   config = mkIf cfg.enable {
+    # Dotnet 10 SDK for roslyn
+    # home.packages = [pkgs.dotnet-sdk_10];
+    # home.sessionVariables.DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet";
+
     programs.zed-editor = {
       enable = true;
 
@@ -75,6 +79,8 @@ in {
 
         # Languages & Tools
         languages = {
+          # This ass heavy lsp goes my pc crazy
+          CSharp.enable_language_server = false;
           Nix = {
             language_servers = ["nixd" "!nil"]; # Use Nixd
             formatter.external = {
