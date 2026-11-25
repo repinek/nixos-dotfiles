@@ -8,7 +8,6 @@
 
     programs.noctalia.settings.shell = {
       avatar_path = "${config.xdg.configHome}/noctalia/avatar.png";
-      # Restore the shell font default from before Noctalia 5.6 (AI)
       font_family = "sans-serif";
 
       # Enable the systemd service so applications launched by Noctalia are not
