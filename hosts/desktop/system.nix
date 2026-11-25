@@ -140,6 +140,15 @@
           devices = ["android"];
           ignorePerms = true;
         };
+
+        folders.wallpapers = {
+          id = "wallpapers";
+          label = "Wallpapers";
+          path = "~/Media/Wallpapers";
+          type = "sendreceive";
+          devices = ["android"];
+          ignorePerms = true;
+        };
       };
     };
 
