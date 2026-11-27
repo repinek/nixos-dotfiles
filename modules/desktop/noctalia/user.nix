@@ -9,19 +9,7 @@ in {
   options.modules.desktop.noctalia.user.enable = mkEnableOption "Noctalia";
 
   imports = [
-    ./audio.nix
-    ./bar.nix
-    ./control-center.nix
-    ./idle.nix
-    ./location.nix
-    ./lockscreen.nix
-    ./nightlight.nix
-    ./notification.nix
-    ./osd.nix
-    ./shell.nix
-    ./theme.nix
-    ./widgets.nix
-    ./wallpaper.nix
+    ./settings.nix
     ./templates/wallpaper.nix
     ./templates/fastfetch.nix
   ];
@@ -29,8 +17,6 @@ in {
   config = mkIf cfg.enable {
     programs.noctalia = {
       enable = true;
-
-      settings.dock.colorize_icons = true;
 
       # Run as a systemd service
       systemd.enable = true;
