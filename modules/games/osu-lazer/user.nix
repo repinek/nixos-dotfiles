@@ -6,6 +6,7 @@
 }:
 with lib; let
   cfg = config.modules.games.osu-lazer.user;
+  mkHiddenDesktopFile = import ../../../lib/mkHiddenDesktopFile.nix;
 in {
   options.modules.games.osu-lazer.user.enable = mkEnableOption "osu!lazer";
 
@@ -15,12 +16,7 @@ in {
       pkgs.gammastep
     ];
 
-    xdg.dataFile."applications/gammastep-indicator.desktop".text = ''
-      [Desktop Entry]
-      Type=Application
-      Name=Gammastep Indicator
-      Hidden=true
-    '';
+    xdg.dataFile = mkHiddenDesktopFile "gammastep-indicator.desktop" "Gammastep Indicator";
 
     programs.osu-lazer = {
       enable = true;

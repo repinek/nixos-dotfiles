@@ -6,6 +6,7 @@
 }:
 with lib; let
   cfg = config.modules.editors.vim.user;
+  mkHiddenDesktopFile = import ../../../lib/mkHiddenDesktopFile.nix;
 in {
   options.modules.editors.vim.user.enable = mkEnableOption "Vi IMproved";
 
@@ -36,19 +37,8 @@ in {
       '';
     };
 
-    xdg.dataFile = {
-      "applications/vim.desktop".text = ''
-        [Desktop Entry]
-        Type=Application
-        Name=Vim
-        Hidden=true
-      '';
-      "applications/gvim.desktop".text = ''
-        [Desktop Entry]
-        Type=Application
-        Name=GVim
-        Hidden=true
-      '';
-    };
+    xdg.dataFile =
+      mkHiddenDesktopFile "vim.desktop" "Vim"
+      // mkHiddenDesktopFile "gvim.desktop" "GVim";
   };
 }

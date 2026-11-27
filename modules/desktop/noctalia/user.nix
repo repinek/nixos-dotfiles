@@ -5,6 +5,7 @@
 }:
 with lib; let
   cfg = config.modules.desktop.noctalia.user;
+  mkHiddenDesktopFile = import ../../../lib/mkHiddenDesktopFile.nix;
 in {
   options.modules.desktop.noctalia.user.enable = mkEnableOption "Noctalia";
 
@@ -22,11 +23,6 @@ in {
       systemd.enable = true;
     };
 
-    xdg.dataFile."applications/dev.noctalia.Noctalia.desktop".text = ''
-      [Desktop Entry]
-      Type=Application
-      Name=Noctalia
-      Hidden=true
-    '';
+    xdg.dataFile = mkHiddenDesktopFile "dev.noctalia.Noctalia.desktop" "Noctalia";
   };
 }

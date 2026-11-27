@@ -6,6 +6,7 @@
 }:
 with lib; let
   cfg = config.modules.desktop.theme.user;
+  mkHiddenDesktopFile = import ../../../lib/mkHiddenDesktopFile.nix;
 in {
   # FIXME: Consider moving shared settings from Noctalia here
   # The current split between theme and Noctalia settings is unclear
@@ -34,20 +35,9 @@ in {
       platformTheme.name = "qtct";
     };
 
-    xdg.dataFile = {
-      "applications/qt5ct.desktop".text = ''
-        [Desktop Entry]
-        Type=Application
-        Name=Qt5 Settings
-        Hidden=true
-      '';
-      "applications/qt6ct.desktop".text = ''
-        [Desktop Entry]
-        Type=Application
-        Name=Qt6 Settings
-        Hidden=true
-      '';
-    };
+    xdg.dataFile =
+      mkHiddenDesktopFile "qt5ct.desktop" "Qt5 Settings"
+      // mkHiddenDesktopFile "qt6ct.desktop" "Qt6 Settings";
 
     # Use the Noctalia color scheme
     xdg.configFile = {

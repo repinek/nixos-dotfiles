@@ -5,6 +5,7 @@
 }:
 with lib; let
   cfg = config.modules.cli.zellij.user;
+  mkHiddenDesktopFile = import ../../../lib/mkHiddenDesktopFile.nix;
 in {
   options.modules.cli.zellij.user.enable = mkEnableOption "Zellij";
 
@@ -19,5 +20,7 @@ in {
         show_startup_tips = false;
       };
     };
+
+    xdg.dataFile = mkHiddenDesktopFile "dev.zellij.Zellij.desktop" "Zellij";
   };
 }

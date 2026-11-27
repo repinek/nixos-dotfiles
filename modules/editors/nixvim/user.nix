@@ -6,6 +6,7 @@
 }:
 with lib; let
   cfg = config.modules.editors.nixvim.user;
+  mkHiddenDesktopFile = import ../../../lib/mkHiddenDesktopFile.nix;
 in {
   options.modules.editors.nixvim.user.enable = mkEnableOption "nixvim - neovim for nix";
 
@@ -29,5 +30,7 @@ in {
         ./plugins/transparency.nix
       ];
     };
+
+    xdg.dataFile = mkHiddenDesktopFile "nvim.desktop" "Neovim wrapper";
   };
 }

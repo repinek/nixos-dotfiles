@@ -6,6 +6,7 @@
 }:
 with lib; let
   cfg = config.modules.cli.scrcpy.user;
+  mkHiddenDesktopFile = import ../../../lib/mkHiddenDesktopFile.nix;
 in {
   options.modules.cli.scrcpy.user.enable = mkEnableOption "scrcpy display and control Android devices";
 
@@ -13,19 +14,8 @@ in {
     home.packages = [pkgs.scrcpy];
 
     # Desktop entries are not needed for this package
-    xdg.dataFile = {
-      "applications/scrcpy.desktop".text = ''
-        [Desktop Entry]
-        Type=Application
-        Name=scrcpy
-        Hidden=true
-      '';
-      "applications/scrcpy-console.desktop".text = ''
-        [Desktop Entry]
-        Type=Application
-        Name=scrcpy console
-        Hidden=true
-      '';
-    };
+    xdg.dataFile =
+      mkHiddenDesktopFile "scrcpy.desktop" "scrcpy"
+      // mkHiddenDesktopFile "scrcpy-console.desktop" "scrcpy console";
   };
 }
