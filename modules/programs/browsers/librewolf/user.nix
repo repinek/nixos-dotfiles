@@ -125,8 +125,8 @@ in {
             }
           }
 
-          /* Global corner radius (Maybe some day I will put 0px here) */
-          * { border-radius: 4px !important; }
+          /* Global corner radius */
+          * { border-radius: 0px !important; }
 
           /* Hide close firefox button (not tab) */
           .titlebar-buttonbox-container {
@@ -137,7 +137,7 @@ in {
         userContent = ''
           @-moz-document url-prefix("about:") {
             * {
-              border-radius: 4px !important;
+              border-radius: 0px !important;
             }
 
             /* Hide settings button */
@@ -208,7 +208,7 @@ in {
         todo, a lot of settings
         Custom CSS:
         #root.root {--toolbar-bg: var(--lwt-accent-color);}
-        #root.root {--general-border-radius: 4px;}
+        #root.root {--general-border-radius: 0px;}
         */
 
         # Bookmarks synced using firefox account
